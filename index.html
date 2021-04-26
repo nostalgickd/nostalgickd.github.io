@@ -18,7 +18,7 @@ font-family: 'Quicksand', sans-serif;
 }
 
 body{
-background-image: url(http://cdn.lowgif.com/full/0947d3018ff2be82-.gif);
+background-image: url(/resources/background.gif);
 background-size:30%;
 } 
 
@@ -29,15 +29,14 @@ top:50px;
 display: flex;
 flex-direction: column;
 align-items: center;
+justify-content: flex-start;
 } 
 
 p,span{
-background-color:white;
-color:black;
+cursor: pointer;
 display:flex;
 height: 2em;
 width: 25em;
-border:1px solid black;
 justify-content: center;
 align-items: center;
 margin-bottom:20px;
@@ -52,11 +51,20 @@ max-height:2em;
 max-width:10em;
 } 
 
-a{
+#sr{
 position: absolute;
 right:5px;
 top:5px;
 } 
+
+#frog{
+position: absolute;
+left:5px;
+top:5px;
+min-height:3em;
+min-width:3em;
+}
+
 
 #duration{
 padding:5px;
@@ -64,6 +72,11 @@ box-sizing:border-box;
 background:#7ba79b;
 width:auto;
 border:1px solid yellow;
+}
+
+#night{
+min-height:3em;
+min-width:3em;
 }
 </style>
 </head>
@@ -87,19 +100,15 @@ border:1px solid yellow;
 <p>STOP RADIO</p>
 <div id="duration"></div>
 </div>
-<a href="bollywood.html">
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/320px-Flag_of_India.svg.png"/>
-</a>
 
+<a id="sr" href="/"> <img src="/resources/sr.png"/> </a>
+<img id="frog" src="/resources/background.png"/>
 
 <script>
-let
-$= document.querySelector.bind(document),
-$$= document.querySelectorAll.bind(document); 
 
 let
 obj= {
-"http://168.195.218.193:8000/radio1-1":"Rapar",
+http://168.195.218.193:8000/radio1-1":"Rapar",
 "http://tbn.kloud.xyz:8050/radio.mp3":"Trishul",
 "http://108.59.9.147:8136/;":"Rasonic",
 "http://sgm.kloud.xyz:8030/radio.mp3":"Sangeetmala",
@@ -115,6 +124,10 @@ obj= {
 "http://stream2.iqhosted.nl:8000/stream/1/":"Sangam"
 };
 
+let
+$= document.querySelector.bind(document),
+$$= document.querySelectorAll.bind(document); 
+
 let not= "NO RADIO PLAYING",
     dur= $("#duration");
 
@@ -122,12 +135,11 @@ dur.innerHTML= not;
 document.title= "KD Radio - Suriname"; 
 
 //DISPLAY DURATION
-function durx(a,b){
+function duration (a,b){
+
 a.ontimeupdate= function() {
 let time= new Date(a.currentTime * 1000).toISOString().substr(11, 8).split(":"),
-    h= time[0],
-    m= time[1],
-    s= time[2];
+       h= time[0], m= time[1], s= time[2];
     
 if (h<=9 && h>0) h= h.replace("0","");
 if (m<=9 && m>0) m= m.replace("0","");
@@ -136,7 +148,6 @@ if (s==00) s= s.replace("0","");
 
 
 if(!a.paused){
-
 let hey="Listening to " +b+" for";
 
 if(h<0 && m<0 && s<=0) dur.innerHTML= "Loading " + b +"....";
@@ -159,7 +170,8 @@ dur.innerHTML= not;
 
 };}
 
-
+//NIGHTMODE
+let night= true;
 
 let
 url= Object.keys(obj),
@@ -167,58 +179,97 @@ tit= Object.values(obj),
 name= $$("span"),
 player= $$("span>audio");
 
-
-//MAIN CODE
-for(let x=0; x<url.length; x++){
+//Extract & Assign Radio Names and URLs
+url.forEach((i,x)=>{
 name[x].innerHTML= tit[x];
-name[x].onclick= function(){
-if(player[x].paused){
-player.forEach((i,k)=> {
-i.src= "";
-name[k].style.backgroundColor= "white";
-name[k].style.color= "black";
+player[x].src= i;
 })
+
+//Change Radio Colors
+function colors(a,b,c){
+if(!night){
+a.style.color= b;
+a.style.background= c;
+}
+else{
+a.style.color= "white";
+a.style.background= "black";
+}
+}
+
+
+//ASSIGN CSS IN START
+name.forEach((i,x)=>{
+i.style.border= "1px solid gray";
+if(!night){
+colors(i,"black","white");
+}
+else{
+colors(i,"white","black");
+}
+})
+
+
+//Stop All Radios
+function stopAll(){
+player.forEach((i,x)=>{
+i.src= "";
+name[x].style.border= "1px solid gray";
+colors(name[x],"black","white");
+})
+document.title= "KD Radio - Suriname";
+}
+
+//-------------------------------------
+name.forEach((i,x)=>{
+
+//ON TAP OR CLICK
+i.onclick=()=>{
+if(player[x].paused){
+stopAll();
+colors(i,"white","green");
 player[x].src= url[x];
 player[x].play();
-//durx(player[x],name[x].innerHTML);
-player[x].onpause=()=>{
-name[x].style.backgroundColor= "red";
 }
-player[x].onplay=()=>{
-name[x].style.backgroundColor= "green";
-dur.innerHTML= `Loading ${name[x].innerHTML}...`;
-durx(player[x],name[x].innerHTML);
-}
-name[x].style.color= "white";
-document.title= "KD Radio - "+ name[x].innerHTML;
-}	
 else{
 return false;
-}};
 }
+};
+
+//ON PAUSE
+player[x].onpause=()=>{
+if(night) name[x].style.border= "1px solid red";
+colors(i,"white","red");
+}
+
+//ON PLAY
+player[x].onplay=()=>{
+dur.innerHTML= `Loading ${i.innerHTML}...`;
+duration
+(player[x],i.innerHTML);
+if(night) name[x].style.border= "1px solid #00fd03";
+colors(i,"white","green");
+document.title= "KD Radio - "+ i.innerHTML;
+}
+
+
+})
+//---------------------------------------
+
 
 
 //DISABLE SELECTION
-$("body").onselectstart= function(){
-return false;
-};
+$("body").onselectstart=()=>{ return false; };
 
 
 //STOPPING RADIO
 let stop= $("p"); 
-stop.onclick= function() {
-document.title= "KD Radio - Suriname";
-player.forEach((i,k)=>{
-i.src= "";
-name[k].style.backgroundColor= "white";
-name[k].style.color= "black";
-})
-}; 
+stop.onclick= stopAll; 
 
 
-/*EXPAND AND COLLAPSE RADIOS
+//EXPAND AND COLLAPSE RADIOS
 let xo= "two";
-let loser= $$("#x3, #x4, #x5, #x6, #x8, #x9, #x11, #x13");
+let loser= $$("#x14");
 loser.forEach(i=>{i.style.display="none";})
 
 $("#frog").onclick= function(){
@@ -231,7 +282,7 @@ loser.forEach(i=> {i.style.display= "flex";})
 xo= "one";
 }
 
-};*/
+};
 
 
 </script>
