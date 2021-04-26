@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>kawiesh.cf - error :(</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Zen+Dots&display=swap');
+			
+body{
+background:black;
+color:white;
+position:absolute;
+left:0; right:0;bottom:0;top:0;
+display:flex;
+flex-direction: column;
+justify-content:center;
+align-items: center;
+}
+
+
+#container{
+position:relative;
+font-family: 'Montserrat', sans-serif;
+width:70%;
+height:auto;
+padding: 10px;
+border: 5px solid transparent;
+border-image: linear-gradient(to bottom right, black,darkgray,black,darkgray) 1;
+}
+
+h1{
+border-bottom: 1px solid #40ff4e;
+color: #40ff4e;
+}
+
+h1,h4{
+font-family: 'Zen Dots', cursive;	
+text-align: center;				
+}
+
+svg{
+stroke:#39ff14;
+fill:none;
+}
+
+#home{
+height:50px;
+width:50px;
+}
+
+p{
+position:absolute; bottom:0;
+font-size:10px;
+font-color:darkgray;
+font-style: italic;
+}
+
+</style>
+</head>
+<body>
+	<div id="home">
+	<svg viewBox="0 0 32 32">
+<path d="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z"></path>
+</svg></div>
+<div id="container">
+<h1>ERROR</h1>
+<h4>Sorry, the requested page doesn't exist!</h4>
+<br>
+<ul>
+<li>Cuss me out for messing things up</li>
+<li>Look for the page in The Bermuda Triangle</li>
+<li>Double-check the URL &#8646; <span></span></li>
+</ul>
+<br><br>
+
+<p>If the URL is correct, then I don't know what the problem is.
+I'm a loser, not a wizard! ~
+</p>
+
+</div>
+
+<script>
+let
+$= document.querySelector.bind(document),
+$$= document.querySelectorAll.bind(document),
+create= document.createElement.bind(document);
+
+let url= location.href.split(".cf/");
+   
+
+$("li>span").innerHTML+= `${url[0]}.cf/<span style="text-decoration:underline">${url[1]}</span>`;
+
+$("svg").onclick= function(){
+location= "/";
+};
+   
+</script>				
+</body>
+</html>
