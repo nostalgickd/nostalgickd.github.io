@@ -231,6 +231,46 @@ document.title= "KD Radio - Bollywood";
 //-------------------------------------
 name.forEach((i,x)=>{
 
+//SWITCH TO NEXT STATION VIA BROWSER NOTIFICATION
+function next(){
+navigator.mediaSession.setActionHandler('nexttrack', () => {
+stopAll();
+let r=x;
+let lim= url.length-1;
+
+if(r<lim){
+   player[r+1].src= url[r+1];
+   player[r+1].play();					
+}
+else{
+   player[0].src= url[0];
+   player[0].play();
+   r=0;	
+}		
+		
+});
+}
+
+//SWITCH TO PREVIOUS STATION VIA BROWSER NOTIFICATION
+function prev(){
+navigator.mediaSession.setActionHandler('previoustrack', () => {
+stopAll();
+let r=x;
+let lim= url.length-1;
+
+if(r==0){
+  player[lim].src= url[lim];
+  player[lim].play();
+  r= lim;
+}
+else{
+  player[r-1].src= url[r-1];
+  player[r-1].play();	
+}	
+			
+});
+}
+
 //ON TAP OR CLICK
 i.onclick=()=>{
 if(player[x].paused){
@@ -258,6 +298,7 @@ duration
 if(night) name[x].style.border= "1px solid #00fd03";
 colors(i,"white","green");
 document.title= "KD Radio - "+ i.innerHTML;
+next(); prev();
 };
 
 
