@@ -201,7 +201,7 @@ if (h>1 && m>1) timer.innerHTML= `${hey} ${h} hours, ${m} minutes and ${s} secon
 if(a.currentSrc.includes("sorry-kd-radio")){
 c.style.border= "1px solid red";
 c.style.color= "red";
-document.title= c.innerText + " [offline]";
+document.title= c.innerText + " [offline] - KD Radio";
 timer.innerHTML= c.innerText + " is currently offline";			
 }
 }
@@ -300,7 +300,7 @@ audio[x].onplay=()=>{
 duration(audio[x],name[x],span[x]);
 i.style.border= "1px solid #39ff14";
 i.style.color= "#39ff14";
-document.title= name[x];
+document.title= name[x] + " - KD Radio";
 navigator.mediaSession.setActionHandler("nexttrack", ()=>skip(x,"next"));
 navigator.mediaSession.setActionHandler("previoustrack", ()=>skip(x,"prev"));
 };
@@ -309,7 +309,7 @@ navigator.mediaSession.setActionHandler("previoustrack", ()=>skip(x,"prev"));
 audio[x].onpause=()=>{
 i.style.border= "1px solid red";
 i.style.color= "red";
-document.title= name[x] + " [Paused]";
+document.title= name[x] + " [Paused] - KD Radio";
 timer.innerHTML= name[x] + " is currently paused";
 };
 
