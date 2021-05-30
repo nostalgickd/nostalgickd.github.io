@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="/resources/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon-16x16.png">
+<link rel="manifest" href="/resources/site.webmanifest">
+
+<meta name="theme-color" content="black"/>
+<meta name="msapplication-navbutton-color" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Collection of Indian based radio stations from all around the world"/>
+<meta name="twitter:description" content="Collection of Indian based radio stations from all around the world"/>
+<meta name="keywords" content="radio, Hindi radio, Bollywood radio, Kawiesh, online radio"/>
+<meta property="og:title" content="KD Radio - Bollywood"/>
+<meta name="twitter:title" content="KD Radio - Bollywood"/>
+<meta property="og:type" content="Collection of Indian based radio stations from all around the world"/>
+<meta property="og:url" content="/"/>
+<meta property="og:image" content="https://kawiesh.gq/resources/kawiesh.jpg"/>
+<meta name="author" content="Kawiesh"/>
+<meta name="twitter:site" content="@Kawiesh"/>
+<title>KD Radio - Bollywood</title>
+
+
+<style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap'); 
+
+*{
+box-sizing: border-box;
+padding:0;
+margin:0;
+}
+
+html{
+min-height: 100%;
+position:relative;
+} 
+
+body{
+height:100%;
+background-color:black;
+background-image: url("https://kawiesh.gq/resources/background2.jpg");
+background-size:50%;
+font-family: 'Quicksand', sans-serif;
+}
+
+#container{
+margin-top: 3em;		
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+} 
+
+span{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 2em; width: 20em;;
+margin-bottom:20px;
+cursor: pointer;
+border:1px solid darkgray;
+color:white;
+background: rgb(0,0,0,0.4);
+border-radius: 3px;
+} 
+
+#stop{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+height: 2em; width: 10em;;
+margin: 30px 0 20px 0;
+cursor: pointer;
+color:black;
+background:darkgray;
+border:1px solid gray;
+} 
+
+#timer{
+padding:5px;
+box-sizing:border-box;
+background:#7ba79b;
+width:auto;
+border:1px solid yellow;
+}
+
+.fixed{
+position: absolute;
+top:2px;
+max-width:2.5em;
+max-height:2.5em;
+} 
+
+#sr{right:2px;}
+
+#hide{
+left:2px;
+border:1px solid pink;
+padding:2px;
+color: pink;
+min-width: 2.5em;
+text-align: center;
+cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+<div>
+<img class="fixed" id="sr" src="/resources/sr.png"/>
+<div class="fixed" id="hide">ALL</div>
+</div>
+<script>
+
+let
+create= document.createElement.bind(document),
+select= document.querySelector.bind(document),
+selectAll= document.querySelectorAll.bind(document),
+list= {
+"http://sc-bb.1.fm:8017":"Bombay Beats",
+"http://109.169.46.197:8011/stream":"Diverse FM",
+"http://music2.vvradio.co.in:2802/stream2":"V V Radio",
+"https://astro4.rastream.com/india?type=mp3":"India Beat",
+"https://c5.radioboss.fm:18125/stream":"Radio Manpasand",
+"http://s0.desimusicmix.com:8012/;stream.mp3":"Desi Music Mix",
+"https://streaming.webhostnepal.com/8020/stream":"Himal Filmy",
+"http://indifun.net:7000/;stream.nsv":"Indifun Radio",
+"http://peridot.streamguys.com:7150/Mirchi":"Mirchi FM",
+"http://79.120.39.202:8002/indiancinema":"Radio Caprice",
+"https://prclive1.listenon.in/":"Radio City - Talk",
+"https://funasia.streamguys1.com/live9":"Big Melodies",
+"https://cp12.serverse.com/proxy/hummfm?mp=/live":"Humm FM",
+"http://radio.punjabrocks.com:9998/taal":"Taal Radio",
+"http://hoth.alonhosting.com:1080/;stream.mp3":"BollyHits Radio",
+"https://s5.alhastream.com/radio/8260/radio":"Nitnut Radio",
+"https://stream.zeno.fm/a69txeenvzzuv":"SRK Online Radio"
+};
+
+
+let
+url= Object.keys(list),
+name= Object.values(list),
+offline= "/resources/sorry-kd-radio.mp3",
+stop= create("p"),
+timer= create("div"),
+container= create("div");
+stop.id= "stop";
+timer.id= "timer";
+container.id= "container";
+stop.innerHTML= "STOP";
+timer.innerHTML= "NO RADIO PLAYING";
+container.append(stop,timer);	
+document.body.append(container);
+document.body.onselectstart=()=> {return false;};
+
+select("#in").onclick=()=> location= "suriname.html";
+
+name.forEach((i,x)=>{
+let
+a= create("span"),
+b= create("audio");
+    
+a.innerHTML= i;
+a.append(b);
+stop.before(a);
+});
+         
+let
+audio= selectAll("audio"),
+span= selectAll("span");
+
+//-------------------------------DURATION-------------------------------
+
+function duration (a,b,c){
+
+a.ontimeupdate= function() {
+let hey="Listening to " + b +" for",
+time= new Date(a.currentTime * 1000).toISOString().substr(11, 8).split(":"),
+   h= time[0], m= time[1], s= time[2];
+
+if (h<=9 && h>0) h= h.replace("0","");
+if (m<=9 && m>0) m= m.replace("0","");
+if (s<=9 && s>0) s= s.replace("0","");
+if (s==00) s= s.replace("0","");
+
+if(!a.paused){
+if(h==0 && m==0 && s==0) timer.innerHTML= "Loading " + b +"....";
+if (h==0 && m<1) timer.innerHTML=`${hey} ${s} seconds`;
+if (h==0 && m==1) timer.innerHTML=`${hey} 1 minute and ${s} seconds`;
+if (h==0 && m>1) timer.innerHTML=`${hey} ${m} minutes and ${s} seconds`;
+if (h==1 && m<1) timer.innerHTML=`${hey} 1 hour and ${s} seconds`;
+if (h==1 && m==1) timer.innerHTML=`${hey} 1 hour, 1 minute and ${s} seconds`;
+if (h==1 && m>1) timer.innerHTML=`${hey} 1 hour, ${m} minutes and ${s} seconds`;
+if (h>1 && m<1) timer.innerHTML=`${hey} ${h} hours and ${s} seconds`;
+if (h>1 && m==1) timer.innerHTML=`${hey} ${h} hours, 1 minute and ${s} seconds`;
+if (h>1 && m>1) timer.innerHTML= `${hey} ${h} hours, ${m} minutes and ${s} seconds`;
+
+if(a.currentSrc.includes("sorry-kd-radio")){
+c.style.border= "1px solid red";
+c.style.color= "red";
+document.title= c.innerText + " [offline]";
+timer.innerHTML= c.innerText + " is currently offline";			
+}
+}
+
+};}
+
+//-------------------------------HIDE-------------------------------
+let
+block= [],
+hidden= true,
+hideCalled= false,
+
+expand= select("#hide");
+
+function hide(){
+
+expand.onclick=	()=>{
+if(hidden){
+block.forEach(i=> i.style.display= "flex");
+expand.innerHTML= "ALL";			
+hidden= false;
+}	
+else{
+block.forEach(i=> i.style.display= "none");				
+expand.innerHTML= "FEW";	
+hidden= true;						
+}	
+};
+hideCalled= true;			
+}
+
+block.push(span[2],span[3],span[4],span[5],span[7],span[8],span[10],span[12]);
+hide(block);
+
+if(!hideCalled){
+expand.style.display= "none";				
+}
+else{
+expand.style.display= "inline";					
+}
+
+//-------------------------------STOP-------------------------------
+function stopAll(){
+audio.forEach((i,x)=>{
+i.innerHTML= ""; 
+i.load();		
+span[x].style.border= "1px solid darkgray";	
+span[x].style.color= "white";	
+});	
+}
+
+stop.onclick=()=>{
+stopAll();
+document.title= "KD Radio - Bollywood";
+timer.innerHTML= "NO RADIO PLAYING";
+};
+
+//-------------------------------PLAY-------------------------------
+function play(a,b){
+stopAll();
+let source1= create("source"),
+    source2= create("source");
+
+source1.src= b;
+source2.src= offline;
+a.append(source1,source2);
+
+a.load();
+a.play();
+}
+
+
+//-------------------------BROWSER--CONTROLS------------------------
+let limit= url.length-1;
+
+function skip(a,b){
+let z= a;
+if(b=="next"){
+if (z==limit) z= -1;
+play(audio[z+1],url[z+1]);
+timer.innerHTML= `Loading ${name[z+1]}...`;
+}
+if(b=="prev"){
+if (z==0) z= limit+1;
+play(audio[z-1],url[z-1]);
+timer.innerHTML= `Loading ${name[z-1]}...`;
+}
+}
+
+//--------------------------MAIN--FUNCTION-------------------------
+
+span.forEach((i,x)=>{
+
+audio[x].onplay=()=>{
+duration(audio[x],name[x],span[x]);
+i.style.border= "1px solid #39ff14";
+i.style.color= "#39ff14";
+document.title= name[x];
+navigator.mediaSession.setActionHandler("nexttrack", ()=>skip(x,"next"));
+navigator.mediaSession.setActionHandler("previoustrack", ()=>skip(x,"prev"));
+};
+
+//----------------------
+audio[x].onpause=()=>{
+i.style.border= "1px solid red";
+i.style.color= "red";
+document.title= name[x] + " [Paused]";
+timer.innerHTML= name[x] + " is currently paused";
+};
+
+//----------------------
+i.onclick=()=>{
+if(!audio[x].paused){
+return false;
+}
+else{
+play(audio[x],url[x]);
+timer.innerHTML= `Loading ${i.innerHTML}...`;
+}
+};
+
+//----------------------
+
+
+});
+
+</script>
+</body>
+</html>
