@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="resources/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="resources/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="resources/icons/favicon-16x16.png">
+<link rel="manifest" href="resources/icons/site.webmanifest">
+
+<meta name="theme-color" content="black"/>
+<meta name="msapplication-navbutton-color" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Collection of Indian based radio stations in Suriname &  Netherlands"/>
+<meta name="twitter:description" content="Collection of Indian based radio stations in Suriname &  Netherlands"/>
+<meta name="keywords" content="radio, Suriname, Surinaamse radio, Kawiesh, online radio"/>
+<meta property="og:title" content="KD Radio - Suriname"/>
+<meta name="twitter:title" content="KD Radio - Suriname"/>
+<meta property="og:type" content="Collection of Indian based radio stations in Suriname &  Netherlands"/>
+<meta property="og:url" content="/"/>
+<meta property="og:image" content="resources/kawiesh.jpg"/>
+<meta name="author" content="Kawiesh"/>
+<meta name="twitter:site" content="@Kawiesh"/>
+<title>KD Radio - Suriname</title>
+
+<link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+<div>
+<img class="fixed" id="in" src="resources/in.png"/>
+<div class="fixed" id="hide">ALL</div>
+</div>
+<script>
+let
+title= "KD Radio - Suriname",
+switchradio= "bollywood.html";
+
+let list= {
+"http://168.195.218.193:8000/radio1-1":"Rapar",
+"http://tbn.kloud.xyz:8050/radio.mp3":"Trishul",
+"http://108.59.9.147:8136/;":"Rasonic",
+"http://sgm.kloud.xyz:8030/radio.mp3":"Sangeetmala",
+"http://nickerie.webhop.net:8000/;stream.nsv":"Ishara",
+"http://162.244.80.245:8016/;":"Ramasha",
+"http://79.143.187.96:8053/live":"Suvidha",
+"http://shruti.kloud.xyz:8000/radio.mp3":"Shruti",
+"https://amorfm_192.streampartner.nl/stream":"Amor",
+"http://stream.akaashfm.com:8000/live?1614478133151":"Akaash",
+"http://94.23.148.11:8058/;":"Vahon",
+"http://stream2.ujala.nl/stream/2/listen.mp3":"Ujalah",
+"http://stream.sunrisefm.nl:9600/stream":"Sunrise",
+"http://stream2.iqhosted.nl:8000/stream/1/":"Sangam"
+};
+</script>
+<script type="text/javascript" src="script.js"></script>
+<script>
+let block= [];
+block.push();
+block.forEach(i=> i.style.display= "none");
+
+//hide(block);
+
+if(!hideCalled){
+expand.style.display= "none";				
+}
+else{
+expand.style.display= "inline";					
+}
+</script>
+</body>
+</html>
