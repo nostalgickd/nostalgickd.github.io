@@ -65,9 +65,13 @@ position: absolute;
 top:2px;
 max-width:2.5em;
 max-height:2.5em;
+cursor: pointer;
 } 
 
-#in,#sr{right:2px;}
+#in,#sr{
+right:2px;
+cursor: pointer;
+}
 
 #hide{
 left:2px;
