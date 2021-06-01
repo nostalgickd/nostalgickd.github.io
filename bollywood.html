@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="resources/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="resources/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="resources/icons/favicon-16x16.png">
+<link rel="manifest" href="resources/icons/site.webmanifest">
+
+<meta name="theme-color" content="black"/>
+<meta name="msapplication-navbutton-color" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Collection of Indian based radio stations from all around the world"/>
+<meta name="twitter:description" content="Collection of Indian based radio stations from all around the world"/>
+<meta name="keywords" content="radio, Hindi radio, Bollywood radio, Kawiesh, online radio"/>
+<meta property="og:title" content="KD Radio - Bollywood"/>
+<meta name="twitter:title" content="KD Radio - Bollywood"/>
+<meta property="og:type" content="Collection of Indian based radio stations from all around the world"/>
+<meta property="og:url" content="/"/>
+<meta property="og:image" content="resources/kawiesh.jpg"/>
+<meta name="author" content="Kawiesh"/>
+<meta name="twitter:site" content="@Kawiesh"/>
+<title>KD Radio - Bollywood</title>
+
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div>
+<img class="fixed" id="sr" src="resources/sr.png"/>
+<div class="fixed" id="hide">ALL</div>
+</div>
+<script>
+let
+title= "KD Radio - Bollywood",
+switchradio= "/";
+         
+let list= {
+"http://sc-bb.1.fm:8017":"Bombay Beats",
+"http://109.169.46.197:8011/stream":"Diverse FM",
+"http://music2.vvradio.co.in:2802/stream2":"V V Radio",
+"https://astro4.rastream.com/india?type=mp3":"India Beat",
+"https://c5.radioboss.fm:18125/stream":"Radio Manpasand",
+"http://s0.desimusicmix.com:8012/;stream.mp3":"Desi Music Mix",
+"https://streaming.webhostnepal.com/8020/stream":"Himal Filmy",
+"http://indifun.net:7000/;stream.nsv":"Indifun Radio",
+"http://peridot.streamguys.com:7150/Mirchi":"Mirchi FM",
+"http://79.120.39.202:8002/indiancinema":"Radio Caprice",
+"https://prclive1.listenon.in/":"Radio City - Talk",
+"https://funasia.streamguys1.com/live9":"Big Melodies",
+"https://cp12.serverse.com/proxy/hummfm?mp=/live":"Humm FM",
+"http://radio.punjabrocks.com:9998/taal":"Taal Radio",
+"http://hoth.alonhosting.com:1080/;stream.mp3":"BollyHits Radio",
+"https://s5.alhastream.com/radio/8260/radio":"Nitnut Radio",
+"https://stream.zeno.fm/a69txeenvzzuv":"SRK Online Radio"
+};
+
+</script>
+
+<script type="text/javascript" src="script.js"></script>
+
+<script>
+let block= [];
+block.push(span[2],span[3],span[4],span[5],span[7],span[8],span[10],span[12]);
+block.forEach(i=> i.style.display= "none");
+
+hide(block);
+
+if(!hideCalled){
+expand.style.display= "none";				
+}
+else{
+expand.style.display= "inline";					
+}
+</script>
+
+</body>
+</html>
