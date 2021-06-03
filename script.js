@@ -52,7 +52,7 @@ if (s==00) s= s.replace("0","");
 
 if(!a.paused){
 if(h==0 && m==0 && s==0) timer.innerHTML= "Loading " + b +"....";
-if (h==0 && m<1) timer.innerHTML=`${hey} ${s} seconds`;
+if (h==0 && m==0 && s>0) timer.innerHTML=`${hey} ${s} seconds`;
 if (h==0 && m==1) timer.innerHTML=`${hey} 1 minute and ${s} seconds`;
 if (h==0 && m>1) timer.innerHTML=`${hey} ${m} minutes and ${s} seconds`;
 if (h==1 && m<1) timer.innerHTML=`${hey} 1 hour and ${s} seconds`;
