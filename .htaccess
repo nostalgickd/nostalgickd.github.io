@@ -1,2 +1,13 @@
 RewriteEngine On
 ErrorDocument 404 /resources/error.html
+
+
+<FilesMatch "\.(js|css)$">
+   FileETag None
+   <ifModule mod_headers.c>
+     Header unset ETag
+     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+     Header set Pragma "no-cache"
+     Header set Expires "Tue, 14 Jan 1975 01:00:00 GMT"
+   </ifModule>
+</FilesMatch>
