@@ -35,7 +35,7 @@ min-width: 10vw; min-height: 10vw;
 }
 </style>
 
-<link id="css" rel="stylesheet" href="http://kawiesh.heliohost.us/kawiesh.tk/style.css"/>
+<link rel="stylesheet" href="http://kawiesh.heliohost.us/kawiesh.tk/style.css"/>
 
 </head>
 <body>
@@ -47,23 +47,14 @@ min-width: 10vw; min-height: 10vw;
 <div class="loader">
 <img src="resources/loading.svg"/>
 </div>
-<script async id="script1" type="text/javascript" src="http://kawiesh.heliohost.us/kawiesh.tk/index.js"></script>
-<script async id="script" type="text/javascript" src="http://kawiesh.heliohost.us/kawiesh.tk/script.js"></script>
+<script async type="text/javascript" src="http://kawiesh.heliohost.us/kawiesh.tk/index.js"></script>
+<script async type="text/javascript" src="http://kawiesh.heliohost.us/kawiesh.tk/script.js"></script>
 
 <script>
-
 let loader= document.querySelector(".loader");
 window.onload= function(){
 loader.parentNode.removeChild(loader);
 };
-
-
-
-if (typeof window.loadingdone == 'undefined'){
-alert("Uh oh something went wrong!, Reloading...");
-document.location.reload(true);
-}
-
 </script>
 
 </body>
