@@ -53,15 +53,15 @@ min-width: 10vw; min-height: 10vw;
 <script>
 
 let loader= document.querySelector(".loader");
-window.onload= function(){loader.parentNode.removeChild(loader);};
+window.onload= function(){
+loader.parentNode.removeChild(loader);
+};
 
-if(typeof window.loaded == 'undefined'){
-let external= document.querySelector("#css,#script1,#script");
+
 
 if (typeof window.loadingdone == 'undefined'){
 alert("Uh oh something went wrong!, Reloading...");
 document.location.reload(true);
-
 }
 
 </script>
