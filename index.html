@@ -48,12 +48,13 @@ min-width: 10vw; min-height: 10vw;
 <img src="resources/loading.svg"/>
 </div>
 
+<script type="text/javascript" src="http://kawiesh.heliohost.us/kawiesh.tk/index.js"></script>
+<script id="main" type="text/javascript" src="http://kawiesh.heliohost.us/kawiesh.tk/script.js"></script>
 <script>
 let loader= document.querySelector(".loader");
-window.onload= function(){loader.parentNode.removeChild(loader);};
+let script= document.querySelector("#main");
+main.onload= function(){loader.parentNode.removeChild(loader);};
 </script>
 
-<script type="text/javascript" src="http://kawiesh.heliohost.us/kawiesh.tk/index.js"></script>
-<script type="text/javascript" src="http://kawiesh.heliohost.us/kawiesh.tk/script.js"></script>
 </body>
 </html>
