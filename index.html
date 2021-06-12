@@ -55,14 +55,12 @@ min-width: 10vw; min-height: 10vw;
 let loader= document.querySelector(".loader");
 window.onload= function(){loader.parentNode.removeChild(loader);};
 
-let external= document.querySelector("#css,#script1,#script");
+let css= document.querySelector("#css");
 
-external.forEach(i=>{
-i.onerror=()=>{
+css.onerror=()=>{
 alert("Uh oh something went wrong!, Reloading...");
 document.location.reload(true);
 };
-});
 
 </script>
 
