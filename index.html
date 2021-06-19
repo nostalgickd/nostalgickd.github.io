@@ -64,7 +64,7 @@ document.write(`
 
 
 <script>
-let index= document.createElement("script")
+let index= document.createElement("script"),
    script= document.createElement("script");
 
 index.type= "text/javascript";
@@ -84,7 +84,8 @@ document.write(`
 index.onerror= scripterror;
 script.onerror= scripterror;
 </script>
-<script>
+
+    <script>
 let loader= document.querySelector(".loader");
 window.onload= function(){
 loader.parentNode.removeChild(loader);
