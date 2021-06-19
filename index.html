@@ -35,21 +35,9 @@ min-width: 10vw; min-height: 10vw;
 }
 </style>
 
+<link rel="preload" href="http://kawiesh.unaux.com/kawieshtk/style.css"/>
+<link rel="stylesheet" href="http://kawiesh.unaux.com/kawieshtk/style.css"/>
 
-<script>
-let style= document.createElement("style");
-
-style.rel= "stylesheet";
-style.href= "http://kawiesh.heliohost.us/kawiesh.tk/style.css";
-
-document.head.append(style);
-    
-style.onerror=()=>{
-style.href="http://kawiesh.unaux.com/kawieshtk/style.css?i=1";
-};
-
-
-</script>
 </head>
 <body>
 <div id= "topbar">
@@ -63,30 +51,14 @@ style.href="http://kawiesh.unaux.com/kawieshtk/style.css?i=1";
 
 
 <script>
-let index= document.createElement("script"),
-   script= document.createElement("script");
-
-index.type= "text/javascript";
-script.type= "text/javascript";
-  
-index.src= "http://kawiesh.heliohost.us/kawiesh.tk/index.js";
-script.src= "http://kawiesh.heliohost.us/kawiesh.tk/script.js";
-  
-document.body.append(index,script);
-    
-function scripterror(){
-index.src="http://kawiesh.unaux.com/kawieshtk/index.js?i=1";
-script.src="http://kawiesh.unaux.com/kawieshtk/script.js?i=1";
-} 
-
-index.onerror= scripterror;
-script.onerror= scripterror;
-
 let loader= document.querySelector(".loader");
 window.onload= function(){
 loader.parentNode.removeChild(loader);
 };
 </script>
+    
+<script type="text/javascript" src="http://kawiesh.unaux.com/kawieshtk/index.js"></script>
+<script type="text/javascript" src="http://kawiesh.unaux.com/kawieshtk/script.js"></script>
 
 </body>
 </html>
