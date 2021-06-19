@@ -45,10 +45,9 @@ style.href= "http://kawiesh.heliohost.us/kawiesh.tk/style.css";
 document.head.append(style);
     
 style.onerror=()=>{
-document.write(`
-<link rel="preload" href="http://kawiesh.unaux.com/kawieshtk/style.css?i=1"/>
-<link rel="stylesheet" href="http://kawiesh.unaux.com/kawieshtk/style.css?i=1"/>`);
+style.href="http://kawiesh.unaux.com/kawieshtk/style.css?i=1";
 };
+
 
 </script>
 </head>
@@ -76,16 +75,13 @@ script.src= "http://kawiesh.heliohost.us/kawiesh.tk/script.js";
 document.body.append(index,script);
     
 function scripterror(){
-document.write(`
-<script type="text/javascript" src="http://kawiesh.unaux.com/kawieshtk/index.js?i=1"></script>
-<script type="text/javascript" src="http://kawiesh.unaux.com/kawieshtk/script.js?i=1"></script>`);
+index.src="http://kawiesh.unaux.com/kawieshtk/index.js?i=1";
+script.src="http://kawiesh.unaux.com/kawieshtk/script.js?i=1";
 } 
 
 index.onerror= scripterror;
 script.onerror= scripterror;
-</script>
 
-    <script>
 let loader= document.querySelector(".loader");
 window.onload= function(){
 loader.parentNode.removeChild(loader);
