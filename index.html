@@ -35,9 +35,22 @@ min-width: 10vw; min-height: 10vw;
 }
 </style>
 
-<link rel="preload" href="http://kawiesh.heliohost.us/kawiesh.tk/style.css"/>
-<link rel="stylesheet" href="http://kawiesh.heliohost.us/kawiesh.tk/style.css"/>
 
+<script>
+let style= document.createElement("style");
+
+style.rel= "stylesheet";
+style.href= "http://kawiesh.heliohost.us/kawiesh.tk/style.css";
+
+document.head.append(style);
+    
+style.onerror=()=>{
+document.write(`
+<link rel="preload" href="http://kawiesh.unaux.com/kawieshtk/style.css"/>
+<link rel="stylesheet" href="http://kawiesh.unaux.com/kawieshtk/style.css"/>`);
+};
+
+</script>
 </head>
 <body>
 <div id= "topbar">
@@ -48,10 +61,29 @@ min-width: 10vw; min-height: 10vw;
 <div class="loader">
 <img src="resources/loading.svg"/>
 </div>
-<script type="text/javascript" src="http://kawiesh.heliohost.us/kawiesh.tk/index.js"></script>
-<script type="text/javascript" src="http://kawiesh.heliohost.us/kawiesh.tk/script.js"></script>
+
 
 <script>
+let index= document.createElement("script")
+   script= document.createElement("script");
+
+index.type= "text/javascript";
+script.type= "text/javascript";
+  
+index.src= "http://kawiesh.heliohost.us/kawiesh.tk/index.js";
+script.src= "http://kawiesh.heliohost.us/kawiesh.tk/script.js";
+  
+document.body.append(index,script);
+    
+function scripterror(){
+document.write(`
+<script type="text/javascript" src="http://kawiesh.unaux.com/kawieshtk/index.js"></script>
+<script type="text/javascript" src="http://kawiesh.unaux.com/kawieshtk/script.js"></script>`);
+} 
+
+index.onerror= scripterror;
+script.onerror= scripterror;
+
 let loader= document.querySelector(".loader");
 window.onload= function(){
 loader.parentNode.removeChild(loader);
