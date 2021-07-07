@@ -1,7 +1,8 @@
 let
 title= "KD Radio - Suriname",
 switchradio= "bollywood.html",
-block= [0,6,7,10,11];
+//block= [0,6,7,10,11];
+block= [];
 
 let list= {
 "http://168.195.218.193:8000/radio1-1":"Rapar",
