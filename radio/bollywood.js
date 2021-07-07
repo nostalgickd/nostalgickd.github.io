@@ -1,7 +1,8 @@
 let
 title= "KD Radio - Bollywood",
 switchradio= "/",
-block= [2,3,4,5,7,8,10,12];
+//block= [2,3,4,5,7,8,10,12];
+block= [];
          
 let list= {
 "http://sc-bb.1.fm:8017":"Bombay Beats",
