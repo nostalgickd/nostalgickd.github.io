@@ -1,6 +1,6 @@
 let
 title= "KD Radio - Bollywood",
-switchradio= "radio/",
+switchradio= "/radio/",
 //block= [2,3,4,5,7,8,10,12];
 block= [];
          
