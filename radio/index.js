@@ -1,6 +1,6 @@
 let
 title= "KD Radio - Suriname",
-switchradio= "/radio/bollywood.html",
+switchradio= "http://nostalgickd.github.io/radio/bollywood.html",
 //block= [0,6,7,10,11];
 block= [];
 
