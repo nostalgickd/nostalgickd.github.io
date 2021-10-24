@@ -15,7 +15,7 @@ font-family: Arial;
 }	
 
 body{
-background: rgb(0,0,0) url("/resources/background.png");
+background: rgb(0,0,0) url("/resources/background.jpg");
 background-size: cover;
 min-width: 100vw; min-height: 100vh;
 position: relative;
