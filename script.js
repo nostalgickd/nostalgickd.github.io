@@ -1,3 +1,15 @@
+let message= `You're viewing this page over https. Not all stations can be played over https.
+Load the http version of this page to be able to play all stations.
+Click on "OK" to load it now or click "Cancel" to keep using https!`;
+
+
+if(location.protocol=="http:"){
+let alert= confirm(message);
+if(alert) location= location.href.replace(location.protocol,"http:")
+}
+
+
+//------------------------------------------------
 let create= (x)=> document.createElement(x),
 select= (x,y=document)=> y.querySelector(x),
 selectAll= (x,y=document)=> y.querySelectorAll(x);
