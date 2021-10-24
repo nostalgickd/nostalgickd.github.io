@@ -6,7 +6,7 @@ selectAll= document.querySelectorAll.bind(document);
 let
 url= Object.keys(list),
 name= Object.values(list),
-offline= "resources/sorry-kd-radio.mp3",
+offline= "/resources/sorry-kd-radio.mp3",
 stop= create("p"),
 timer= create("div"),
 container= create("div");
