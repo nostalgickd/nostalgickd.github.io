@@ -3,7 +3,7 @@ Load the http version of this page to be able to play all stations.
 Click on "OK" to load it now or click "Cancel" to keep using https!`;
 
 
-if(location.protocol=="http:"){
+if(location.protocol=="https:"){
 let alert= confirm(message);
 if(alert) location= location.href.replace(location.protocol,"http:")
 }
