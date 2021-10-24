@@ -14,7 +14,7 @@ position:relative;
 body{
 height:100%;
 background-color:black;
-background-image: url("http://kawiesh.tk/resources/background2.jpg");
+background-image: url("/resources/background2.jpg");
 background-size:50%;
 font-family: 'Quicksand', sans-serif;
 }
