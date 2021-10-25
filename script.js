@@ -1,5 +1,6 @@
-let message= `You're viewing this page over https. Not all stations can be played over https. Load the http version of this page to be able to play all stations.
-Click "OK" to load now or click "Cancel" to keep using https!`;
+let message= `Not all stations can be played, because you're viewing this page over https. Load the page over http to be able to play all stations.
+
+Click "OK" to load now or "Cancel" to keep using https!`;
 
 
 if(location.protocol=="https:"){
