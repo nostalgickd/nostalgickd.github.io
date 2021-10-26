@@ -18,8 +18,8 @@ let bollywood= {
 "https://s5.alhastream.com/radio/8260/radio":"Nitnut",
 "https://stream.zeno.fm/a69txeenvzzuv":"SRK Online",
 "https://stream.bongonet.net/proxy/rhi?mp=/stream":"RHI - Covers",
-"https://stream.zeno.fm/eyxg23ky4x8uv" : "Marudhara Radio",
-"https://stream.zeno.fm/8wk1s0pt008uv" : "NP 24 Radio",
+"https://stream.zeno.fm/eyxg23ky4x8uv" : "Marudhara",
+"https://stream.zeno.fm/8wk1s0pt008uv" : "NP 24",
 "https://drive.uber.radio/uber/bollywooduditnarayan/icecast.audio" : "Udit Narayan",
 "https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio" : "Alka Yagnik"
 };
