@@ -8,7 +8,7 @@ let sarnamie= {
 "http://79.143.187.96:8053/live" : "Suvidha",
 "http://shruti.kloud.xyz:8000/radio.mp3" : "Shruti",
 "https://amorfm_192.streampartner.nl/stream" : "Amor",
-"http://94.23.148.11:8058/;" : "Vahon",
+"https://onlineradio.websoftitnepal.com/8030/stream/1/.mp4a.40.5" : "Vahon",
 "http://stream2.ujala.nl/stream/2/listen.mp3" : "Ujala",
 "http://stream.sunrisefm.nl:9600/stream" : "Sunrise",
 "http://stream2.iqhosted.nl:8000/stream/1/" : "Sangam",
