@@ -107,7 +107,11 @@ background: rgb(0,0,0,0.4);
 border-radius: 3px;
 font: 18px chakrapetch;
 position: relative;
-} 
+}
+
+.span:last-child:nth-child(2n-1){
+left:50%;
+}
 
 #stop{
 display: inline-flex;
