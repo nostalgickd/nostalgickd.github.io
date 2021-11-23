@@ -30,7 +30,7 @@ let general= {
 "https://canopus.dribbcast.com/stream/8052/stream/1/" : "Color Radio",
 //"https://solid41.streamupsolutions.com/proxy/yjdqldwt?mp=/stream" : "Da Beat",
 //"http://streaming.shoutcast.com/we-radio?" : "WE Radio",
-"https://caster05.streampakket.com/proxy/9338/stream/1/" : "Tamara",
+"http://audiostreamen.nl:8006/stream" : "Tamara",
 "http://bombelman.com:3062/;" : "NIO",
 //"http://127.0.0.1:26671/listen.pls" : "Radio One",
 "http://192.111.140.6:8117/stream" : "Fawaka",
@@ -49,12 +49,12 @@ let javanese= {
 
 let sranang= {
 "http://168.195.218.193:8000/radio2-0" : "SRS",
-"http://centova.pure-isp.eu:8012/stream" : "Konmakandra",
+"https://mediaserv30.live-streams.nl:18020/stream" : "Konmakandra",
 "https://canopus.dribbcast.com/stream/8052" : "Anjisa",
 "http://162.244.80.245:8020/stream/1/" : "Koyeba",
 "http://sc.sr.net:8000/radio2-1" : "Boskopu",
 //"http://91.196.171.99/radiobrasa" : "Brasa",
-"​https://stream.zenolive.com/6te6g6ubed0uv.aac​​​​​" : "Radio Anda",
+"https://kathy.torontocast.com:2945/stream" : "Radio Anda",
 //"http://178.63.94.130:8080/9181316.ogg" : "Positive",
 "http://stanvasteradio.gkstreamen.nl:8120/;stream.mp3" : "Stanvaste",
 "http://46.4.5.234:8080/9173707.ogg" : "Asosye"
@@ -75,8 +75,7 @@ let other= {
 };
 
 
-let list= [sarnamie,general,javanese,sranang,christian,other];
+let list= [sarnamie,general,sranang,christian,javanese,other];
 
-
-let sr= 1, block=[];
+let block=[];
 //block= [0,4,5,6,8,9];
