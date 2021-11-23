@@ -20,10 +20,24 @@ srflag= select("#sr"),
 inflag= select("#in"),
 hide= select("#hide"),
 pagetitle= "",
-button= select(".button"),
+toggle= select("#genre"),
+left= select(".left"),
+genre= select(".genre"),
+right= select(".right"),
 container= select("#container"),
 stop= select("#stop"),
 timer= select("#timer");
+
+if(left || right){
+left.innerHTML= `<svg class="dir" viewBox="0 0 24 24">
+<path d="M2 11l7-9v5c11.953 0 13.332 9.678 13 
+15c-.502-2.685-.735-7-13-7v5l-7-9z"/></svg>`;
+
+right.innerHTML= `<svg class="dir" viewBox="0 0 24 24">
+<path d="M22 11l-7-9v5C3.047 7 1.668 16.678 
+2 22c.502-2.685.735-7 13-7v5l7-9z"/></svg>`;
+}
+
 
 if(inflag){
 pagetitle= "KD Radio - Suriname";
@@ -43,14 +57,13 @@ return false;
 //Using button to switch genres
 if(list.length > 1){
 main(list[0]);
-button.onclick= change;
-//button.style.display= "flex";
-button.style.visibility= "visible";
+left.onclick=()=> change("left");
+right.onclick=()=> change("right");
+toggle.style.visibility= "visible";
 }
 else{
 main(list[0]);
-//button.style.display= "none";
-button.style.visibility= "hidden";	
+toggle.style.visibility= "hidden";	
 }
 
 
@@ -160,7 +173,9 @@ function stopAll(){
 audio.forEach(i=>{
 i.innerHTML= ""; i.load();		
 i.parentNode.className= "span white";
-});	
+});
+document.title= pagetitle;
+timer.innerHTML= "NO RADIO PLAYING";
 }
 
 //Play this station--------------------------
@@ -243,32 +258,35 @@ spanDisplay("none");
 }	
 }
 
-//Check genre-------------
-function taal(a,b,c){
-if(a){
-block= b;
-button.innerHTML= c;		
-}		
+//Check genre--------------
+function checkGenre(x){
+if(x==0) genre.innerHTML= "sarnamie";
+if(x==1) genre.innerHTML= "general";
+if(x==2) genre.innerHTML= "sranang";
+if(x==3) genre.innerHTML= "christian";
+if(x==4) genre.innerHTML= "javanese";
+if(x==5) genre.innerHTML= "other";
 }
 
-//Switch genre-------------
-function change(){
+
+//-----Change genres-----------
+let current= 0;
+function change(direction){
 stopAll();
-document.title= pagetitle;
-timer.innerHTML= "NO RADIO PLAYING";
-span.forEach(i=>i.remove());
-hide.classList.remove("clicked");
-hide.innerHTML= "ALL";
-if(sr==list.length) sr=0;
-//taal((sr==0),[0,4,5,6,8,9],"Sarnamie");
-taal((sr==0),[],"Sarnamie");
-taal((sr==1),[],"General");
-taal((sr==2),[],"Javanese");
-taal((sr==3),[],"Sranang");
-taal((sr==4),[],"Christian");
-taal((sr==5),[],"Other");
-main(list[sr]);
-sr++;
+container.innerHTML= "";
+
+if(direction=="right"){
+if(current==5) current= -1;
+current++;
+main(list[current]);
+checkGenre(current);
+}
+else if(direction=="left"){
+if(current==0) current= 6;
+current--;
+main(list[current]);
+checkGenre(current);
+}
 }
 
 
