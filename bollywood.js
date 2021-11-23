@@ -27,4 +27,4 @@ let bollywood= {
 
 let list= [bollywood];
 
-let sr= 1, block= [2,3,4,5,7,8,10,12];
+let block= [2,3,4,5,7,8,10,12];
