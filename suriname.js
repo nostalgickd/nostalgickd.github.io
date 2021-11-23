@@ -13,7 +13,11 @@ let sarnamie= {
 "http://stream.sunrisefm.nl:9600/stream" : "Sunrise",
 "http://stream2.iqhosted.nl:8000/stream/1/" : "Sangam",
 "https://rs.suricloud.com/radio/8130/radio.mp3" : "Sargam",
-"https://hidradio.live-streams.nl/live?type=.mp3/;stream.mp3" : "HiD Radio"
+"https://hidradio.live-streams.nl/live?type=.mp3/;stream.mp3" : "HiD Radio",
+"https://stream.zeno.fm/kzsmp5qs9k0uv" : "Radio Sarnami",
+"https://stream.zeno.fm/putkar0p9k0uv" : "Bollywood Suriname",
+"https://stream.zeno.fm/ctmsytc6em0uv" : "Joyce The Voice",
+"https://stream.zeno.fm/xssh6qrf1wzuv" : "Assalaam Radio"
 };
 
 let general= {
@@ -37,14 +41,19 @@ let general= {
 //"http://listen.shoutcast.com/k1009" : "Kankantri",
 "https://sonic.magicdragon.nl/8024/stream" : "Pokoe FM",
 "https://icecast.omroep.nl/3fm-bb-mp3" : "Radio FM 103",
-"http://cc3b.beheerstream.com:8192/;stream.mp3" : "Cariba FM"
+"http://cc3b.beheerstream.com:8192/;stream.mp3" : "Cariba FM",
+"https://larry.torontocast.com:1795/stream":"Neutral",
+"https://stream.zeno.fm/xsdmzxyhc18uv" : "Radio 804",
+"https://stream.zeno.fm/5tv3n9cw008uv" : "Lime Radio",
+"https://stream.zeno.fm/zduxspz4kv8uv" : "Fan Da Libi"
 };
 
 let javanese= {
 "http://162.244.80.245:8012/;" : "Garuda",
 //"http://streaming.radionomy.com/LaguJawa" : "Lagu Jawa",
 "http://94.23.148.11:8214/stream/1/" : "Sirian Jawa",
-"https://s5.radio.co/s1735f3c1d/listen":"Surja Vibes"
+"https://s5.radio.co/s1735f3c1d/listen":"Surja Vibes",
+"https://stream.zeno.fm/w6hh0rqqwy8uv" : "DjRegi",
 };
 
 let sranang= {
@@ -57,7 +66,12 @@ let sranang= {
 "https://kathy.torontocast.com:2945/stream" : "Radio Anda",
 //"http://178.63.94.130:8080/9181316.ogg" : "Positive",
 "http://stanvasteradio.gkstreamen.nl:8120/;stream.mp3" : "Stanvaste",
-"http://46.4.5.234:8080/9173707.ogg" : "Asosye"
+"http://46.4.5.234:8080/9173707.ogg" : "Asosye",
+"https://clare.shoutca.st/radio/8070/radio.mp3":"MS Radio",
+"https://stream.zeno.fm/ysd1dvrtcv8uv" : "Ketebuna",
+"https://stream.zeno.fm/rnf3xu9tgs8uv" : "Boeskondee Media",
+"https://stream.zeno.fm/1sqwfhqwra0uv" : "Fandaaki Paanzu",
+"https://stream.zeno.fm/kyve9mgds18uv" : "Radio Totness",
 };
 
 let christian= {
@@ -65,7 +79,8 @@ let christian= {
 "http://bombelman.com:3052/random" : "Immanu&euml;l",
 "http://server.jvhost.net:8120/stream" : "Kabar Katresnan",
 //"http://198.7.59.204/stream.mp3?ipport=198.7.59.204_31366" : "Radio 7 Gospel",
-"http://exoticaradio.shoutcaststream.com:8380/stream" : "Radio mArt"
+"http://exoticaradio.shoutcaststream.com:8380/stream" : "Radio mArt",
+"https://stream.zeno.fm/kadt188ugy8uv" : "Afonsoewa",
 };
 
 let other= {
