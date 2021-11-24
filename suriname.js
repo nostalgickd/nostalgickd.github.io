@@ -15,9 +15,9 @@ let sarnamie= {
 "https://rs.suricloud.com/radio/8130/radio.mp3" : "Sargam",
 "https://hidradio.live-streams.nl/live?type=.mp3/;stream.mp3" : "HiD Radio",
 "https://stream.zeno.fm/kzsmp5qs9k0uv" : "Radio Sarnami",
-"https://stream.zeno.fm/putkar0p9k0uv" : "Bollywood Suriname",
+"https://stream.zeno.fm/putkar0p9k0uv" : "Bollywood Sur.",
 "https://stream.zeno.fm/ctmsytc6em0uv" : "Joyce The Voice",
-"https://stream.zeno.fm/xssh6qrf1wzuv" : "Assalaam Radio"
+"https://stream.zeno.fm/xssh6qrf1wzuv" : "Assalaam"
 };
 
 let general= {
