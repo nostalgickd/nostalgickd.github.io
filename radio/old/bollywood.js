@@ -1,6 +1,6 @@
 let
 title= "KD Radio - Bollywood",
-switchradio= "http://nostalgickd.github.io/radio/",
+switchradio= "index.html",
 //block= [2,3,4,5,7,8,10,12];
 block= [];
          
