@@ -224,8 +224,7 @@ if(x==5) genre.innerHTML= "other";
 //-----Change genres-----------
 let current= 0;
 function change(direction){
-audio.pause();
-timer.innerHTML= "NO RADIO PLAYING";
+//audio.pause();
 container.innerHTML= "";
 
 if(direction=="right"){
