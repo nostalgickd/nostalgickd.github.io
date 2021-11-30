@@ -29,11 +29,12 @@ audio= select("#audio");
 let url,name,span;
 
 if(left||right){
-left.innerHTML= `<svg class="dir" viewBox="0 0 24 24">
-<path d="M2 11l7-9v5c11.953 0 13.332 9.678 13 15c-.502-2.685-.735-7-13-7v5l-7-9z"/></svg>`;
-right.innerHTML= `<svg class="dir" viewBox="0 0 24 24">
+left.innerHTML= `<svg class="dir" viewBox="0 0 24 24"><g>
+<path d="M2 11l7-9v5c11.953 0 13.332 9.678 13 15c-.502-2.685-.735-7-13-7v5l-7-9z"/>
+</g></svg>`;
+right.innerHTML= `<svg class="dir" viewBox="0 0 24 24"><g>
 <path d="M22 11l-7-9v5C3.047 7 1.668 16.678 2 22c.502-2.685.735-7 13-7v5l7-9z"/>
-</svg>`;
+</g></svg>`;
 }
 
 
