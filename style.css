@@ -85,6 +85,8 @@ cursor: pointer;
 fill: rgba(0,0,0,.5);
 stroke: yellow;
 stroke-width: 1;
+width: 100%;
+height: 100%;
 }
 
 
@@ -110,9 +112,10 @@ font: 18px chakrapetch;
 position: relative;
 }
 
+/*
 .span:last-child:nth-child(2n-1){
 left:50%;
-}
+}*/
 
 #pause{
 display: inline-flex;
