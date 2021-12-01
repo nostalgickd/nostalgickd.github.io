@@ -37,8 +37,8 @@ justify-content: space-between;
 
 .fixed{
 cursor: pointer;
-width: auto;
-max-height: 100%;
+height: 100%;
+aspect-ratio: 1/1;
 }
 
 
