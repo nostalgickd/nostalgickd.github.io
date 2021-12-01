@@ -81,13 +81,17 @@ width: 30px;
 cursor: pointer;
 }
 
+.dir{
+width: 100%;
+height: 100%;
+}
+
 .dir *{
 fill: rgba(0,0,0,.5);
 stroke: yellow;
 stroke-width: 1;
-width: 100%;
-height: 100%;
 }
+
 
 
 #container{
