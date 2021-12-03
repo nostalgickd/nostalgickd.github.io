@@ -192,14 +192,14 @@ default:H= `${h} hours, `;
 
 switch(m){
 case 0: M= ""; break;
-case 1: M= "1 minute and "; break;
-default:M= `${m} minutes and `;
+case 1: M= "1 min. & "; break;
+default:M= `${m} min. & `;
 }
 
 if(b=="paused"){
-timer.innerHTML= `${a} paused after ${H}${M}${s} seconds`;
+timer.innerHTML= `${a} paused after ${H}${M}${s} sec.`;
 }
-else timer.innerHTML= `Listening to ${a} for ${H}${M}${s} seconds`;
+else timer.innerHTML= `Listening to ${a} for ${H}${M}${s} sec.`;
 }
 
 
