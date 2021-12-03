@@ -186,20 +186,20 @@ let H,M;
 
 switch(h){
 case 0: H= ""; break;
-case 1: H= "1h, "; break;
-default:H= `${h}h, `;
+case 1: H= "1 hour, "; break;
+default:H= `${h} hours, `;
 }
 
 switch(m){
 case 0: M= ""; break;
-case 1: M= "1m & "; break;
-default:M= `${m}m & `;
+case 1: M= "1 min. & "; break;
+default:M= `${m} min. & `;
 }
 
 if(b=="paused"){
-timer.innerHTML= `${a} paused after ${H}${M}${s}s`;
+timer.innerHTML= `${a} paused after ${H}${M}${s} sec.`;
 }
-else timer.innerHTML= `Listening to ${a} for ${H}${M}${s}s`;
+else timer.innerHTML= `Listening to ${a} for ${H}${M}${s} sec.`;
 }
 
 
