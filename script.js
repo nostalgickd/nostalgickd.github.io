@@ -130,7 +130,8 @@ else{
 }
 else{
 x.className= "span clicked";
-document.title= x.innerHTML + " - KD Radio";
+//document.title= x.innerHTML + " - KD Radio";
+document.title= "Kawiesh's Radio Collection";
 timer.innerHTML= "Loading " + x.innerHTML;
 pause.innerHTML=  "&bull; &bull; &bull;";
 pause.style.pointerEvents= "none";
