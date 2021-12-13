@@ -248,7 +248,15 @@ checkGenre(current);
 
 //KARVANISTA 
 
-let keywords= Object.values(Object.assign({}, ...list));
+
+let allStations= Object.values(Object.assign({}, ...list));
+let keywords= allStations.map(i=>{
+if(!i.includes("Radio")){
+return "Radio " + i;
+}
+else return i;
+});
+
 let meta1= select("meta[name='keywords']");
 let meta2= create("meta");
 meta2.name= "keywords";
