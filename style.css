@@ -18,7 +18,7 @@ overflow: auto;
 body{
 background: rgb(0,0,0) url("/resources/background.jpg");
 background-size: cover;
-min-width: 100vw; min-height: 100vh;
+/*min-width: 100vw; min-height: 100vh;*/
 position: relative;
 display: flex;
 flex-direction: column;
