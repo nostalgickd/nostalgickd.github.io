@@ -92,6 +92,18 @@ stroke: yellow;
 stroke-width: 1;
 }
 
+a.info{
+display: block;
+width: 30px; height: 30px;
+position: fixed;
+right: 5px; bottom: 5px;
+}
+
+
+svg.info{
+width: 100%; height: 100%;
+fill: darkblue;
+}
 
 
 #container{
