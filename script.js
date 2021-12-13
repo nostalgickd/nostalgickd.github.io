@@ -223,6 +223,8 @@ if(x==5) genre.innerHTML= "other";
 }
 
 
+
+
 //-----Change genres-----------
 let current= 0;
 function change(direction){
@@ -244,4 +246,11 @@ checkGenre(current);
 }
 
 
-//KARVANISTA
+//KARVANISTA 
+
+let keywords= Object.values(Object.assign({}, ...list));
+let meta1= select("meta[name='keywords']");
+let meta2= create("meta");
+meta2.name= "keywords";
+meta2.content= keywords.join(", ");
+meta1.after(meta2);
