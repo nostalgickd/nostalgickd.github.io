@@ -52,7 +52,6 @@ grid-template-areas:
 
 .grid>div{
 border: 1px solid;
-padding: 5px;
 display: flex;
 align-items: center;
 justify-content: flex-start;
@@ -69,7 +68,11 @@ max-height: 100%;
 
 .picture{
 grid-area: picture;
-aspect-ratio: 1/1;
+}
+
+[class$="icon"]{
+width: 30px;
+height: 30px;
 }
 
 
@@ -87,6 +90,7 @@ grid-area: twittericon;
 
 .twitter{
 grid-area: twitter;
+padding: 5px;
 }
 
 
