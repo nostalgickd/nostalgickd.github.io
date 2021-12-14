@@ -69,6 +69,7 @@ max-height: 100%;
 
 .picture{
 grid-area: picture;
+aspect-ratio: 1/1;
 }
 
 
@@ -115,7 +116,7 @@ body{background-size: 50%}
 <div class="emailicon">Email</div>
 <div class="email">email@domain.com</div>
 <div class="twittericon">Twitter</div>
-<div class="twitter"><a href="https://twitter.com/Kawiesh">@Kawiesh</a></div>
+<div class="twitter">@Kawiesh</div>
 </div>
  
 </div>
@@ -124,17 +125,19 @@ let create= (x)=> document.createElement(x),
 select= (x,y=document)=> y.querySelector(x),
 selectAll= (x,y=document)=> y.querySelectorAll(x);
 
-let email= select(".emailicon");
-email.innerHTML= `<svg viewBox="0 0 36 36">
+let twitter= select(".twitter");
+twitter.innerHTML= `<a href="https://twitter.com/Kawiesh">@Kawiesh</a>`;
+
+let emailicon= select(".emailicon");
+emailicon.innerHTML= `<svg viewBox="0 0 36 36">
 <path d="M32 6H4a2 2 0 0 0-2 2v20a2 2 0 0 0 2 
 2h28a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-1.54 
 22H5.66l7-7.24l-1.44-1.39L4 26.84V9.52l12.43 
 12.37a2 2 0 0 0 2.82 0L32 9.21v17.5l-7.36-7.36l-1.41 
 1.41zM5.31 8h25.07L17.84 20.47z"/></svg>`;
 
-
-let twitter= select(".twittericon");
-twitter.innerHTML= `<svg viewBox="0 0 72 72">
+let twittericon= select(".twittericon");
+twittericon.innerHTML= `<svg viewBox="0 0 72 72">
 <path fill="#61b2e4" d="M58.042 16.667s-2.584 
 2.083-6.209 2.458c0 0-5.708-6.375-13.875-.833c-3.666 
 2.583-4 8.041-3.375 10c0 0-11.083.875-20.75-10.459c0 
