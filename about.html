@@ -106,20 +106,21 @@ text-align: left;
 
 
 /*---------*/
+details{
+display: inline-block;
+}
+
 
 details>div{
 font-family: Arial;
 }
 
 
-summary{
-background: yellow;
-}
-
 details[open]>summary{
+border-bottom: 1px dashed;
 background: pink;
+margin-bottom: 1.5em;
 }
-
 
 .graph{
 width: 250px;
