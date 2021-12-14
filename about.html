@@ -41,6 +41,7 @@ justify-content: flex-start;
 
 div.grid{
 display: grid;
+margin-bottom: 50px;
 height: 60px;
 grid-gap: 2px;
 grid-auto-columns: auto;
@@ -69,8 +70,8 @@ max-height: 100%;
 
 .picture{
 grid-area: picture;
-width: 2fr;
-height: 2fr;
+width: 2fr; height: 2fr;
+border: none;
 }
 
 [class$="icon"]{
@@ -85,6 +86,7 @@ grid-area: emailicon;
 
 .email{
 grid-area: email;
+padding: 5px;
 }
 
 .twittericon{
@@ -96,6 +98,47 @@ grid-area: twitter;
 padding: 5px;
 }
 
+/*---------*/
+
+details>div{
+white-space: pre;
+}
+
+
+.graph{
+width: 250px;
+height: 20px;
+border: 1px solid black;
+border-radius: 20px;
+display: flex;
+z-index: 2;
+overflow: hidden;
+}
+
+
+.graph>*{
+height: 100%;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+z-index: 1;
+font: bold 10px "Courier New";
+}
+
+.html{
+background: skyblue;
+width: 15%;
+}
+
+.css{
+background: pink;
+width: 25%;
+}
+
+.js{
+background: yellow;
+width: 60%;
+}
 
 
 @media (orientation:portrait){
@@ -118,19 +161,68 @@ body{background-size: 50%}
 <div id="container">
 
 <div class="grid">
-<div class="picture">
-<img src="/resources/kawiesh.jpg"/></div>
+<div class="picture"><img src="/resources/kawiesh.jpg"/></div>
 <div class="emailicon">Email</div>
 <div class="email">email@domain.com</div>
 <div class="twittericon">Twitter</div>
 <div class="twitter">@Kawiesh</div>
 </div>
- 
+
+<details>
+<summary>About</summary>
+<div>
+This site contains a collection of Surinamese radio stations and radio stations airing mostly early 2000s Bollywood songs.
+</div>
+</details>
+
+<details>
+<summary>Legality</summary>
+<div>
+The streams are not hosted or modified by me in any way.
+The stream URLs are gathered from various (publicly accessable) sources across the web.
+If you want your station removed or have any other comment, use the contact information on the top of this page.
+</div>
+</details>
+
+
+<details>
+<summary>Https vs Http</summary>
+<div>
+A lot of the radio stations still stream their audio over <span class="purple">http</span>.
+And it's not possible to serve http resources over <span class="green">https</span> pages.
+Https is more secure, but because this is a static website 
+(no server-side coding involved) http won't cause any risk.
+
+
+TL;DR<br>
+Valid SSL certificate is present, but not used by default
+Use http to be able to listen to all stations
+Use https if you want more security, but access to fewer stations
+</div>
+</details>
+
+<details>
+<summary>Code</summary>
+<div>
+The site relies heavily on JavaScript (>ES 6)
+<div class="graph">
+<span class="html">HTML</span>
+<span class="css">CSS</span>
+<span class="js">JS</span>
+</div>
+<div>
+</details>
+
+
 </div>
 <script>				
 let create= (x)=> document.createElement(x),
 select= (x,y=document)=> y.querySelector(x),
 selectAll= (x,y=document)=> y.querySelectorAll(x);
+
+
+Let email= select(".email");
+email.innerHTML= `<img src="/resources/email.png"/>`;
 
 let twitter= select(".twitter");
 twitter.innerHTML= `<a href="https://twitter.com/Kawiesh">@Kawiesh</a>`;
