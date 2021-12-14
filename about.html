@@ -108,7 +108,11 @@ text-align: left;
 /*---------*/
 
 details>div{
-white-space: pre;
+font-family: Arial;
+}
+
+details[open]>summary{
+margin-bottom: -1em;
 }
 
 
@@ -186,8 +190,8 @@ This site contains a collection of Surinamese radio stations and radio stations 
 <details>
 <summary>Legality</summary>
 <div>
-The streams are not hosted or modified by me in any way.
-The stream URLs are gathered from various (publicly accessable) sources across the web.
+The streams are not hosted or modified by me in any way.<br>
+The stream URLs are gathered from various (publicly accessable) sources across the web.<br>
 If you want your station removed or have any other comment, use the contact information on the top of this page.
 </div>
 </details>
@@ -196,15 +200,14 @@ If you want your station removed or have any other comment, use the contact info
 <details>
 <summary>Https vs Http</summary>
 <div>
-A lot of the radio stations still stream their audio over <span class="purple">http</span>.
-And it's not possible to serve http resources over <span class="green">https</span> pages.
-Https is more secure, but because this is a static website 
-(no server-side coding involved) http won't cause any risk.
-
+A lot of the radio stations still stream their audio over <span class="purple">http</span>. 
+And it's not possible to serve http resources over <span class="green">https</span> pages. 
+Https is more secure, but because this is a static website (no server-side coding involved) http won't cause any risk.
+<br><br>
 
 TL;DR<br>
-Valid SSL certificate is present, but not used by default
-Use http to be able to listen to all stations
+Valid SSL certificate is present, but not used by default<br>
+Use http to be able to listen to all stations<br>
 Use https if you want more security, but access to fewer stations
 </div>
 </details>
@@ -220,8 +223,8 @@ The site relies heavily on JavaScript (>ES 6)
 </div>
 </div>
 </details>
-</div>
 
+</div>
 </div>
 <script>				
 let create= (x)=> document.createElement(x),
