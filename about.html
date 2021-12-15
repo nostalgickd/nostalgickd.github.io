@@ -158,6 +158,24 @@ width: 60%;
 }
 
 
+span[class^='http']{
+height: 1em;
+display: inline-flex;
+place-content: center;
+}
+
+.https>svg{
+height: 100%;
+fill: green;
+}
+
+.http>svg{
+height: 100%;
+fill: red;
+}
+
+
+
 @media (orientation:portrait){
 #container{
 width: 95%; height: auto;
@@ -207,7 +225,7 @@ If you want your station removed or have any other comment, use the contact info
 <br><br>
 
 <details>
-<summary>Https vs Http</summary>
+<summary>https <span class="https"></span> vs. http <span class="http"></span></summary>
 <div>
 A lot of the radio stations still stream their audio over <span class="purple">http</span>. 
 And it's not possible to serve http resources over <span class="green">https</span> pages. 
@@ -241,6 +259,25 @@ The site relies heavily on JavaScript (>ES 6)
 let create= (x)=> document.createElement(x),
 select= (x,y=document)=> y.querySelector(x),
 selectAll= (x,y=document)=> y.querySelectorAll(x);
+
+
+
+
+let https= select(".https");
+https.innerHTML= `<svg viewBox="0 0 24 24">
+<path d="M20 12c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5S7 
+4.243 7 7v3H6c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 
+2h12c1.103 0 2-.897 2-2v-8zM9 7c0-1.654 1.346-3 3-3s3 
+1.346 3 3v3H9V7z"/></svg>`;
+
+
+let http= select(".http");
+http.innerHTML= `<svg viewBox="0 0 24 24">
+<path d="M17 8V7c0-2.757-2.243-5-5-5S7 4.243 7 
+7v3H6c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 
+2h12c1.103 0 2-.897 2-2v-8c0-1.103-.897-2-2-2H9V7c0-1.654 
+1.346-3 3-3s3 1.346 3 3v1h2z"/></svg>`;
+
 
 
 let email= select(".email");
