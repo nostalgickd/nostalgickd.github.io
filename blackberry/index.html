@@ -94,48 +94,17 @@ background: rgb(255,255,255,0.7);
 <div id="container">
 <div class="message">Trying to load files...</div>
 <br>
-<table id="links"></table>
+<table id="links">
+<tr><td><a class="link" href="radio">Radio</a></td></tr>
+<tr><td><a class="link" href="bookmarklet-maker">Bookmarklet Maker</a></td></tr>
+</table>
 </div>
 <script>				
-let create= (x)=> document.createElement(x),
-select= (x,y=document)=> y.querySelector(x),
-selectAll= (x,y=document)=> y.querySelectorAll(x);
+var api= "https://api.github.com/repos/nostalgickd/",
+repo= "nostalgickd.github.io/contents/",
+folder= "blackberry/?v=" + Date.now();
+var url= api + repo + folder;
 
-
-let api= "https://api.github.com/repos/nostalgickd/";
-let repo= "nostalgickd.github.io/contents/";
-let folder= "blackberry/?v=" + Date.now();
-let url= api + repo + folder;
-
-let table= select("table#links");
-
-
-//CREATE TABLE
-async function fetchLinks(){
-let request= await fetch(url);
-let reply= await request.json();
-let files= reply.map(i=>{
-let url= i.path, text= i.path.split(".")[0];
-let tr= create("tr"); table.append(tr);
-let td= `<td><a class="link" href="${url}">${text}</a></td>`;
-tr.innerHTML= td;
-});
-
-//NOTIFY WHEN LOADED
-select(".message").innerHTML= "File directory!";
-
-//REMOVE NON JS FILES
-selectAll("a.link").forEach(i=>{
-if(!i.href.endsWith(".js")){
-i.closest("tr").remove();				
-}						
-});
-
-}
-
-
-//DO THE MAIN FUNCTION
-fetchLinks();
 
 </script>	
 </body>
