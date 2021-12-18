@@ -102,7 +102,11 @@ select= (x,y=document)=> y.querySelector(x),
 selectAll= (x,y=document)=> y.querySelectorAll(x);
 
 
-let url= "https://api.github.com/repos/nostalgickd/nostalgickd.github.io/contents/blackberry?v=" + Date.now();
+let api= "https://api.github.com/repos/nostalgickd/";
+let repo= "nostalgickd.github.io/contents/";
+let folder= "blackberry/?v=" + Date.now();
+let url= api + repo + folder;
+
 let table= select("table#links");
 
 
@@ -114,7 +118,6 @@ let files= reply.map(i=>{
 let url= i.path, text= i.path.split(".")[0];
 let tr= create("tr"); table.append(tr);
 let td= `<td><a class="link" href="${url}">${text}</a></td>`;
-
 tr.innerHTML= td;
 });
 
