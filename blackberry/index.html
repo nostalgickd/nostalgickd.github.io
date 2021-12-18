@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="black"/>
+<meta name="msapplication-TileColor" content="#da532c"/>
+<meta name="msapplication-navbutton-color" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="description" content="Some BlackBerry web tools!"/>
+<meta name="keywords" content="Blackberry, Javascript, html, css, kawiesh, bookmarklet, fetch api"/>
+<meta name="author" content="Kawiesh"/>
+<meta property="og:title" content="Remote bookmarklets by Kawiesh"/>
+<meta property="og:type" content="Some BlackBerry web tools!"/>
+<meta property="og:url" content=""/>
+<meta property="og:image" content="https://kawiesh.tk/resources/kawiesh.jpg"/>
+<title>Tools optimized for Blackberry Browser</title>
+
+<style>				
+*{
+box-sizing: border-box;
+margin:0; padding:0; 
+outline: none;
+}	
+
+body{
+background: rgb(251,244,234) url("/resources/kawieshseemless.png");
+background-size: 10%;
+min-width: 100vw; min-height: 100vh;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content:center;
+}
+
+#container{
+border: 0px solid red;
+margin-top: 20px;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content:center;
+}
+
+.message{
+padding: 5px;
+border: 1px solid black;
+background: rgb(255,255,255,0.7);
+}
+
+
+a.link{
+display: block;
+padding:5px 5px;
+text-align: center;
+text-decoration: none;
+font-variant: small-caps;
+position: relative;
+border: 1px solid black;
+}
+
+
+table#links{
+max-width: 100%;
+table-layout: fixed;
+border-spacing: 5px 2px;
+}
+
+
+td{
+overflow: hidden;
+height: calc(1em + 5px);
+background: rgb(255,255,255,0.7);
+}
+
+
+
+@media (orientation:portrait){
+#container{width: 95%;}
+}	
+
+@media (orientation:landscape){
+#container{width: 75%;}
+}	
+
+
+
+</style>
+</head>
+<body data-nosnippet= "true">
+<div id="container">
+<div class="message">Trying to load files...</div>
+<br>
+<table id="links"></table>
+</div>
+<script>				
+let create= (x)=> document.createElement(x),
+select= (x,y=document)=> y.querySelector(x),
+selectAll= (x,y=document)=> y.querySelectorAll(x);
+
+
+let url= "https://api.github.com/repos/nostalgickd/nostalgickd.github.io/blackberry/contents/?v=" + Date.now();
+let table= select("table#links");
+
+
+//CREATE TABLE
+async function fetchLinks(){
+let request= await fetch(url);
+let reply= await request.json();
+let files= reply.map(i=>{
+let url= i.path, text= i.path.split(".")[0];
+let tr= create("tr"); table.append(tr);
+let td= `<td><a class="link" href="${url}">${text}</a></td>`;
+
+tr.innerHTML= td;
+});
+
+//NOTIFY WHEN LOADED
+select(".message").innerHTML= "File directory!";
+
+//REMOVE NON JS FILES
+selectAll("a.link").forEach(i=>{
+if(!i.href.endsWith(".js")){
+i.closest("tr").remove();				
+}						
+});
+
+
+
+
+//DO THE MAIN FUNCTION
+fetchLinks();
+
+</script>	
+</body>
+</html>
 
