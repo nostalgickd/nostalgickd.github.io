@@ -79,6 +79,12 @@ option.innerHTML= i;
 select("optgroup", dropdown).append(option);
 });
 
+let blocklist= JSON.parse(localStorage.blockstations);
+
+blocklist.forEach(i=>{
+let a= selectAll("option");
+a[i].selected= true;
+});
 
 
 document.body.onclick=()=>{
@@ -95,7 +101,7 @@ localStorage.blockstations= JSON.stringify(blockstations);
 this.innerHTML= "Saved";
 
 let blocklist= JSON.parse(localStorage.blockstations);
-select("span").innerHTML= blocklist.length + " stations hidden successfully. Reload the pages for the changes to take effect";
+select("span").innerHTML= blocklist.length + " stations hidden successfully. Reload the page for the changes to take effect";
 };
 
 
