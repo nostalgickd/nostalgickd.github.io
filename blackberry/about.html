@@ -61,7 +61,7 @@ body{background-size: 50%;}
 </optgroup>
 </select>
 <button id="save">Save</button>
-
+<span></span>
 </div>
 <script src="/bollywood.js"></script>
 <script>				
@@ -81,13 +81,24 @@ select("optgroup", dropdown).append(option);
 
 
 
+document.body.onclick=()=>{
+save.innerHTML= "Save";
+}
+
 save.onclick= function(){
 let blockstations= [...dropdown.selectedOptions].map(i=>{
 return i.index;
 });
 
 localStorage.blockstations= blockstations;
+
+this.innerHTML= "Saved";
+
+select("span").innerHTML= "Blocked stations:" + localStorage.blockstations ;
 };
+
+
+
 
 </script>	
 </body>
