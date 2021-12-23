@@ -1,0 +1,37 @@
+let create= (x)=> document.createElement(x),
+select= (x,y=document)=> y.querySelector(x),
+selectAll= (x,y=document)=> y.querySelectorAll(x);
+
+
+<select id="stations" multiple>
+<outgroup label="Select stations to hide></optgroup>
+</select>
+<button id="save">Save</button>
+
+
+let dropdown= select("#stations");
+
+let stations= Object.values(list[0]);
+
+stations.forEach(i=>{
+let option= create("option");
+option.innerHTML= i;
+select("optgroup", dropdown).append(option);
+});
+
+
+
+save.onclick= function(){
+let blockstations= [...dropdown.selectedOptions].map(i=>{
+return i.index;
+});
+
+localStorage.blockstations= blockstations;
+};
+
+
+
+
+
+
+
