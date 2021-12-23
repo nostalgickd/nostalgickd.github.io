@@ -90,11 +90,12 @@ let blockstations= [...dropdown.selectedOptions].map(i=>{
 return i.index;
 });
 
-localStorage.blockstations= blockstations;
+localStorage.blockstations= JSON.stringify(blockstations);
 
 this.innerHTML= "Saved";
 
-select("span").innerHTML= "Blocked stations:" + localStorage.blockstations ;
+let blocklist= JSON.parse(localStorage.blockstations);
+select("span").innerHTML= blocklist.length + " stations hidden successfully. Reload the pages for the changes to take effect";
 };
 
 
