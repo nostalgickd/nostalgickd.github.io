@@ -115,7 +115,13 @@ function selectedOptions(el){
 return [...el.selectedOptions].map(i=> i.index);
 }
 
+OR
 
+
+function selectedOptions(el){
+let a= selectAll("option:checked",el);
+return [...a].map(i=>i.index);
+}
 
 
 */
