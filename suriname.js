@@ -91,6 +91,7 @@ let other= {
 
 
 let list= [sarnamie,general,sranang,christian,javanese,other];
+let liststring= "sarnamie,general,sranang,christian,javanese,other";
 
 let block=[];
 //block= [0,4,5,6,8,9];
