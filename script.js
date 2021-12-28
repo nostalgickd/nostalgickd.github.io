@@ -270,6 +270,7 @@ meta1.after(meta2);
 
 //INFO LINK
 let about= create("a");
+about.dataset.nosnippet= "";
 document.body.append(about);
 about.className= "info";
 about.href= "about.html";
