@@ -14,7 +14,7 @@ let create= (x)=> document.createElement(x),
 select= (x,y=document)=> y.querySelector(x),
 selectAll= (x,y=document)=> y.querySelectorAll(x);
 
-let offline= httpz ? 
+let offline= _https ? 
 "/resources/oopshttps.mp3" :
 "/resources/kdradiosorry.mp3" ;
 srflag= select("#sr"),
