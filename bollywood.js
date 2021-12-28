@@ -26,5 +26,6 @@ let bollywood= {
 
 
 let list= [bollywood];
+let liststring= "bollywood";
 
 let block= [2,3,4,5,7,8,10,12];
