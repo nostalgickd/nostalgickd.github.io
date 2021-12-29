@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>http://kawiesh.tk</loc></url>
-<url><loc>http://kawiesh.tk/bollywood</loc></url>
-<url><loc>http://kawiesh.tk/blackberry/radio</loc></url>
-<url><loc>https://cdn.kawiesh.tk</loc></url>
-<url><loc>https://lyrics.kawiesh.tk</loc></url>
+<!--
+Created with Free Online Sitemap Generator www.countingcharacters.com/xml-sitemap-generator
+-->
+<url>
+      <loc>http://kawiesh.tk</loc>
+      <lastmod>2021-12-29</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1</priority>
+</url>
+<url>
+      <loc>http://kawiesh.tk/bollywood</loc>
+      <lastmod>2021-12-29</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1</priority>
+</url>
+<url>
+      <loc>http://kawiesh.tk/blackberry/radio</loc>
+      <lastmod>2021-12-29</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1</priority>
+</url>
+<url>
+      <loc>https://cdn.kawiesh.tk</loc>
+      <lastmod>2021-12-29</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1</priority>
+</url>
+<url>
+      <loc>https://lyrics.kawiesh.tk</loc>
+      <lastmod>2021-12-29</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1</priority>
+</url>
 </urlset>
