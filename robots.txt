@@ -1,0 +1,4 @@
+Sitemap: https://kawiesh.tk/sitemap.xml
+
+User-agent: *
+Disallow:
