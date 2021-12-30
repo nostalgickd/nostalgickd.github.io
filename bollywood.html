@@ -40,22 +40,24 @@ min-width: 10vw; min-height: 10vw;
 </style>
 <link rel="stylesheet" href= "style.css">
 </head>
-<div class="loader" data-nosnippet>
-  <img src="/resources/loading.svg" data-nosnippet/>
+
+<body data-nosnippet>
+<div class="loader">
+  <img src="/resources/loading.svg"/>
 </div>
-<div id= "topbar" data-nosnippet>
-  <div class="fixed" id="hide" data-nosnippet>All</div>
-  <div id="genre" data-nosnippet>
-    <span class="left" data-nosnippet>Prev.</span>&nbsp;
-    <span class="genre" data-nosnippet>Radio</span>&nbsp;
-    <span class="right" data-nosnippet>Next</span>  
+<div id= "topbar">
+  <div class="fixed" id="hide">All</div>
+  <div id="genre">
+    <span class="left">Prev.</span>&nbsp;
+    <span class="genre">Radio</span>&nbsp;
+    <span class="right">Next</span>  
   </div>
-  <img class="fixed" alt="Suriname" id="sr" src="/resources/sr.svg" data-nosnippet/>
+  <img class="fixed" alt="Suriname" id="in" src="/resources/sr.svg"/>
 </div>
-<div id="container" data-nosnippet></div>
-<p id="pause" data-nosnippet>&bull; &bull; &bull;</p>
-<div id="timer" data-nosnippet>NO RADIO PLAYING</div>
-<audio id="audio" data-nosnippet></audio>
+<div id="container"></div>
+<p id="pause">&bull; &bull; &bull;</p>
+<div id="timer">NO RADIO PLAYING</div>
+<audio id="audio"></audio>
 
 <script>
 function removeLoader(){
