@@ -42,11 +42,15 @@ right.innerHTML= `<svg class="dir" viewBox="0 0 24 24"><g>
 genre.innerHTML= liststring.split(",")[0];
 
 
-
 document.body.onselectstart=()=> false;
 if(srflag) srflag.onclick=()=> location= "/";
 if(inflag) inflag.onclick=()=> location= "bollywood.html";			
 pause.onclick=()=> audio.paused ? audio.play() : audio.pause();
+
+selectAll("body *").forEach(i=>{
+i.dataset.nosnippet= "";
+});
+
 
 //------INITIAL SETUP --------
 if(list.length > 1){
