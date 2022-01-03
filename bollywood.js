@@ -21,11 +21,16 @@ let bollywood= {
 "https://stream.zeno.fm/eyxg23ky4x8uv" : "Marudhara",
 "https://stream.zeno.fm/8wk1s0pt008uv" : "NP 24",
 "https://drive.uber.radio/uber/bollywooduditnarayan/icecast.audio" : "Udit Narayan",
-"https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio" : "Alka Yagnik"
+"https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio" : "Alka Yagnik",
+"https://stream.zeno.fm/8e9q38tg7zquv" : "Hindi Music",
+"https://drive.uber.radio/uber/bollywoodvishalandshekhar/icecast.audio":"Vishal & Shekhar"
 };
+
 
 
 let list= [bollywood];
 let liststring= "bollywood";
 
-let block= [2,3,4,5,7,8,10,12];
+let block= "[2,3,4,5,7,8,10,12]";
+let blocklist= localStorage["_block"]|| block;
+block= JSON.parse(blocklist);
