@@ -1,7 +1,3 @@
-
-
-
-
 let _style= create("style");
 document.body.append(_style);
 _style.innerHTML= `
@@ -119,7 +115,7 @@ background: pink;
 padding: 1px; border-radius: 2px;
 width: 30px; height: 30px;
 position: absolute;
-right: 5px; bottom: 20px;
+left: 5px; bottom: 20px;
 overflow: hidden;
 }
 
