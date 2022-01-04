@@ -186,9 +186,7 @@ _dic.style.display= "none";
 };
 
 
-select("#modal .close").onclick=()=>{
-_div.style.display= "none";
-};
+
 
 _stations.forEach(i=>{
 let a= create("option"); a.innerHTML= i;
@@ -252,4 +250,7 @@ _div.style.display= "none";
 
 };
 
-
+select("#modal .close").onclick=()=>{
+_div.style.display= "none";
+_settings.classList.add("open");
+};
