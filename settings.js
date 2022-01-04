@@ -252,5 +252,5 @@ _div.style.display= "none";
 
 select("#modal .close").onclick=()=>{
 _div.style.display= "none";
-_settings.classList.add("open");
+_settings.classList.toggle("open");
 };
