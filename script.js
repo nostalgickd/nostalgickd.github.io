@@ -95,7 +95,7 @@ span= selectAll(".span");
 
 span.forEach((i,x)=>{
 i.onclick= function(){
-showControls(i.innerHTML,x);
+showControls(i.innerText,x);
 if(/idle|paused/.test(this.className)){
 span.forEach(i=> i.className= "span idle");							
 audio.innerHTML=`<source src="${url[x]}"><source src="${offline}">`;
@@ -123,14 +123,14 @@ if(audio.currentTime>1){
 let isoffline= new URL(offline, location);
 if(audio.currentSrc==isoffline){
   x.className= "span offline";
-  document.title= x.innerHTML + " [offline] - KD Radio";
+  document.title= x.innerText + " [offline] - KD Radio";
   timer.innerHTML= x.innerHTML + " is offline";
   pause.innerHTML= "&bull; &bull; &bull;";
   pause.style.pointerEvents= "none";
 }
 else{
   let paused= audio.paused;
-  document.title= paused ? x.innerHTML + " [paused] - KD radio" : x.innerHTML + " - KD Radio";
+  document.title= paused ? x.innerText + " [paused] - KD radio" : x.innerText + " - KD Radio";
   paused ? updateTime(x.innerHTML,"paused") : updateTime(x.innerHTML);
   x.className= paused ? "span paused" : "span playing";
   pause.innerHTML= paused ? "PLAY" : "PAUSE";
