@@ -318,8 +318,9 @@ d="M58.042 16.667s-2.584 2.083-6.209 2.458c0
 9.5-22.583c0 0 3.95-3 4.975-4.917c0 0-3.058 1-5.558 
 1c0 0 3.333-1.75 4.125-5.416z"/></svg>`;
 
-email.oncontextmenu=()=>{
+select("img",email).oncontextmenu=()=>{
 alert(`The email address is not typed, but has been added as a photo instead. This is done to prevent crawling by bots`);
+return false;
 };
 </script>	
 </body>
