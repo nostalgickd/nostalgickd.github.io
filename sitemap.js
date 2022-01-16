@@ -271,7 +271,7 @@ let cx= Object.values(obj);
 let bx= cx.map(i=>{
 let lul= i.map(q=>{
 let text= q.split("/").pop();
-return `<a href="//kawiesh.tk/${q}">${text}</a>`;
+return `<a href="/${q}">${text}</a>`;
 });
 return lul;			
 });
