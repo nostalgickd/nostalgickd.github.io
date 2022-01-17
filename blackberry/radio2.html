@@ -276,13 +276,12 @@ currentStation.innerHTML= options[x].innerHTML;// +" : "+ urls[x];
 });
 
 next.onclick= function(){
-skipAudio(menu,urls.length-1,0,1);
+skipAudio(menu,urls.length-1,1,1);
 };
 
 prev.onclick= function(){
 skipAudio(menu,0,urls.length-1,-1);
 };
-
 
 
 
