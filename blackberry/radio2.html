@@ -29,7 +29,7 @@ width: 40px;
 
 div.station>span{
 display: inline-block;
-margin-left: 45px;
+margin-left: 50px;
 text-align: center;
 }
 
@@ -320,7 +320,7 @@ menu.selectedIndex= 1;
 else{
 menu.selectedIndex++;
 }
-menu.dispatchEvent(new Event('change', {bubbles: true}));
+fireChange(menu);
 }
 else{
 if(menu.selectedIndex<=1){
@@ -329,7 +329,7 @@ menu.selectedIndex= urls.length;
 else{
 menu.selectedIndex--;
 }
-menu.dispatchEvent(new Event('change', {bubbles: true}));
+fireChange(menu);
 }
 
 								
@@ -390,6 +390,18 @@ time= time.toTimeString().split(" ")[0];
 timer.innerHTML= time;
 });
 
+
+
+function fireChange(element){
+if ("createEvent" in document) {
+var evt = document.createEvent("HTMLEvents");
+evt.initEvent("change", false, true);
+element.dispatchEvent(evt);
+}
+else{
+element.fireEvent("onchange");								
+}
+}
 
 </script>			
 </body>
