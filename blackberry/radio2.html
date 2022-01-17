@@ -22,6 +22,19 @@ display: block;
 margin-bottom: 10px;
 }
 
+button{
+height: 25px;
+width: 40px;								
+}
+
+div.station>span{
+display: inline-block;
+margin-left: 45px;
+text-align: center;
+}
+
+
+
 
 select{width:200px; height: 25px;}
 audio{width: 250px; height: 30px;}
@@ -44,24 +57,29 @@ cursor: pointer;
 
 <div class="bollywood station">
 <span>Bollywood</span><br>
+<button class="prev">Prev</button>
 <select class="bollywood" required>
 <option value="" disabled selected hidden>Choose a station...</option>
 <optgroup label= "----Bollywood stations----" class="bollywood">
 </optgroup>
 </select>
+<button class="next">Next</button>
 </div>
 
 <div class="sarnamie station">
 <span>Sarnamie</span><br>
+<button class="prev">Prev</button>
 <select class="sarnamie" required>
 <option value="" disabled selected hidden>Choose a station...</option>
 <optgroup label= "----Sarnamie stations----" class="sarnamie">
 </optgroup>
 </select>
+<button class="next">Next</button>
 </div>
 
 <div class="other station">
 <span>Suriname (other)</span><br>
+<button class="prev">Prev</button>
 <select class="other" required>
 <option value="" disabled selected hidden>Choose a station...</option>
 <optgroup label= "----General----" class="general"></optgroup>
@@ -70,11 +88,12 @@ cursor: pointer;
 <optgroup label= "----Christian----" class="christian"></optgroup>
 <optgroup label= "----Other----" class="misc"></optgroup>
 </select>
+<button class="next">Next</button>
 </div>
 
-<button class="prev">Prev</button>
+<span>Listening to: &nbsp;
 <b><span class="cs">Bombay Beats</span></b>&nbsp;
-<button class="next">Next</button>
+</span>
 
 <span class="controls">loading...</span><br>
 <span>Listening for: <span class="time">0</span>s</span>
@@ -240,18 +259,10 @@ createMenu(bollywood,"optgroup.bollywood","select.bollywood");
 //add---source----------------
 var currentStation= document.querySelector("span.cs");
 var controls= document.querySelector(".controls");
-var next= document.querySelector(".next");
-var prev= document.querySelector(".prev");
 
 
-function skipAudio(x,a,b,c){
-if(x.selectedIndex==a){
-x.selectedIndex= b;
-}
-else x.selectedIndex+= c;
 
-x.dispatchEvent(new Event('change', {bubbles: true}));
-}
+
 
 
 
@@ -270,18 +281,14 @@ menu.addEventListener("change", function(){
 for(var x=0; x<options.length; x++){  
 if(options[x].selected){
 updateSrc(urls[x]);
+alert(urls[x]);
 currentStation.innerHTML= options[x].innerHTML;// +" : "+ urls[x];
 }
 }
+
 });
 
-next.onclick= function(){
-skipAudio(menu,urls.length-1,1,1);
-};
 
-prev.onclick= function(){
-skipAudio(menu,0,urls.length-1,-1);
-};
 
 
 
@@ -294,6 +301,50 @@ this.selectedIndex= 0;
 addSource(sarnamie,"select.sarnamie");
 addSource(other,"select.other");
 addSource(bollywood,"select.bollywood");
+
+
+//♥️
+
+var next= document.querySelectorAll(".next");
+var prev= document.querySelectorAll(".prev");
+
+function buttonClick(x,obj,sel,dir){
+x.addEventListener("click", function(){
+var urls= Object.keys(obj);
+var menu= document.querySelector(sel);
+
+if(dir=="next"){
+if(menu.selectedIndex==urls.length){
+menu.selectedIndex= 1;
+}
+else{
+menu.selectedIndex++;
+}
+menu.dispatchEvent(new Event('change', {bubbles: true}));
+}
+else{
+if(menu.selectedIndex<=1){
+menu.selectedIndex= urls.length;
+}
+else{
+menu.selectedIndex--;
+}
+menu.dispatchEvent(new Event('change', {bubbles: true}));
+}
+
+								
+});}
+
+
+buttonClick(next[0],bollywood,"select.bollywood","next");
+buttonClick(next[1],sarnamie,"select.sarnamie","next");
+buttonClick(next[2],other,"select.other","next");
+
+buttonClick(prev[0],bollywood,"select.bollywood","prev");
+buttonClick(prev[1],sarnamie,"select.sarnamie","prev");
+buttonClick(prev[2],other,"select.other","prev");
+
+//♥️
 
 //PLAY BOMBAY BEATS ON LOAD
 window.addEventListener("load", function(){
