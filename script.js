@@ -304,11 +304,7 @@ _hash= _hash.split("#").join("");
 let _rgx= new RegExp(_hash,"i");
 selectAll(".span").forEach(i=>{
 if(_rgx.test(i.innerHTML)){
-if(_prompt){
-let _ask= confirm(`Play ${i.innerHTML} ?`);
-if(_ask) i.click();
-}
-else i.click();
+i.className= ".span .playing";
 }
 });
 }}
