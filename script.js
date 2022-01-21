@@ -297,20 +297,26 @@ about.innerHTML= `
 
 //PLAY STATIONS USING HASH
 
-function checkHash(){
+function checkHash(_prompt){
 let _hash= location.hash;
 if(_hash){
 _hash= _hash.split("#").join("");
 let _rgx= new RegExp(_hash,"i");
 selectAll(".span").forEach(i=>{
-if(_rgx.test(i.innerHTML)) i.click();
+if(_rgx.test(i.innerHTML)){
+if(_prompt){
+let _ask= confirm(`Play ${i.innerHTML} ?`);
+if(_ask) i.click();
+}
+else i.click();
+}
 });
 }}
 
 window.addEventListener('load', ()=>{
-checkHash();
+checkHash(true);
 });
 
 window.addEventListener('hashchange', ()=>{
-checkHash();
+checkHash(false);
 });
