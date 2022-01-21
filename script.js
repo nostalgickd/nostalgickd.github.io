@@ -295,8 +295,8 @@ about.innerHTML= `
 6.628-2.782 11.208.846c4.004 3.169 4.642 7.618 1.692 11.563z"/>
 </svg>`;
 
-//PLAY STATIONS USING HASH
-
+/*
+PLAY STATIONS USING HASH
 function checkHash(_prompt){
 let _hash= location.hash;
 if(_hash){
@@ -304,7 +304,7 @@ _hash= _hash.split("#").join("");
 let _rgx= new RegExp(_hash,"i");
 selectAll(".span").forEach(i=>{
 if(_rgx.test(i.innerHTML)){
-i.className= ".span .playing";
+i.click();
 }
 });
 }}
@@ -316,3 +316,5 @@ checkHash(true);
 window.addEventListener('hashchange', ()=>{
 checkHash(false);
 });
+
+*/
