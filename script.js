@@ -294,3 +294,23 @@ about.innerHTML= `
 4.827c0 1.201-.01 1.81-.01 1.81l-5.035-.011c-.818-6.517 3.435-9.547 4.636-10.363c1.445-.982 
 6.628-2.782 11.208.846c4.004 3.169 4.642 7.618 1.692 11.563z"/>
 </svg>`;
+
+//PLAY STATIONS USING HASH
+
+function checkHash(){
+let _hash= location.hash;
+if(_hash){
+_hash= _hash.split("#").join("");
+let _rgx= new RegExp(_hash,"i");
+selectAll(".span").forEach(i=>{
+if(_rgx.test(i.innerHTML)) i.click();
+});
+}}
+
+window.addEventListener('load', ()=>{
+checkHash();
+});
+
+window.addEventListener('hashchange', ()=>{
+checkHash();
+});
