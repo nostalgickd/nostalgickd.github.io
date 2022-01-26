@@ -42,6 +42,18 @@ justify-content: flex-start;
 align-items: center;
 }
 
+
+
+#tree{
+width: 100%;
+margin-top: 20px;
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+}
+
 .root{
 width: 95%;
 }
@@ -94,10 +106,21 @@ left: -15px;
 
 
 
+.root details[open]::before{
+content:"\00a0\00a0\00a0";
+position: absolute;
+border-left: 1px dotted;
+top:9px;
+left:3px;
+}
+
+
+
 
 .root details ul{
 margin-left: 15px;
 }
+
 
 
 li::before{
@@ -112,10 +135,27 @@ z-index: -10;
 }
 
 
-li:last-child:before{
+li:last-child::before{
 border-bottom: none;
 border-left: none;
 }
+
+/*
+
+li::before{
+content: "\00a0\00a0\00a0";
+border: none;
+border-left: 1px dotted black;
+border-bottom: 1px dotted black;
+height: calc(100% - 1px);
+position: absolute;
+left:-12px;
+top: -8px;
+z-index: -10;
+}
+
+*/
+
 
 a{
 bottom: 0px;
@@ -146,20 +186,98 @@ transform: scale(0.8,0.8);
 </head>
 <body data-nosnippet>
 <div id="container">
+<span>Owner &nbsp;<input></span><br>
+<span>Repo &nbsp;<input></span><br>
+<button>Go</button><br>
+<div id="tree"></div>
+
 
 </div>
 <script>				
+
 let create= (x)=> document.createElement(x),
 select= (x,y=document)=> y.querySelector(x),
 selectAll= (x,y=document)=> y.querySelectorAll(x);
 
+let tree= select("#tree");
+
+let full= {
+  "radio": [
+    "<a href=\"/radio/bollywood.html\">bollywood.html</a>",
+    "<a href=\"/radio/bollywood.js\">bollywood.js</a>",
+    "<a href=\"/radio/index.html\">index.html</a>",
+    "<a href=\"/radio/script.js\">script.js</a>",
+    "<a href=\"/radio/style.css\">style.css</a>",
+    "<a href=\"/radio/suriname.js\">suriname.js</a>"
+  ],
+  "resources": [
+    "<a href=\"/resources/background.jpg\">background.jpg</a>",
+    "<a href=\"/resources/background2.jpg\">background2.jpg</a>",
+    "<a href=\"/resources/chakrapetch.woff\">chakrapetch.woff</a>",
+    "<a href=\"/resources/contact.png\">contact.png</a>",
+    "<a href=\"/resources/email.png\">email.png</a>",
+    "<a href=\"/resources/in.png\">in.png</a>",
+    "<a href=\"/resources/in.svg\">in.svg</a>",
+    "<a href=\"/resources/kawiesh.jpg\">kawiesh.jpg</a>",
+    "<a href=\"/resources/kdradiosorry.mp3\">kdradiosorry.mp3</a>",
+    "<a href=\"/resources/loading.svg\">loading.svg</a>",
+    "<a href=\"/resources/oopshttps.mp3\">oopshttps.mp3</a>",
+    "<a href=\"/resources/playing.svg\">playing.svg</a>",
+    "<a href=\"/resources/sorry-kd-radio.mp3\">sorry-kd-radio.mp3</a>",
+    "<a href=\"/resources/sr.png\">sr.png</a>",
+    "<a href=\"/resources/sr.svg\">sr.svg</a>"
+  ],
+  "radio>old": [
+    "<a href=\"/radio/old/bollywood.html\">bollywood.html</a>",
+    "<a href=\"/radio/old/bollywood.js\">bollywood.js</a>",
+    "<a href=\"/radio/old/index.html\">index.html</a>",
+    "<a href=\"/radio/old/index.js\">index.js</a>",
+    "<a href=\"/radio/old/script.js\">script.js</a>",
+    "<a href=\"/radio/old/style.css\">style.css</a>"
+  ],
+  "resources>artwork": [
+    "<a href=\"/resources/artwork/about.txt\">about.txt</a>",
+    "<a href=\"/resources/artwork/background-128x128.png\">background-128x128.png</a>",
+    "<a href=\"/resources/artwork/background-192x192.png\">background-192x192.png</a>",
+    "<a href=\"/resources/artwork/background-256x256.png\">background-256x256.png</a>",
+    "<a href=\"/resources/artwork/background-384x384.png\">background-384x384.png</a>",
+    "<a href=\"/resources/artwork/background-512x512.png\">background-512x512.png</a>",
+    "<a href=\"/resources/artwork/background-96x96.png\">background-96x96.png</a>"
+  ],
+  "resources>icons": [
+    "<a href=\"/resources/icons/about.txt\">about.txt</a>",
+    "<a href=\"/resources/icons/android-chrome-192x192.png\">android-chrome-192x192.png</a>",
+    "<a href=\"/resources/icons/android-chrome-512x512.png\">android-chrome-512x512.png</a>",
+    "<a href=\"/resources/icons/apple-touch-icon.png\">apple-touch-icon.png</a>",
+    "<a href=\"/resources/icons/browserconfig.xml\">browserconfig.xml</a>",
+    "<a href=\"/resources/icons/favicon-16x16.png\">favicon-16x16.png</a>",
+    "<a href=\"/resources/icons/favicon-32x32.png\">favicon-32x32.png</a>",
+    "<a href=\"/resources/icons/favicon.ico\">favicon.ico</a>",
+    "<a href=\"/resources/icons/mstile-150x150.png\">mstile-150x150.png</a>",
+    "<a href=\"/resources/icons/safari-pinned-tab.svg\">safari-pinned-tab.svg</a>",
+    "<a href=\"/resources/icons/site.webmanifest\">site.webmanifest</a>"
+  ],
+  "radio>old>resources": [
+    "<a href=\"/radio/old/resources/backgroundpic.jpg\">backgroundpic.jpg</a>",
+    "<a href=\"/radio/old/resources/in.png\">in.png</a>",
+    "<a href=\"/radio/old/resources/loading.svg\">loading.svg</a>",
+    "<a href=\"/radio/old/resources/sorry-kd-radio.mp3\">sorry-kd-radio.mp3</a>",
+    "<a href=\"/radio/old/resources/sr.png\">sr.png</a>"
+  ]
+}
+
+
+
+makeTree(full);
+
+
+function makeTree(obj){
 let list = {};
 
-function createDetails(a,b,arr){
+function createDetails(name,arr){
 let det= create("details");
-det.className= a;
 let sum= create("summary");
-sum.innerHTML=	b;
+sum.innerHTML= name;
 let ul= create("ul");
 arr.forEach(i=>{
 let li= create("li");
@@ -168,174 +286,81 @@ ul.append(li);
 });
 det.append(sum,ul);
 
-list[a]= det.outerHTML;
+list[name]= det;
 };
 
 
 
-let obj={
-  "root": [
-    "404.html",
-    "CNAME",
-    "about.html",
-    "bollywood.html",
-    "bollywood.js",
-    "favicon.ico",
-    "index.html",
-    "robots.txt",
-    "script.js",
-    "settings.js",
-    "sitemap.txt",
-    "sitemap.xml",
-    "style.css",
-    "suriname.js",
-    "template.html"
-  ],
-  "blackberry": [
-    "blackberry/about.html",
-    "blackberry/bookmarklet-maker.html",
-    "blackberry/html-editor.html",
-    "blackberry/index.html",
-    "blackberry/radio.html"
-  ],
-  "radio": [
-    "radio/bollywood.html",
-    "radio/bollywood.js",
-    "radio/index.html",
-    "radio/script.js",
-    "radio/style.css",
-    "radio/suriname.js"
-  ],
-  "resources": [
-    "resources/background.jpg",
-    "resources/background2.jpg",
-    "resources/chakrapetch.woff",
-    "resources/contact.png",
-    "resources/email.png",
-    "resources/in.png",
-    "resources/in.svg",
-    "resources/kawiesh.jpg",
-    "resources/kdradiosorry.mp3",
-    "resources/loading.svg",
-    "resources/oopshttps.mp3",
-    "resources/playing.svg",
-    "resources/sorry-kd-radio.mp3",
-    "resources/sr.png",
-    "resources/sr.svg"
-  ],
-  "radio>old": [
-    "radio/old/bollywood.html",
-    "radio/old/bollywood.js",
-    "radio/old/index.html",
-    "radio/old/index.js",
-    "radio/old/script.js",
-    "radio/old/style.css"
-  ],
-  "resources>artwork": [
-    "resources/artwork/about.txt",
-    "resources/artwork/background-128x128.png",
-    "resources/artwork/background-192x192.png",
-    "resources/artwork/background-256x256.png",
-    "resources/artwork/background-384x384.png",
-    "resources/artwork/background-512x512.png",
-    "resources/artwork/background-96x96.png"
-  ],
-  "resources>icons": [
-    "resources/icons/about.txt",
-    "resources/icons/android-chrome-192x192.png",
-    "resources/icons/android-chrome-512x512.png",
-    "resources/icons/apple-touch-icon.png",
-    "resources/icons/browserconfig.xml",
-    "resources/icons/favicon-16x16.png",
-    "resources/icons/favicon-32x32.png",
-    "resources/icons/favicon.ico",
-    "resources/icons/mstile-150x150.png",
-    "resources/icons/safari-pinned-tab.svg",
-    "resources/icons/site.webmanifest"
-  ],
-  "radio>old>resources": [
-    "radio/old/resources/backgroundpic.jpg",
-    "radio/old/resources/in.png",
-    "radio/old/resources/loading.svg",
-    "radio/old/resources/sorry-kd-radio.mp3",
-    "radio/old/resources/sr.png"
-  ]
-};
 
 
-
-let ax= Object.keys(obj);
-let cx= Object.values(obj);
-
-
-let bx= cx.map(i=>{
-let lul= i.map(q=>{
-let text= q.split("/").pop();
-return `<a href="/${q}">${text}</a>`;
+for(let i in obj){
+if (obj.hasOwnProperty(i)){
+obj[i]= obj[i].map(j=>{
+let text= j.split("/");
+text= text[text.length-1];
+return `<a href="/${j}">${text}</a>`;
 });
-return lul;			
-});
-
-
-
-createDetails("radioresources","resources",bx[7]);
-
-
-
-
-
-bx[4].push(list["radioresources"]);
-createDetails("radioold","old",bx[4]);
-bx[2].push(list["radioold"]);
-createDetails("radio","radio",bx[2]);
-
-
-
-createDetails("blackberry","blackberry",bx[1]);
-
-
-
-createDetails("resicon","icons",bx[6]);
-createDetails("artwork","artwork",bx[5]);
-bx[3].push(list["resicon"],list["artwork"]);
-createDetails("resources","resources",bx[3]);
-
-
-
-
-
-bx[0].push(list["radio"],list["blackberry"],list["resources"]);
-createDetails("root","root",bx[0]);
-container.innerHTML= list["root"];
-
-selectAll(".root details").forEach(i=>{
-i.closest("li").classList.add("closed");
-
-i.firstElementChild.onclick=()=>{
-(i.open) ?
-i.closest("li").classList.remove("open"):
-i.closest("li").classList.add("open");
-
-};
-
-});
-
-
-select(".root").open= true;
-select(".root summary").className= "open";
-select(".root summary").onclick= function(){
-this.className= (this.parentNode.open) ? "closed" : "open";				
+}
 }
 
 
-/*
-selectAll("a").forEach(i=>{
-i.onclick=()=>{
-return false;				
-}	;		
 
-});
-*/
+
+
+//Create root folder and remove it from object
+createDetails("root", obj["root"]);
+let root= list["root"];
+root.className= "root";
+root.open= true;
+tree.innerHTML= "";
+tree.append(root);
+delete obj["root"];
+
+
+
+//Handle other folders
+for(let i in obj){
+if (obj.hasOwnProperty(i)){
+
+if(i.includes(">")){
+let klassname= i.split(">");
+createDetails(i,obj[i]);
+list[i].className= klassname.join(" ");
+select("summary",list[i]).innerHTML= klassname.pop();
+//list[i].style.marginLeft= "15px";
+}
+else{
+createDetails(i,obj[i]);
+list[i].className= i;
+let li= create("li");
+li.append(list[i]);
+select("ul",root).append(li);
+}
+
+
+}}
+
+
+for(let i in obj){
+if (obj.hasOwnProperty(i)){
+if(i.includes(">")){
+let hmm= i.split(">");
+
+for(let h=1; h<hmm.length; h++){
+let par= hmm.slice(0,h).join(">");
+let ch= hmm.slice(0,h+1).join(">");
+
+let li= create("li");
+li.append(list[ch]);
+select("ul",list[par]).append(li);
+}
+
+}
+}}
+
+
+}
+
 
 </script>	
 </body>
