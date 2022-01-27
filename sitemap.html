@@ -182,6 +182,12 @@ transform: scale(0.8,0.8);
 }
 
 
+.root{
+margin-top: 10px;
+padding-bottom: 10px;
+border-bottom: 1px solid blue;
+}
+
 </style>
 </head>
 <body data-nosnippet>
@@ -198,7 +204,7 @@ selectAll= (x,y=document)=> y.querySelectorAll(x);
 
 let tree= select("#tree");
 
-let full= {
+let main= {
   "root": [
     "404.html",
     "CNAME",
@@ -280,12 +286,62 @@ let full= {
 };
 
 
+let cdn= {
+  "root": [
+    "404.html",
+    "CNAME",
+    "csseditor.js",
+    "index.html",
+    "jsinjector.js",
+    "linksfilter.js",
+    "linktools.js",
+    "quickcopy.js",
+    "quicksource.js",
+    "shortener.html",
+    "template.html",
+    "videospeed.js"
+  ],
+  "old": [
+    "old/csseditorold.js",
+    "old/index.html",
+    "old/listlinks.js"
+  ],
+  "resources": [
+    "resources/about.txt",
+    "resources/kawieshseemless.png",
+    "resources/starsbg.jpg",
+    "resources/t1.png",
+    "resources/t2.png"
+  ],
+  "tree": [
+    "tree/index.html",
+    "tree/list-files-recursive.html",
+    "tree/list-github-files-recursive.html",
+    "tree/list-github-files.html",
+    "tree/make-github-directory-tree.html"
+  ]
+};
+
+let bb= {
+  "root": [
+    "CNAME",
+    "about.html",
+    "bookmarklet-maker.html",
+    "html-editor.html",
+    "index.html",
+    "oldradio.html",
+    "radio.html"
+  ]
+};
 
 
-makeTree(full);
+
+makeTree(main,"www.kawiesh.tk","https://kawiesh.tk");
+makeTree(cdn,"cdn.kawiesh.tk","https://cdn.kawiesh.tk");
+makeTree(bb,"bb.kawiesh.tk","http://bb.kawiesh.tk");
 
 
-function makeTree(obj){
+function makeTree(obj,rootname,domain){
 let list = {};
 
 function createDetails(name,arr){
@@ -312,7 +368,7 @@ if (obj.hasOwnProperty(i)){
 obj[i]= obj[i].map(j=>{
 let text= j.split("/");
 text= text[text.length-1];
-return `<a href="/${j}">${text}</a>`;
+return `<a href="${domain}/${j}">${text}</a>`;
 });
 }
 }
@@ -322,7 +378,7 @@ return `<a href="/${j}">${text}</a>`;
 
 
 //Create root folder and remove it from object
-createDetails("root", obj["root"]);
+createDetails(rootname, obj["root"]);
 let root= list["root"];
 root.className= "root";
 root.open= true;
