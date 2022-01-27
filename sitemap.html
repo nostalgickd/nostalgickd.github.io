@@ -379,10 +379,10 @@ return `<a href="${domain}/${j}">${text}</a>`;
 
 //Create root folder and remove it from object
 createDetails(rootname, obj["root"]);
-let root= list["root"];
+let root= list[rootname];
 root.className= "root";
 root.open= true;
-tree.innerHTML= "";
+//tree.innerHTML= "";
 tree.append(root);
 delete obj["root"];
 
