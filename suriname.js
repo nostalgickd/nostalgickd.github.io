@@ -21,7 +21,7 @@ let sarnamie= {
 "//stream.zeno.fm/putkar0p9k0uv" : "Bollywood Sur.",
 "//stream.zeno.fm/ctmsytc6em0uv" : "Joyce The Voice",
 "//stream.zeno.fm/xssh6qrf1wzuv" : "Assalaam",
-"//listen.web-radio.co.uk/proxy/radiosbs/radiosbs" : "SBS Radio",
+"//solid48.streamupsolutions.com/proxy/radiosbs/radiosbs" : "SBS Radio",
 };
 
 let general= {
