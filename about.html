@@ -275,7 +275,7 @@ let create= (x)=> document.createElement(x),
 select= (x,y=document)=> y.querySelector(x),
 selectAll= (x,y=document)=> y.querySelectorAll(x);
 
-select(".ul").forEach(i=>{
+selectAll(".ul").forEach(i=>{
 let a= i.innerHTML.split("\n").shift().pop();
 let b= create("ul");
 a.forEach(j=>{
