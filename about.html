@@ -258,6 +258,13 @@ The site relies heavily on JavaScript (>ES 6)
 <span class="css">CSS</span>
 <span class="js">JS</span>
 </div>
+<div class="ul">
+The stream URLs are gathered from the web
+The URLs are stored in a JSON object
+A function is written to loop through the object and create station blocks
+Other functions are written to add functionalities such as play, pause, time update, skip etc
+
+</div>
 </div>
 </details>
 
@@ -267,6 +274,19 @@ The site relies heavily on JavaScript (>ES 6)
 let create= (x)=> document.createElement(x),
 select= (x,y=document)=> y.querySelector(x),
 selectAll= (x,y=document)=> y.querySelectorAll(x);
+
+select(".ul").forEach(i=>{
+let a= i.innerHTML.split("\n").shift().pop();
+let b= create("ul");
+a.forEach(j=>{
+let c= create("li");
+c.innerHTML= j;
+b.append(j);
+});
+i.outerHTML= b.outerHTML;
+});
+
+
 
 let https= select(".https");
 https.innerHTML+= `<svg viewBox="0 0 24 24">
