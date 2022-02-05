@@ -1,5 +1,5 @@
 let sarnamie= {
-//"//168.195.218.193:8000/radio1-1" : "Rapar",
+"//168.195.218.193:8000/radio1-1" : "Rapar",
 "//rs.suricloud.com/radio/8050/radio.mp3" : "Trishul",
 "//stream.zeno.fm/6etys88fup8uv" : "Rasonic",
 "//rs.suricloud.com/radio/8030/radio.mp3" : "Sangeetmala",
