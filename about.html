@@ -276,7 +276,8 @@ select= (x,y=document)=> y.querySelector(x),
 selectAll= (x,y=document)=> y.querySelectorAll(x);
 
 selectAll(".ul").forEach(i=>{
-let a= i.innerHTML.split("\n").shift().pop();
+let a= i.innerHTML.split("\n");
+a.shift(); a.pop();
 let b= create("ul");
 a.forEach(j=>{
 let c= create("li");
