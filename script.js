@@ -274,11 +274,11 @@ meta1.after(meta2);
 
 //INFO LINK
 let about= create("a");
-about.dataset.nosnippet= "";
+about.dataset.nosnippet= true;
 document.body.append(about);
 about.className= "info";
 about.href= "about.html";
-about.target= "_self";
+about.target= "_blank";
 about.innerHTML= `
 <svg class= "info" viewBox="0 0 63 64">
 <path d="M55.826.723H7.916A7.29 7.29 0 0 0 .625 8.014v47.91a7.29 7.29 0 
