@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="black"/>
+<meta name="msapplication-TileColor" content="#da532c"/>
+<meta name="msapplication-navbutton-color" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>About - www.kawiesh.tk</title>
+
+<style>				
+*{
+box-sizing: border-box;
+margin:0; padding:0; 
+outline: none;
+}	
+
+body{
+background: white url(/resources/pattern1.jpg);
+background-size: 90%;
+min-width: 100vw; 
+max-width: 100vw; 
+min-height: 100vh;
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+}
+
+#container{
+height: auto;
+border: 0px solid red;
+margin-top: 20px;
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+font: 12px Arial;
+}
+
+img{
+width: 50px;
+height: 50px;
+border: 1px solid black;
+float: left;
+}
+
+
+#info{
+display: flex;
+flex-direction: column;
+height: 50px;
+justify-content: space-between;
+}
+
+
+.row{
+margin-left: 2px;
+display: flex;
+width: 180px;
+height: 24px;
+}
+
+
+.icon,.info{
+padding: 2px;
+height: 100%;
+display: flex;
+align-items: center;
+border: 1px solid black;
+}
+
+.icon{
+justify-content: center;
+width: 24px;
+margin-right: 2px;
+}
+
+.info{
+justify-content: flex-start;
+font: bold 12px "Courier New";
+width: 150px;
+}
+
+a{
+text-decoration: none;
+}
+
+a:visited{
+color: blue;
+}
+
+h3{
+margin-top: 10px;
+}
+
+
+
+
+@media (orientation:portrait){
+#container{width: 95%;}		
+}	
+
+@media (orientation:landscape){
+#container{width: 75%;}			
+}	
+
+</style>
+</head>
+<body data-nosnippet>
+<div id="container">
+
+<div id="block1">
+<img src="/resources/kawiesh.jpg"/>
+<div id="info">
+<div class="row one">
+   <div class="icon email">E</div>
+   <div class="info email">click to reveal</div>
+</div>
+<div class="row two">
+   <div class="icon twitter">T</div>
+   <div class="info twitter"></div>
+</div>
+</div>
+</div>
+
+
+<div id="block2">
+<h3>About</h3>
+This site holds a collection of Surinamese radio stations 
+and some radio stations airing mostly late 90s & early 2000s Bollywood songs.
+It is not a commercial site and is intended for private use.
+
+
+<h3>Legality</h3>
+The streams are not hosted and or modified by me. <br>
+All the URLs are gathered from the web and were publicly accessible.
+If you have any comment or want to remove/add your/a station, 
+use the contact information on the <a href="#info">top</a> of this page.
+
+
+<h3>Http vs. Https</h3>
+A valid SSL certificate is present on the site but is not 
+used by default. This because some of the radio stations 
+stream their content over http. And it's not possible to 
+access http resources over https.<br><br>
+
+Https is more secure, but because this is a static website 
+(no server-side coding involved) http won't cause any risk.
+
+<i>
+TL;DR: 
+Valid SSL certificate is present, but not used by default. 
+If you want to be on the safer side, you can use https. 
+You won't be able to play all stations though !
+</i>
+
+<h3>Code</h3>
+The site relies heavily on JavaScript (>ES 6).<br>
+<ul>
+<li>URLs are gathered from the web</li>
+<li>These are stored in a JSON object</li>
+<li>Object is looped through to create station blocks</li>
+<li>Functionalities (e.g: play, pause, time update) are added</li>
+</ul>
+
+<h3>Media Controls</h3>
+The following media controls are added and can be used on browsers
+that support the <code>Media Session API</code> (e.g: Chromium 
+based browsers):
+<ul>
+<li>Jump to previous station</li>
+<li>Jump to next station</li>
+</ul>
+<i>These can be used to switch between 
+stations in the background, without opening the browser/page.</i>
+</div>
+
+
+
+</div>
+<script>				
+let create= (x)=> document.createElement(x),
+select= (x,y=document)=> y.querySelector(x),
+selectAll= (x,y=document)=> y.querySelectorAll(x);
+
+let twt= `<svg viewBox="0 0 24 24"><g fill="none"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.229 13.229 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.647 4.647 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.692 4.692 0 0 1-2.104.08a4.661 4.661 0 0 0 4.352 3.234a9.348 9.348 0 0 1-5.786 1.995a9.5 9.5 0 0 1-1.112-.065a13.175 13.175 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254c0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003z" fill="currentColor"/></g></svg>`;
+let eml= `<svg viewBox="0 0 32 32"><path d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-2.2 2L16 14.78L6.2 8zM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24z" fill="currentColor"/></svg>`;
+let _twt= `<a href="https://twitter.com/Kawiesh">@Kawiesh</a>`;
+let _eml= `<a href="mailto:contact@kawiesh.tk">contact@kawiesh.tk</a>`;
+
+
+
+let twitter= select(".icon.twitter");
+let _twitter= select(".info.twitter");
+let email= select(".icon.email");
+let _email= select(".info.email");
+
+
+twitter.innerHTML= twt;
+email.innerHTML= eml;
+_twitter.innerHTML= _twt;
+
+_email.onclick= function(){
+this.innerHTML= _eml;
+};
+
+
+
+</script>	
+</body>
+</html>
