@@ -18,6 +18,12 @@ margin:0; padding:0;
 outline: none;
 }	
 
+:root{
+--height: 75px;
+--half: calc(var(--height) - 2px);
+}
+
+
 body{
 background: white url(/resources/pattern1.png);
 background-size: 90%;
@@ -40,12 +46,13 @@ display: flex;
 flex-direction: column;
 justify-content: flex-start;
 align-items: flex-start;
-font: 12px Arial;
+font: 15px Arial;
 }
 
+
 img{
-width: 50px;
-height: 50px;
+width: var(--height);
+height: var(--height);
 border: 1px solid black;
 float: left;
 }
@@ -54,38 +61,39 @@ float: left;
 #info{
 display: flex;
 flex-direction: column;
-height: 50px;
+height: var(--height);
 justify-content: space-between;
 }
 
 
 .row{
+width: 300px;
+height: calc(var(--half) / 2);
 margin-left: 2px;
 display: flex;
-width: 180px;
-height: 24px;
 }
 
 
 .icon,.info{
-padding: 2px;
 height: 100%;
 display: flex;
 align-items: center;
+padding: 2px;
 border: 1px solid black;
 }
 
 .icon{
+width: calc(var(--half) / 2);
 justify-content: center;
-width: 24px;
 margin-right: 2px;
 }
 
 .info{
+width: 200px;
 justify-content: flex-start;
-font: bold 12px "Courier New";
-width: 150px;
+font: bold 14px "Courier New";
 }
+
 
 a{
 text-decoration: none;
@@ -96,10 +104,16 @@ color: blue;
 }
 
 h3{
-margin-top: 10px;
+margin-top: 15px;
 }
 
+ul{
+list-style: none;
+}
 
+li::before {
+content: "\25a7";
+}
 
 
 @media (orientation:portrait){
@@ -145,8 +159,8 @@ use the contact information on the <a href="#info">top</a> of this page.
 
 
 <h3>Http vs. Https</h3>
-A valid SSL certificate is present on the site but is not 
-used by default. That's because some of the radio stations 
+A valid SSL certificate is present on the site (see padlock icon 
+in the address bar), but is not used by default. That's because some of the radio stations 
 stream their content over http. And it's not possible to 
 access http resources over https.<br><br>
 
@@ -169,14 +183,16 @@ The site relies heavily on JavaScript (>ES 6).<br>
 </ul>
 
 <h3>Media Controls</h3>
-The following media controls are added and can be used on browsers
-that support the <code>Media Session API</code> (e.g: Chromium 
-based browsers):
+The following media controls are added:
 <ul>
-<li>Jump to previous station</li>
-<li>Jump to next station</li>
+<li>Previoustrack: Jump to previous station</li>
+<li>Nexttrack: Jump to next station</li>
 </ul>
-<i>These can be used to switch between 
+<br>
+<i>
+These controls will appear in the notification panel if 
+the browsers supports <code>Media Session API</code> (e.g: Chromium 
+based browsers). The controls can be used to switch between 
 stations in the background, without opening the browser/page.</i>
 <br>
 </div>
