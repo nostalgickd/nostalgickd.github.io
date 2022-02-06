@@ -165,12 +165,12 @@ stream their content over http. And it's not possible to
 access http resources over https.<br><br>
 
 Https is more secure, but because this is a static website 
-(no server-side coding involved) http (most likely) won't cause any risk.
+(no server-side coding involved) http (probably) won't cause any risk.
 
 <i>
 TL;DR: 
 If you want to be able to listen to all the stations, use http. 
-If you want to be on the safer side, use https (not all stations available) !
+If you want to be on the safer side, use https (not all stations will be available) !
 </i>
 
 <h3>Code</h3>
@@ -178,7 +178,7 @@ The site relies heavily on JavaScript (>ES 6).<br>
 <ul>
 <li>URLs are gathered from the web</li>
 <li>These are stored in a JSON object</li>
-<li>Object is looped through to create station blocks</li>
+<li>This object is looped through to create station blocks</li>
 <li>Functionalities (e.g: play, pause, time update) are added</li>
 </ul>
 
@@ -191,7 +191,7 @@ The following media controls are added:
 <br>
 <i>
 These controls will appear in the notification panel if 
-the browsers supports <code>Media Session API</code> (e.g: Chromium 
+the browser supports <code>Media Session API</code> (e.g: Chromium 
 based browsers). The controls can be used to switch between 
 stations in the background, without opening the browser/page.</i>
 <br>
