@@ -61,7 +61,7 @@ border-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWWmZREd
 }
 
 
-img{
+.img{
 width: var(--height);
 height: var(--height);
 border: 1px solid black;
@@ -132,6 +132,12 @@ img,svg{
 max-width: 100%;
 }
 
+
+.ss{
+width: 100%;
+height: auto;
+}
+
 @media (orientation:portrait){
 #container{width: 95%;}		
 }	
@@ -146,7 +152,7 @@ max-width: 100%;
 <div id="container">
 
 <div id="block1">
-<img src="/resources/kawiesh.jpg"/>
+<img class="img" src="/resources/kawiesh.jpg"/>
 <div id="info">
 <div class="row one">
    <div class="icon email">E</div>
@@ -198,12 +204,11 @@ The main code can be found <a href="/script.js">here</a>.<br>
 <li>Functionalities (such as play, pause, time update) are added</li>
 </ul>
 <br>
-<img src="/resources/androidscreenshot.jpg"/>
+
 The site relies heavily on JavaScript (>ES 6).<br>
 The <a href="http://bb.kawiesh.tk/radio">streamlined version</a> 
 of the site (optimized for BlackBerry phones) can be used 
 on older devices that don't support ES6.
-<img src="/resources/bbscreenshot.png"/>
 
 <h3>Media Controls</h3>
 The following media controls are added:
@@ -217,6 +222,14 @@ These controls will appear in the notification panel if
 the browser supports <code>Media Session API</code> (e.g: Chromium 
 based browsers). The controls can be used to switch between 
 stations in the background, without opening the browser/page.</i>
+<br>
+
+<h3>Screenshots</h3>
+<div>Android</div>
+<img class="ss" src="/resources/androidscreenshot.jpg"/>
+<br>
+<div>BlackBerry</div>
+<img class="ss" src="/resources/bbscreenshot.png"/>
 <br>
 </div>
 
