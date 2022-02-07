@@ -35,6 +35,7 @@ display: flex;
 flex-direction: column;
 justify-content: flex-start;
 align-items: center;
+border: 2px double black;
 }
 
 #container{
@@ -123,7 +124,7 @@ list-style: none;
 }
 
 li::before {
-content: "\25a7";
+content: "\2605";
 }
 
 
@@ -163,9 +164,9 @@ It's intended for private/non-commercial use.
 
 
 <h3>Legality</h3>
-The streams are not hosted and/or modified by me. <br>
-The stream URLs are gathered from the web and were publicly accessible.
-If you have any comment or want to remove/add your/a station, 
+The streams are not hosted and or modified by me. <br>
+The stream URLs are gathered from the web and are publicly accessible.
+If you have any comment or want to remove/add your station, 
 use the contact information on the <a href="#info">top</a> of this page.
 
 
@@ -180,8 +181,8 @@ Https is more secure, but because this is a static website
 
 <i>
 TL;DR: 
-If you want to be able to listen to all the stations, use http. 
-If you want to be on the safer side, use https (not all stations will be available) !
+If you want to be able to listen to all stations, use http. 
+If you want to be on the safer side, use https (all stations won't be available) !
 </i>
 
 <h3>Code</h3>
@@ -190,7 +191,7 @@ The site relies heavily on JavaScript (>ES 6).<br>
 <li>URLs are gathered from the web</li>
 <li>These are stored in a JSON object</li>
 <li>This object is looped through to create station blocks</li>
-<li>Functionalities (e.g: play, pause, time update) are added</li>
+<li>Functionalities (such as play, pause, time update) are added</li>
 </ul>
 
 <h3>Media Controls</h3>
