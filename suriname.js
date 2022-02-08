@@ -7,7 +7,7 @@ let sarnamie= {
 "//rs.suricloud.com/radio/8120/radio.mp3" : "Ek Sitara",
 "//my.ssl-stream.com/Suvidha_Radio" : "Suvidha",
 "//rs.suricloud.com/radio/8000/radio.mp3" : "Shruti",
-"//amorfm_192.streampartner.nl/stream" : "Amor",
+"https://amorfm_192.streampartner.nl/stream" : "Amor",
 "//streaming01.x-6.nl:8000/;" : "Srinagar",
 "//server-25.stream-server.nl:8348/stream" : "Sitara FM",
 "//stream.akaashfm.com:8000/live" : "Akaash FM",
