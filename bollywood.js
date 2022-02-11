@@ -1,4 +1,4 @@
-let bollywood0= {
+let bollywood= {
 "http://sc-bb.1.fm:8017":"Bombay Beats",
 "http://109.169.46.197:8011/stream":"Diverse FM",
 "http://music2.vvradio.co.in:2802/stream2":"VV Radio",
@@ -27,7 +27,7 @@ let bollywood0= {
 };
 
 
-let bollywood= {
+let bollywood1= {
 "//strm112.1.fm/bombaybeats_mobile_mp3":"Bombay Beats",
 "//media-ice.co.uk:8000/DiverseAAC":"Diverse FM",
 "//music2.vvradio.co.in:2802/stream2":"VV Radio",
