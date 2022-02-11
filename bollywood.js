@@ -15,7 +15,7 @@ let bollywood0= {
 "https://stream.zeno.fm/2vhb00mhky8uv":"Singham",
 //"https://stream.zeno.fm/d22wrdbst5quv.mp3":"Radio Wow",
 "http://hoth.alonhosting.com:1080/;stream.mp3":"BollyHits",
-"https://s5.alhastream.com/radio/8260/radio":"Nitnut",
+"http://103.179.56.26:8000/radio.aac":"Nitnut",
 "https://stream.zeno.fm/a69txeenvzzuv":"SRK Online",
 "https://stream.bongonet.net/proxy/rhi?mp=/stream":"RHI - Covers",
 "https://stream.zeno.fm/eyxg23ky4x8uv" : "Marudhara",
@@ -28,7 +28,7 @@ let bollywood0= {
 
 
 let bollywood= {
-"//strm112.1.fm/bombaybeats_mobile_mp3":"Bombay Beatz",
+"//strm112.1.fm/bombaybeats_mobile_mp3":"Bombay Beats",
 "//media-ice.co.uk:8000/DiverseAAC":"Diverse FM",
 "//music2.vvradio.co.in:2802/stream2":"VV Radio",
 "//astro4.rastream.com/india?type=mp3":"India Beat",
@@ -44,7 +44,7 @@ let bollywood= {
 "//stream.zeno.fm/2vhb00mhky8uv":"Singham",
 //"https://stream.zeno.fm/d22wrdbst5quv.mp3":"Radio Wow",
 "//stream.zeno.fm/6rth3ywheg8uv":"BollyHits",
-"//s5.alhastream.com/radio/8260/radio":"Nitnut",
+"//stream.zeno.fm/dhytbz6zfchvv":"Nitnut",
 "//stream.zeno.fm/a69txeenvzzuv":"SRK Online",
 "//stream.bongonet.net/proxy/rhi?mp=/stream":"RHI - Covers",
 "//stream.zeno.fm/eyxg23ky4x8uv" : "Marudhara",
