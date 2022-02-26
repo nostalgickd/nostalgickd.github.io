@@ -33,7 +33,7 @@ let general= {
 //"//168.195.218.193:8000/radio2-2" : "Beat FM",
 "//sccn104.serverroom.us:5600/;stream.mp3" : "SCCN Smooth",
 "//rs.suricloud.com/radio/8010/radio.mp3" : "Sky - Pipel",
-"//radiostream.limfmsu.com/radio" : "LIM FM",
+"https://radiostream.limfmsu.com/radio" : "LIM FM",
 "//rs.suricloud.com/radio/8060/radio.mp3" : "Radio 9",
 "//stream.rcast.net/67505": "Suri Lite",
 //"//162.244.80.245:8006/;" : "FM Gold",
