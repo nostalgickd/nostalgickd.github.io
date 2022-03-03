@@ -1,5 +1,5 @@
 let sarnamie= {
-"//audio-edge-es6pf.mia.g.radiomast.io/d7e8093b-6a7e-4442-a096-37f259cb7092" : "Rapar",
+//"//audio-edge-es6pf.mia.g.radiomast.io/d7e8093b-6a7e-4442-a096-37f259cb7092" : "Rapar",
 //"//168.195.218.193:8000/radio1-1" : "Rapar",
 "//rs.suricloud.com/radio/8050/radio.mp3" : "Trishul",
 "//stream.zeno.fm/6etys88fup8uv" : "Rasonic",
@@ -20,7 +20,7 @@ let sarnamie= {
 "//hidradio.live-streams.nl/live?type=.mp3/;stream.mp3" : "HiD Radio",
 "//stream.zeno.fm/kzsmp5qs9k0uv" : "Radio Sarnami",
 "//stream.zeno.fm/putkar0p9k0uv" : "Bollywood Sur.",
-//"//stream.zeno.fm/ctmsytc6em0uv" : "Joyce The Voice",
+"//stream.zeno.fm/ctmsytc6em0uv" : "Joyce The Voice",
 "//stream.zeno.fm/xssh6qrf1wzuv" : "Assalaam",
 "//solid48.streamupsolutions.com/proxy/radiosbs/radiosbs" : "SBS Radio",
 };
