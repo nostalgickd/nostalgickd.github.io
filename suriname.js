@@ -4,7 +4,8 @@ let sarnamie= {
 "//rs.suricloud.com/radio/8050/radio.mp3" : "Trishul",
 "//stream.zeno.fm/6etys88fup8uv" : "Rasonic",
 "//rs.suricloud.com/radio/8030/radio.mp3" : "Sangeetmala",
-"//stream.zeno.fm/nrs4d44vzv8uv;" : "Ishara",
+//"//stream.zeno.fm/nrs4d44vzv8uv;" : "Ishara",
+"//stream.zeno.fm/nqm3a44vzv8uv" : "Ishara",
 "//rs.suricloud.com/radio/8120/radio.mp3" : "Ek Sitara",
 "//my.ssl-stream.com/Suvidha_Radio" : "Suvidha",
 "//rs.suricloud.com/radio/8000/radio.mp3" : "Shruti",
@@ -27,7 +28,8 @@ let sarnamie= {
 
 let general= {
 "//stream.zeno.fm/7qt8yd08qchvv" : "ABC",
-"//stream.prography.com/stream/8064" : "Apintie",
+//"//stream.prography.com/stream/8064" : "Apintie",
+"//stream.zeno.fm/zh2rs490x68uv" : "Apintie",
 "//streams.radio.co/s28bc986cd/listen" : "Radio 10",
 //"//168.195.218.193:8000/radio1-3" : "RP Hot One",
 //"//168.195.218.193:8000/radio2-2" : "Beat FM",
@@ -50,7 +52,9 @@ let general= {
 "//larry.torontocast.com:1795/stream" : "Neutral",
 "//stream.zeno.fm/xsdmzxyhc18uv" : "Radio 804",
 "//stream.zeno.fm/5tv3n9cw008uv" : "Lime",
-"//stream.zeno.fm/zduxspz4kv8uv" : "Fan Da Libi"
+"//stream.zeno.fm/zduxspz4kv8uv" : "Fan Da Libi",
+"//stream.zeno.fm/y3k2cb2mpchvv" : "Ollies Radio",
+"//stream.zeno.fm/abb1cne92hhvv" : "DC SuriRadio"
 };
 
 let javanese= {
@@ -60,6 +64,7 @@ let javanese= {
 "//s5.radio.co/s1735f3c1d/listen" : "Surja Vibes",
 "//stream.zeno.fm/w6hh0rqqwy8uv" : "DjRegi",
 "//betelgeuse.dribbcast.com/proxy/abhost?mp=/stream" : "Bangsa Jawa",
+"//stream.zeno.fm/u3abxhenhf9uv" : "Tamanredjo Talents"
 };
 
 let sranang= {
@@ -72,13 +77,18 @@ let sranang= {
 "//stream.zenolive.com/6te6g6ubed0uv.aac" : "Radio Anda",
 //"//178.63.94.130:8080/9181316.ogg" : "Positive",
 "//stanvasteradio.gkstreamen.nl:8120/;" : "Stanvaste Radio",
-"//46.4.5.234:8080/9173707.ogg" : "Asosye",
+//"//46.4.5.234:8080/9173707.ogg" : "Asosye",
+"//stream.zeno.fm/q4wkxqmdqchvv" : "Asosye",
 "//patmos.cdnstream.com/proxy/rifawaka/?mp=/stream" : "Fawaka",
 "//clare.shoutca.st/radio/8070/radio.mp3":"MS Radio",
 "//stream.zeno.fm/ysd1dvrtcv8uv" : "Ketebuna",
 "//stream.zeno.fm/rnf3xu9tgs8uv" : "Boeskondee Media",
 "//stream.zeno.fm/1sqwfhqwra0uv" : "Fandaaki Paanzu",
 "//stream.zeno.fm/kyve9mgds18uv" : "Radio Totness",
+"//stream.zeno.fm/db9pak567ehvv" : "DJBadJho",
+"//stream.zeno.fm/unz726g6kfhvv" : "Maipa",
+"//stream.zeno.fm/p0d98x5phs8uv" : "DoubleB 2",
+"//stream.zeno.fm/ym53qqc53hhvv" : "Sam Taki"
 };
 
 let christian= {
@@ -88,6 +98,7 @@ let christian= {
 //"//198.7.59.204/stream.mp3?ipport=198.7.59.204_31366" : "Radio 7 Gospel",
 "//cc5.beheerstream.com/proxy/exoticaradio?mp=/stream" : "Radio mArt",
 "//stream.zeno.fm/kadt188ugy8uv" : "Afonsoewa",
+"//stream.zeno.fm/31gfhb24kfhvv" : "Tzgospel Swahili"
 };
 
 let other= {
