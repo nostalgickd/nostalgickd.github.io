@@ -88,7 +88,9 @@ let sranang= {
 "//stream.zeno.fm/db9pak567ehvv" : "DJBadJho",
 "//stream.zeno.fm/unz726g6kfhvv" : "Maipa",
 "//stream.zeno.fm/p0d98x5phs8uv" : "DoubleB 2",
-"//stream.zeno.fm/ym53qqc53hhvv" : "Sam Taki"
+"//stream.zeno.fm/ym53qqc53hhvv" : "Sam Taki",
+
+"/resources/placeholder.mp3" : "Placeholder"
 };
 
 let christian= {
