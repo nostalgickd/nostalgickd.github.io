@@ -107,6 +107,8 @@ let other= {
 "//d1x0scdnoh33b7.cloudfront.net/olonradio/537b9f27/master.m3u8" : "Razo",
 "//d1x0scdnoh33b7.cloudfront.net/olonradio/7fb21f1b/master.m3u8" : "Caribbean FM",
 "//stream.prography.com/stream/8066" : "LPM Portugese",
+
+"/resources/placeholder.mp3" : "Placeholder"
 };
 
 
