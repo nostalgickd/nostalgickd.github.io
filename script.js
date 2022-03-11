@@ -2,12 +2,15 @@ let message= `Not all stations can be played, because you're viewing this page o
 
 Click "OK" to load now or "Cancel" to keep using https!`;
 
+
 let _https= (location.protocol=="https:");
+
+/*
 if(_https){
 let _alert= confirm(message);
 if(_alert) location= location.href.replace(location.protocol,"http:")
 }
-
+*/
 
 //------------------------------------------------
 let create= (x)=> document.createElement(x),
