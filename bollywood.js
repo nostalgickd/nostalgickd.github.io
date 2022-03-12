@@ -9,7 +9,7 @@ let bollywood= {
 "http://indifun.net:7000/;stream.nsv":"Indifun",
 "http://peridot.streamguys.com:7150/Mirchi":"Mirchi FM",
 "http://79.120.39.202:8002/indiancinema":"Caprice",
-"https://prclive1.listenon.in/":"Radio City [Talk]",
+//"https://prclive1.listenon.in/":"Radio City [Talk]",
 "https://funasia.streamguys1.com/live9":"Big Melodies",
 "https://cp12.serverse.com/proxy/hummfm?mp=/live":"Humm FM",
 "https://stream.zeno.fm/2vhb00mhky8uv":"Singham",
@@ -23,7 +23,10 @@ let bollywood= {
 "https://drive.uber.radio/uber/bollywooduditnarayan/icecast.audio" : "Udit Narayan",
 "https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio" : "Alka Yagnik",
 "https://stream.zeno.fm/8e9q38tg7zquv" : "Hindi Music",
-"https://drive.uber.radio/uber/bollywoodvishalandshekhar/icecast.audio":"Vishal & Shekhar"
+"https://drive.uber.radio/uber/bollywoodvishalandshekhar/icecast.audio":"Vishal & Shekhar",
+"https://stream.zeno.fm/4zg81bp7a5zuv" : "SB FM Parepare",
+"https://stream.zeno.fm/4gfevnscvp8uv" : "DesiZone 90s",
+"https://stream.zeno.fm/y0ce4dbtfa0uv" : "Indias Movies"
 };
 
 
@@ -60,6 +63,6 @@ let bollywood1= {
 let list= [bollywood];
 let liststring= "bollywood";
 
-let block= "[2,3,4,5,7,8,10,12]";
+let block= "[2,3,4,5,8,11,17,18]";
 let blocklist= localStorage["_block"]|| block;
 block= JSON.parse(blocklist);
