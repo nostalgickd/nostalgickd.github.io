@@ -26,6 +26,7 @@ let bollywood= {
 "https://drive.uber.radio/uber/bollywoodvishalandshekhar/icecast.audio":"Vishal & Shekhar",
 "https://stream.zeno.fm/4zg81bp7a5zuv" : "SB FM Parepare",
 "https://stream.zeno.fm/4gfevnscvp8uv" : "DesiZone 90s",
+"https://stream.zeno.fm/uspcm0rcvp8uv" : "DesiZone 2000s",
 "https://stream.zeno.fm/y0ce4dbtfa0uv" : "Indias Movies"
 };
 
@@ -63,6 +64,6 @@ let bollywood1= {
 let list= [bollywood];
 let liststring= "bollywood";
 
-let block= "[2,3,4,5,8,11,17,18]";
+let block= "[2,4,5,8,11,17,18]";
 let blocklist= localStorage["_block"]|| block;
 block= JSON.parse(blocklist);
