@@ -31,37 +31,31 @@ let bollywood= {
 };
 
 
-let bollywood1= {
-"//strm112.1.fm/bombaybeats_mobile_mp3":"Bombay Beats",
-"//media-ice.co.uk:8000/DiverseAAC":"Diverse FM",
-"//music2.vvradio.co.in:2802/stream2":"VV Radio",
-"//astro4.rastream.com/india?type=mp3":"India Beat",
-"//c5.radioboss.fm:18125/stream":"Manpasand",
-"//stream.zeno.fm/cngd2qk67reuv":"Taal",
-"//eu47-sonic.instainternet.com/8068/stream":"Himal Filmy",
-"//indifun.net:7000/;stream.nsv":"Indifun",
-"//peridot.streamguys.com:7150/Mirchi":"Mirchi FM",
-"//stream.zeno.fm/vmp0tkewzv8uv":"Caprice",
-"//prclive1.listenon.in/":"Radio City [Talk]",
-"//funasia.streamguys1.com/live9":"Big Melodies",
-"//cp12.serverse.com/proxy/hummfm?mp=/live":"Humm FM",
-"//stream.zeno.fm/2vhb00mhky8uv":"Singham",
-//"https://stream.zeno.fm/d22wrdbst5quv.mp3":"Radio Wow",
-"//stream.zeno.fm/6rth3ywheg8uv":"BollyHits",
-"//stream.zeno.fm/dhytbz6zfchvv":"Nitnut",
-"//stream.zeno.fm/a69txeenvzzuv":"SRK Online",
-"//stream.bongonet.net/proxy/rhi?mp=/stream":"RHI - Covers",
-"//stream.zeno.fm/eyxg23ky4x8uv" : "Marudhara",
-"//stream.zeno.fm/8wk1s0pt008uv" : "NP 24",
-"//drive.uber.radio/uber/bollywooduditnarayan/icecast.audio" : "Udit Narayan",
-"//drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio" : "Alka Yagnik",
-"//stream.zeno.fm/8e9q38tg7zquv" : "Hindi Music",
-"//drive.uber.radio/uber/bollywoodvishalandshekhar/icecast.audio":"Vishal & Shekhar"
-};
+//--------
 
+let proxy0= "https://www.liveradio.es/";
+let proxy= "https://cors.bitwize.com.lb/";
 
+function addProxy(oldobj,newobj){
+for(let key in oldobj){
+if(!key.startsWith("https")){
+newobj[`${proxy}${key}`]= `${oldobj[key]} !!!`;
+}
+else newobj[key]= oldobj[key];
+}
+}
 
 let list= [bollywood];
+
+//Add proxy, only when viewing over HTTPS
+if(location.protocol=="https:"){
+let bollywood1={};
+let list1= [bollywood1];
+list.forEach((i,x)=> addProxy(list[x],list1[x]));
+list= list1;
+}
+
+
 let liststring= "bollywood";
 
 let block= "[2,4,5,8,10,12,18,19]";
