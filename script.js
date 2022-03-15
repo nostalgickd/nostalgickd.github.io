@@ -10,6 +10,10 @@ if(_https){
 let _alert= confirm(message);
 if(_alert) location= location.href.replace(location.protocol,"http:")
 }
+
+let offline= _https ? 
+"/resources/oopshttps.mp3" :
+"/resources/kdradiosorry.mp3" ;
 */
 
 //------------------------------------------------
@@ -17,9 +21,7 @@ let create= (x)=> document.createElement(x),
 select= (x,y=document)=> y.querySelector(x),
 selectAll= (x,y=document)=> y.querySelectorAll(x);
 
-let offline= _https ? 
-"/resources/oopshttps.mp3" :
-"/resources/kdradiosorry.mp3" ;
+let offline= "/resources/kdradiosorry.mp3" ;
 srflag= select("#sr"),
 inflag= select("#in"),
 hide= select("#hide"),
