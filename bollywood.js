@@ -39,7 +39,7 @@ let proxy= "https://cors.bitwize.com.lb/";
 function addProxy(oldobj,newobj){
 for(let key in oldobj){
 if(!key.startsWith("https")){
-newobj[`${proxy}${key}`]= `${oldobj[key]} !!!`;
+newobj[`${proxy}${key}`]= `${oldobj[key]} !`;
 }
 else newobj[key]= oldobj[key];
 }
