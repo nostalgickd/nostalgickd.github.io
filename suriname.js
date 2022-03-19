@@ -16,11 +16,11 @@ let sarnamie= {
 "https://server4.ujala.nl/stream/2/listen.mp3" : "Ujala",
 "https://stream.sfmstreaming.nl/sunrisefm" : "Sunrise FM",
 "http://stream2.iqhosted.nl:8000/stream/1/" : "Sangam",
-//"https://rs.suricloud.com/radio/8130/radio.mp3" : "Sargam",
+"https://rs.suricloud.com/radio/8130/radio.mp3" : "Sargam",
 "https://hidradio.live-streams.nl/live?type=.mp3/;stream.mp3" : "HiD Radio",
 "https://stream.zeno.fm/kzsmp5qs9k0uv" : "Radio Sarnami",
 "https://stream.zeno.fm/putkar0p9k0uv" : "Bollywood Sur.",
-"https://stream.zeno.fm/ctmsytc6em0uv" : "Joyce The Voice",
+//"https://stream.zeno.fm/ctmsytc6em0uv" : "Joyce The Voice",
 "https://stream.zeno.fm/xssh6qrf1wzuv" : "Assalaam",
 "https://solid48.streamupsolutions.com/proxy/radiosbs/radiosbs" : "SBS Radio",
 };
