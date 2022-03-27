@@ -29,6 +29,7 @@ let general= {
 "https://stream.zeno.fm/7qt8yd08qchvv" : "ABC",
 //"https://stream.prography.com/stream/8064" : "Apintie",
 "https://stream.zeno.fm/zh2rs490x68uv" : "Apintie",
+"https://surilive.com:8060/;" : "SRS",
 "https://streams.radio.co/s28bc986cd/listen" : "Radio 10",
 //"https://168.195.218.193:8000/radio1-3" : "RP Hot One",
 //"https://168.195.218.193:8000/radio2-2" : "Beat FM",
@@ -51,9 +52,6 @@ let general= {
 "https://larry.torontocast.com:1795/stream" : "Neutral",
 "https://stream.zeno.fm/xsdmzxyhc18uv" : "Radio 804",
 "https://stream.zeno.fm/5tv3n9cw008uv" : "Lime",
-"https://stream.zeno.fm/zduxspz4kv8uv" : "Fan Da Libi",
-"https://stream.zeno.fm/y3k2cb2mpchvv" : "Ollies Radio",
-"https://stream.zeno.fm/abb1cne92hhvv" : "DC SuriRadio"
 };
 
 let javanese= {
@@ -67,11 +65,14 @@ let javanese= {
 };
 
 let sranang= {
-"https://surilive.com:8060/;" : "SRS",
+
 "https://mediaserv30.live-streams.nl:18020/stream" : "Konmakandra",
 "https://canopus.dribbcast.com/stream/8052" : "Anjisa",
 "https://worldstreaminglive.com/proxy/koyeba/stream" : "Koyeba FM",
-"https://stream.prography.nl/stream/8062" : "Boskopu",
+//"https://stream.prography.nl/stream/8062" : "Boskopu",
+"https://stream.zeno.fm/zduxspz4kv8uv" : "Fan Da Libi",
+"https://stream.zeno.fm/y3k2cb2mpchvv" : "Ollies Radio",
+"https://stream.zeno.fm/abb1cne92hhvv" : "DC SuriRadio",
 //"https://91.196.171.99/radiobrasa" : "Brasa",
 "https://stream.zenolive.com/6te6g6ubed0uv.aac" : "Radio Anda",
 //"https://178.63.94.130:8080/9181316.ogg" : "Positive",
@@ -88,6 +89,7 @@ let sranang= {
 "https://stream.zeno.fm/unz726g6kfhvv" : "Maipa",
 "https://stream.zeno.fm/p0d98x5phs8uv" : "DoubleB 2",
 "https://stream.zeno.fm/ym53qqc53hhvv" : "Sam Taki",
+"https://stream.zeno.fm/gg7afgcuhkhvv" : "Makandi",
 //"https://kawiesh.tk/resources/placeholder.mp3" : "Placeholder"
 };
 
