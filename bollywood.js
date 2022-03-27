@@ -34,13 +34,14 @@ let bollywood= {
 
 //--------
 
-let proxy0= "https://www.liveradio.es/";
-let proxy= "https://cors.bitwize.com.lb/";
+let proxy0= "https://cors.bitwize.com.lb/";
+let proxy1= "https://www.liveradio.es/";
+let proxy2= "https://api.codetabs.com/v1/proxy?quest=";
 
 function addProxy(oldobj,newobj){
 for(let key in oldobj){
 if(!key.startsWith("https")){
-newobj[`${proxy}${key}`]= `${oldobj[key]} !`;
+newobj[`${proxy0}${key}`]= `${oldobj[key]} !`;
 }
 else newobj[key]= oldobj[key];
 }
