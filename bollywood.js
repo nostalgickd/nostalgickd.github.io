@@ -1,6 +1,7 @@
 let bollywood= {
 "https://strm112.1.fm/bombaybeats_mobile_mp3":"Bombay Beats",
-"https://media-ice.co.uk:8000/DiverseAAC":"Diverse FM",
+//"https://media-ice.co.uk:8000/DiverseAAC":"Diverse FM",
+"https://a11.streamgb.com/proxy/radioxl?mp=/stream":"Diverse FM",
 "https://eu1.fastcast4u.com/proxy/vvradio?mp=/;":"VV Radio",
 "https://astro4.rastream.com/india?type=mp3":"India Beat",
 "https://c5.radioboss.fm:18125/stream":"Manpasand",
