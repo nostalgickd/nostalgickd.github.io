@@ -1,26 +1,10 @@
-/*
-let message= `Not all stations can be played, because you're viewing this page over https. Load the page over http to be able to play all stations.
-
-Click "OK" to load now or "Cancel" to keep using https!`;
-
-
-let _https= (location.protocol=="https:");
-if(_https){
-let _alert= confirm(message);
-if(_alert) location= location.href.replace(location.protocol,"http:")
-}
-
-let offline= _https ? 
-"/resources/oopshttps.mp3" :
-"/resources/kdradiosorry.mp3" ;
-*/
-
 //------------------------------------------------
 let create= (x)=> document.createElement(x),
 select= (x,y=document)=> y.querySelector(x),
 selectAll= (x,y=document)=> y.querySelectorAll(x);
 
 let offline= "/resources/kdradiosorry.mp3",
+isoffline= new URL(offline, location),
 srflag= select("#sr"),
 inflag= select("#in"),
 hide= select("#hide"),
@@ -43,30 +27,52 @@ right.innerHTML= `<svg class="dir" viewBox="0 0 24 24"><g>
 </g></svg>`;
 }
 
-genre.innerHTML= liststring.split(",")[0];
+
 
 
 document.body.onselectstart=()=> false;
 if(srflag) srflag.onclick=()=> location= "/";
 if(inflag) inflag.onclick=()=> location= "bollywood.html";			
-pause.onclick=()=> audio.paused ? audio.play() : audio.pause();
 
-selectAll("body *").forEach(i=>{
-i.dataset.nosnippet= "";
-});
+pause.onclick=()=>{
+let red= select(".paused");
+let green= select(".playing");
+if(audio.paused){
+audio.play();
+red.className= "span playing";
+}
+else{
+audio.pause();
+green.className= "span paused";
+}
+};
+
 
 
 //------INITIAL SETUP --------
 if(list.length > 1){
-main(list[0]);
+main(list[lang]);
 left.onclick=()=> change("left");
 right.onclick=()=> change("right");
 toggle.style.visibility= "visible";
+genre.innerHTML=location.hash=liststring[lang];
 }
 else{
 main(list[0]);
-toggle.style.visibility= "hidden";	
+toggle.style.visibility= "hidden";
 }
+
+
+window.onhashchange=()=>{
+lolz();
+//alert(hash + ":"+ lang);
+container.innerHTML= "";
+main(list[lang]);
+genre.innerHTML=liststring[lang];
+
+
+};
+
 
 
 
@@ -82,7 +88,7 @@ hide.style.visibility= "hidden";
 }
 
 
-//----------------------------------⭐⭐⭐⭐
+//----------------------------------â­â­â­â­
 function main(list){
 url= Object.keys(list);
 name= Object.values(list);
@@ -109,14 +115,14 @@ stationInfo(i);
 };
 });
 
+
+saveState();
 }
-//----------------------------------⭐⭐⭐⭐
 
 
 
 
-
-//Helper---functions---❤
+//*****HELPER*****FUNCTIONS*****
 
 
 
@@ -124,7 +130,6 @@ stationInfo(i);
 function stationInfo(x){
 audio.ontimeupdate=()=>{
 if(audio.currentTime>1){
-let isoffline= new URL(offline, location);
 if(audio.currentSrc==isoffline){
   x.className= "span offline";
   document.title= x.innerText + " [offline] - KD Radio";
@@ -237,24 +242,24 @@ if(index==x) genre.innerHTML= i;
 
 
 //-----Change genres-----------
-let current= 0;
 let maxstations= list.length;
 function change(direction){
 //audio.pause();
 container.innerHTML= "";
 
 if(direction=="right"){
-if(current==maxstations-1) current= -1;
-current++;
-main(list[current]);
-checkGenre(current);
+if(lang==maxstations-1) lang= -1;
+lang++;
 }
 else if(direction=="left"){
-if(current==0) current= maxstations;
-current--;
-main(list[current]);
-checkGenre(current);
+if(lang==0) lang= maxstations;
+lang--;
 }
+
+main(list[lang]);
+genre.innerHTML=location.hash= liststring[lang];
+
+
 }
 
 
@@ -299,26 +304,26 @@ about.innerHTML= `
 6.628-2.782 11.208.846c4.004 3.169 4.642 7.618 1.692 11.563z"/>
 </svg>`;
 
-/*
-PLAY STATIONS USING HASH
-function checkHash(_prompt){
-let _hash= location.hash;
-if(_hash){
-_hash= _hash.split("#").join("");
-let _rgx= new RegExp(_hash,"i");
-selectAll(".span").forEach(i=>{
-if(_rgx.test(i.innerHTML)){
-i.click();
-}
+
+
+selectAll("body *").forEach(i=>{
+i.dataset.nosnippet= "true";
 });
+
+
+function saveState(){
+let source= select("source",audio);
+if(!source) return;
+
+for(let i=0; i<url.length; i++){
+if(source.src==url[i]){
+
+   if(audio.currentSrc==isoffline){
+   span[i].className= "span offline";
+   return;
+   }
+
+   span[i].className= (audio.paused) ? "span paused" : "span playing";
+   return;
 }}
-
-window.addEventListener('load', ()=>{
-checkHash(true);
-});
-
-window.addEventListener('hashchange', ()=>{
-checkHash(false);
-});
-
-*/
+}
