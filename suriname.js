@@ -111,39 +111,59 @@ let other= {
 };
 
 
-//----------------
+//--------
 
-let proxy0= "https://www.liveradio.es/";
-let proxy= "https://cors.bitwize.com.lb/";
+let proxy0= "https://cors.bitwize.com.lb/";
+let proxy1= "https://www.liveradio.es/";
+let proxy2= "https://api.codetabs.com/v1/proxy?quest=";
 
 function addProxy(oldobj,newobj){
 for(let key in oldobj){
 if(!key.startsWith("https")){
-newobj[`${proxy}${key}`]= `${oldobj[key]} !`;
+newobj[`${proxy0}${key}`]= `${oldobj[key]} !`;
 }
 else newobj[key]= oldobj[key];
 }
 }
 
-
-let list= [sarnamie,general,sranang,christian,javanese,other];
-
-
-//Add proxy, only when viewing over HTTPS
+//PROXY OVER HTTPS
 if(location.protocol=="https:"){
-let sarnamie1={},general1={},sranang1={},christian1={},javanese1={},other1={};
-let list1= [sarnamie1,general1,sranang1,christian1,javanese1,other1];
+let bollywood1={};
+let list1= [bollywood1];
 list.forEach((i,x)=> addProxy(list[x],list1[x]));
 list= list1;
+l
 }
 
-																					
-let liststring= "sarnamie,general,sranang,christian,javanese,other";
-let block= [];
+
+let list= [sarnamie,general,sranang,christian,javanese,other],
+liststring= "sarnamie,general,sranang,christian,javanese,other";
+liststring= liststring.split(",");
 
 
-/*----To Do:
-block= [0,4,5,6,8,9];
-let block= "[]";
+//HIDE STATIONS
+let block= "[2,4,5,8,10,12,18,19]";
 let blocklist= localStorage["_block"]|| block;
-block= JSON.parse(blocklist);----*/
+block= JSON.parse(blocklist);
+block= [];
+
+
+
+//LOCATION HASH
+let lang= 0;
+let hash= liststring[lang];
+
+function lolz(){
+hash= location.hash.replace("#","");
+for(let i=0; i<liststring.length; i++){
+if(liststring[i]==hash){
+lang= i;
+break;
+}
+else lang= 0;
+
+}
+}
+
+
+lolz();
