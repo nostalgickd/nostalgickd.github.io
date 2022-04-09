@@ -126,6 +126,14 @@ else newobj[key]= oldobj[key];
 }
 }
 
+
+
+
+let list= [sarnamie,general,sranang,christian,javanese,other],
+liststring= "sarnamie,general,sranang,christian,javanese,other";
+liststring= liststring.split(",");
+
+
 //PROXY OVER HTTPS
 if(location.protocol=="https:"){
 let bollywood1={};
@@ -134,11 +142,6 @@ list.forEach((i,x)=> addProxy(list[x],list1[x]));
 list= list1;
 l
 }
-
-
-let list= [sarnamie,general,sranang,christian,javanese,other],
-liststring= "sarnamie,general,sranang,christian,javanese,other";
-liststring= liststring.split(",");
 
 
 //HIDE STATIONS
