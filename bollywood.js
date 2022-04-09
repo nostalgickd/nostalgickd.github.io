@@ -48,19 +48,43 @@ else newobj[key]= oldobj[key];
 }
 }
 
-let list= [bollywood];
-
-//Add proxy, only when viewing over HTTPS
+//PROXY OVER HTTPS
 if(location.protocol=="https:"){
 let bollywood1={};
 let list1= [bollywood1];
 list.forEach((i,x)=> addProxy(list[x],list1[x]));
 list= list1;
+l
 }
 
 
-let liststring= "bollywood";
+let list= [bollywood],
+liststring= "bollywood";
+liststring= liststring.split(",");
 
+
+//HIDE STATIONS
 let block= "[2,4,5,8,10,12,18,19]";
 let blocklist= localStorage["_block"]|| block;
 block= JSON.parse(blocklist);
+
+
+
+//LOCATION HASH
+let lang= 0;
+let hash= liststring[lang];
+
+function lolz(){
+hash= location.hash.replace("#","");
+for(let i=0; i<liststring.length; i++){
+if(liststring[i]==hash){
+lang= i;
+break;
+}
+else lang= 0;
+
+}
+}
+
+
+lolz();
