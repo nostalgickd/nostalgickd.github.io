@@ -48,19 +48,19 @@ else newobj[key]= oldobj[key];
 }
 }
 
+
+
+let list= [bollywood],
+liststring= "bollywood";
+liststring= liststring.split(",");
+
 //PROXY OVER HTTPS
 if(location.protocol=="https:"){
 let bollywood1={};
 let list1= [bollywood1];
 list.forEach((i,x)=> addProxy(list[x],list1[x]));
 list= list1;
-l
 }
-
-
-let list= [bollywood],
-liststring= "bollywood";
-liststring= liststring.split(",");
 
 
 //HIDE STATIONS
