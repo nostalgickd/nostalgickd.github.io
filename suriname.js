@@ -20,7 +20,8 @@ let sarnamie= {
 "https://hidradio.live-streams.nl/live?type=.mp3/;stream.mp3" : "HiD Radio",
 "https://stream.zeno.fm/kzsmp5qs9k0uv" : "Radio Sarnami",
 "https://stream.zeno.fm/putkar0p9k0uv" : "Bollywood Sur.",
-//"https://stream.zeno.fm/ctmsytc6em0uv" : "Joyce The Voice",
+"https://stream.zeno.fm/ctmsytc6em0uv" : "Joyce The Voice",
+"https://stream.zeno.fm/p218h6ccxnhvv" : "AVS Radio",
 "https://stream.zeno.fm/xssh6qrf1wzuv" : "Assalaam",
 "https://solid48.streamupsolutions.com/proxy/radiosbs/radiosbs" : "SBS Radio",
 };
