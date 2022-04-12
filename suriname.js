@@ -31,7 +31,8 @@ let general= {
 //"https://stream.prography.com/stream/8064" : "Apintie",
 "https://stream.zeno.fm/zh2rs490x68uv" : "Apintie",
 "https://surilive.com:8060/;" : "SRS",
-"https://streams.radio.co/s28bc986cd/listen" : "Radio 10",
+"https://s5.radio.co/s85a633f73/listen" : "Radio 10",
+//"https://streams.radio.co/s28bc986cd/listen" : "Radio 10",
 //"https://168.195.218.193:8000/radio1-3" : "RP Hot One",
 //"https://168.195.218.193:8000/radio2-2" : "Beat FM",
 "http://sccn104.serverroom.us:5600/;stream.mp3" : "SCCN Smooth",
@@ -40,11 +41,13 @@ let general= {
 "https://rs.suricloud.com/radio/8060/radio.mp3" : "Radio 9",
 "https://stream.rcast.net/67505": "Suri Lite",
 //"https://162.244.80.245:8006/;" : "FM Gold",
-"https://canopus.dribbcast.com/stream/8052/stream/1/" : "Color Radio",
+"https://surilive.com:8070/;" : "Color Radio",
+//"https://canopus.dribbcast.com/stream/8052/stream/1/" : "Color Radio",
 //"https://solid41.streamupsolutions.com/proxy/yjdqldwt?mp=/stream" : "Da Beat",
 //"https://streaming.shoutcast.com/we-radio?" : "WE Radio",
 "https://caster05.streampakket.com/proxy/9338/stream/1/" : "Tamara",
-"https://canopus.dribbcast.com/stream/8010" : "NIO FM",
+"https://surilive.com:8010/;" : "NIO FM",
+//"https://canopus.dribbcast.com/stream/8010" : "NIO FM",
 //"https://127.0.0.1:26671/listen.pls" : "Radio One",
 //"https://listen.shoutcast.com/k1009" : "Kankantri",
 "http://stanvasteradio.gkstreamen.nl:8120/;" : "Stanvaste",
@@ -66,7 +69,6 @@ let javanese= {
 };
 
 let sranang= {
-
 "https://mediaserv30.live-streams.nl:18020/stream" : "Konmakandra",
 "https://canopus.dribbcast.com/stream/8052" : "Anjisa",
 "https://worldstreaminglive.com/proxy/koyeba/stream" : "Koyeba FM",
@@ -75,7 +77,8 @@ let sranang= {
 "https://stream.zeno.fm/y3k2cb2mpchvv" : "Ollies Radio",
 "https://stream.zeno.fm/abb1cne92hhvv" : "DC SuriRadio",
 //"https://91.196.171.99/radiobrasa" : "Brasa",
-"https://stream.zenolive.com/6te6g6ubed0uv.aac" : "Radio Anda",
+"https://kathy.torontocast.com:2945/stream" : "Radio Anda",
+//"https://stream.zenolive.com/6te6g6ubed0uv.aac" : "Radio Anda",
 //"https://178.63.94.130:8080/9181316.ogg" : "Positive",
 "https://sonic.magicdragon.nl:7011/stream" : "Pokoe FM",
 //"https://46.4.5.234:8080/9173707.ogg" : "Asosye",
