@@ -197,8 +197,8 @@ position: absolute; right: 0;
 
 
 body::-webkit-scrollbar{
-width: 5px;
-height: 5px;
+width: 3px;
+height: 3px;
 }
 
 body::-webkit-scrollbar-track{
