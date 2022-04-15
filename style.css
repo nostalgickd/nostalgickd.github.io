@@ -13,7 +13,11 @@ margin:0; padding:0;
 outline: none;
 font-family: Arial;
 overflow: auto;
-}	
+}
+
+html,body{
+overflow: hidden auto;
+}
 
 body{
 background: rgb(0,0,0) url("/resources/background.jpg");
@@ -183,10 +187,25 @@ position: absolute; right: 0;
 }
 
 
-@media (orientation:portrait){
+@media(orientation:portrait){
 #container{width: 90%;}
 }	
 
-@media (orientation:landscape){
+@media(orientation:landscape){
 #container{width: 50%;}
+}
+
+
+::-webkit-scrollbar{
+width: 5px;
+height: 5px;
+}
+
+::-webkit-scrollbar-track{
+background: white;
+}
+
+::-webkit-scrollbar-thumb{
+background: yellow;
+border-radius: 50px;
 }
