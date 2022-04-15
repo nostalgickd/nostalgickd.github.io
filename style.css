@@ -196,16 +196,16 @@ position: absolute; right: 0;
 }
 
 
-::-webkit-scrollbar{
+body::-webkit-scrollbar{
 width: 5px;
 height: 5px;
 }
 
-::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track{
 background: white;
 }
 
-::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb{
 background: yellow;
 border-radius: 50px;
 }
