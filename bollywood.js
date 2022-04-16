@@ -1,5 +1,5 @@
 let bollywood= {
-"http://strm112.1.fm/bombaybeats_mobile_mp3":"Bombay Beats",
+"https://strm112.1.fm/bombaybeats_mobile_mp3":"Bombay Beats",
 //"https://media-ice.co.uk:8000/DiverseAAC":"Diverse FM",
 "https://a11.streamgb.com/proxy/radioxl?mp=/stream":"Diverse FM",
 "https://eu1.fastcast4u.com/proxy/vvradio?mp=/;":"VV Radio",
@@ -16,7 +16,8 @@ let bollywood= {
 //"https://cp12.serverse.com/proxy/hummfm?mp=/live":"Humm FM",
 "https://stream.zeno.fm/2vhb00mhky8uv":"Singham",
 //"https://stream.zeno.fm/d22wrdbst5quv.mp3":"Radio Wow",
-"http://hoth.alonhosting.com:1080/;stream.mp3" : "BollyHits",
+"https://stream.zeno.fm/6rth3ywheg8uv":"BollyHits",
+//"http://hoth.alonhosting.com:1080/;stream.mp3":"BollyHits",
 "https://stream.zeno.fm/dhytbz6zfchvv":"Nitnut",
 "https://stream.zeno.fm/a69txeenvzzuv":"SRK Online",
 "https://stream.bongonet.net/proxy/rhi?mp=/stream":"RHI - Covers",
