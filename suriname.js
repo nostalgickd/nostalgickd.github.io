@@ -36,6 +36,7 @@ let general= {
 //"https://168.195.218.193:8000/radio1-3" : "RP Hot One",
 //"https://168.195.218.193:8000/radio2-2" : "Beat FM",
 "https://stream.zeno.fm/084958y3ynhvv" : "GOV Radio",
+"https://video1.getstreamhosting.com:8340/stream" : "SCCN Smooth",
 //"http://sccn104.serverroom.us:5600/;stream.mp3" : "SCCN Smooth",
 "https://rs.suricloud.com/radio/8010/radio.mp3" : "Sky - Pipel",
 "https://radiostream.limfmsu.com/radio" : "LIM FM",
@@ -57,6 +58,7 @@ let general= {
 "https://larry.torontocast.com:1795/stream" : "Neutral",
 "https://stream.zeno.fm/xsdmzxyhc18uv" : "Radio 804",
 "https://stream.zeno.fm/5tv3n9cw008uv" : "Lime",
+"https://kawiesh.tk/resources/placeholder.mp3" : "Placeholder"
 };
 
 let javanese= {
