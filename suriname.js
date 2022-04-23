@@ -24,6 +24,8 @@ let sarnamie= {
 "https://stream.zeno.fm/p218h6ccxnhvv" : "AVS Radio",
 "https://stream.zeno.fm/xssh6qrf1wzuv" : "Assalaam",
 "https://solid48.streamupsolutions.com/proxy/radiosbs/radiosbs" : "SBS Radio",
+"http://mscp3.live-streams.nl:8050/stream" : "Pehchaan",
+"https://stream.hostinggold.eu:1185/stream" : "Hulchul",
 };
 
 let general= {
