@@ -77,7 +77,7 @@ let javanese= {
 
 let sranang= {
 "https://mediaserv30.live-streams.nl:18020/stream" : "Konmakandra",
-"https://canopus.dribbcast.com/stream/8052" : "Anjisa",
+//"https://canopus.dribbcast.com/stream/8052" : "Anjisa",
 "https://worldstreaminglive.com/proxy/koyeba/stream" : "Koyeba FM",
 //"https://stream.prography.nl/stream/8062" : "Boskopu",
 "https://stream.zeno.fm/zduxspz4kv8uv" : "Fan Da Libi",
@@ -101,7 +101,7 @@ let sranang= {
 "https://stream.zeno.fm/p0d98x5phs8uv" : "DoubleB 2",
 "https://stream.zeno.fm/ym53qqc53hhvv" : "Sam Taki",
 "https://stream.zeno.fm/gg7afgcuhkhvv" : "Makandi",
-//"https://kawiesh.tk/resources/placeholder.mp3" : "Placeholder"
+"https://kawiesh.tk/resources/placeholder.mp3" : "Placeholder"
 };
 
 let christian= {
