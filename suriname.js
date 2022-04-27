@@ -31,7 +31,8 @@ let sarnamie= {
 };
 
 let general= {
-"https://stream.zeno.fm/7qt8yd08qchvv" : "ABC",
+"https://surilive.com:8020/;" : "ABC",
+//"https://stream.zeno.fm/7qt8yd08qchvv" : "ABC",
 //"https://stream.prography.com/stream/8064" : "Apintie",
 "https://stream.zeno.fm/zh2rs490x68uv" : "Apintie",
 "https://surilive.com:8060/;" : "SRS",
