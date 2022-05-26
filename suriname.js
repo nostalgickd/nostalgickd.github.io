@@ -12,7 +12,7 @@ let sarnamie= {
 //"http://streaming01.x-6.nl:8000/;" : "Srinagar",
 "https://stream.zeno.fm/d9wgghcwzv8uv" : "Srinagar",
 "https://server-25.stream-server.nl:8348/stream" : "Sitara FM",
-"http://stream.akaashfm.com:8000/live" : "Akaash FM",
+//"http://stream.akaashfm.com:8000/live" : "Akaash FM",
 "https://onlineradio.websoftitnepal.com/8030/stream/1/.mp4a.40.5" : "Vahon",
 //"https://onlineradio.websoftitnepal.com/8030/stream" : "Vahon",
 "https://server4.ujala.nl/stream/2/listen.mp3" : "Ujala",
@@ -24,6 +24,7 @@ let sarnamie= {
 "https://stream.zeno.fm/putkar0p9k0uv" : "Bollywood Sur.",
 "https://stream.zeno.fm/ctmsytc6em0uv" : "Joyce The Voice",
 "https://stream.zeno.fm/p218h6ccxnhvv" : "AVS Radio",
+"https://stream.zeno.fm/bu26ykfcxnhvv" : "AVS Classic",
 "https://stream.zeno.fm/xssh6qrf1wzuv" : "Assalaam",
 "https://solid48.streamupsolutions.com/proxy/radiosbs/radiosbs" : "SBS Radio",
 "http://mscp3.live-streams.nl:8050/stream" : "Pehchaan",
@@ -46,7 +47,8 @@ let general= {
 "https://rs.suricloud.com/radio/8010/radio.mp3" : "Sky - Pipel",
 "https://radiostream.limfmsu.com/radio" : "LIM FM",
 "https://rs.suricloud.com/radio/8060/radio.mp3" : "Radio 9",
-"https://stream.rcast.net/67505": "Suri Lite",
+"https://stream.rcast.net/67505": "Suri-Lite",
+//"https://stream.zeno.fm/favahvks5rhvv" : "Suri-Lite Radio",
 //"https://162.244.80.245:8006/;" : "FM Gold",
 "https://surilive.com:8070/;" : "Color Radio",
 //"https://canopus.dribbcast.com/stream/8052/stream/1/" : "Color Radio",
@@ -63,7 +65,8 @@ let general= {
 "https://larry.torontocast.com:1795/stream" : "Neutral",
 "https://stream.zeno.fm/xsdmzxyhc18uv" : "Radio 804",
 "https://stream.zeno.fm/5tv3n9cw008uv" : "Lime",
-"https://kawiesh.tk/resources/placeholder.mp3" : "Placeholder"
+"https://stream.zeno.fm/u32bq5sfunhvv" : "DTV Radio",
+//"https://kawiesh.tk/resources/placeholder.mp3" : "Placeholder"
 };
 
 let javanese= {
@@ -102,7 +105,8 @@ let sranang= {
 "https://stream.zeno.fm/p0d98x5phs8uv" : "DoubleB 2",
 "https://stream.zeno.fm/ym53qqc53hhvv" : "Sam Taki",
 "https://stream.zeno.fm/gg7afgcuhkhvv" : "Makandi",
-"https://kawiesh.tk/resources/placeholder.mp3" : "Placeholder"
+"https://stream.zeno.fm/q6cwr2fb1rhvv" : "Boss Media",
+//"https://kawiesh.tk/resources/placeholder.mp3" : "Placeholder"
 };
 
 let christian= {
@@ -119,7 +123,8 @@ let other= {
 "https://d1x0scdnoh33b7.cloudfront.net/olonradio/537b9f27/master.m3u8" : "Razo",
 "https://d1x0scdnoh33b7.cloudfront.net/olonradio/7fb21f1b/master.m3u8" : "Caribbean FM",
 "https://surilive.com:8050/stream/1/" : "LPM Portugese",
-"https://kawiesh.tk/resources/placeholder.mp3" : "Placeholder"
+"https://stream.zeno.fm/w0hf496vvhhvv" : "Paw Matu Radio",
+//"https://kawiesh.tk/resources/placeholder.mp3" : "Placeholder"
 };
 
 
