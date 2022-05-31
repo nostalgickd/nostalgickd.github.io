@@ -154,10 +154,14 @@ liststring= liststring.split(",");
 
 //PROXY OVER HTTPS
 if(location.protocol=="https:"){
-let sarnamie1={},general1={},sranang1={},christian1={},javanese1={},other1={};
-let list1= [sarnamie1,general1,sranang1,christian1,javanese1,other1];
-list.forEach((i,x)=> addProxy(list[x],list1[x]));
-list= list1;
+let proxiedList= [];
+list.forEach(i=>{
+let clonedObject= {};
+proxiedList.push(clonedObject);
+});
+
+list.forEach((i,x)=> addProxy(list[x],proxiedList[x]));
+list= proxiedList;
 }
 
 
