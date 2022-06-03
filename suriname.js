@@ -117,7 +117,7 @@ let christian= {
 //"https://198.7.59.204/stream.mp3?ipport=198.7.59.204_31366" : "Radio 7 Gospel",
 "https://cc5.beheerstream.com/proxy/exoticaradio?mp=/stream" : "Radio mArt",
 "https://stream.zeno.fm/kadt188ugy8uv" : "Afonsoewa",
-"https://stream.zeno.fm/31gfhb24kfhvv" : "Tzgospel Swahili"
+"https://stream.radiomaria.nl/mp3" : "Radio Maria"
 };
 
 let other= {
