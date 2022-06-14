@@ -282,14 +282,16 @@ left: 10%;
 flex-direction: column;
 background: linear-gradient(to bottom, white, darkgray);
 border: 5px outset blue;
+transition: .5s ease-in;
+transform: scale(0,0);
 }
 
 .popin{
-animation: popin .5s ease-in 0s 1 normal forwards;
+transform: scale(1,1);
 }
 
 .popout{
-animation: popout .5s ease-in 0s 1 normal forwards;
+transform: scale(0,0);
 }
 
 
