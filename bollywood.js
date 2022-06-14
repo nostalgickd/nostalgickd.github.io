@@ -69,10 +69,10 @@ let two= {
 
 
 //Main list
-let list= [one,two];
+let list= [one];
 
 //BlockList
 let ibl= {
 "one" : [9,12,16,18,20,24,26,27],
-"two" : [18,19]
+//"two" : [18,19]
 };
