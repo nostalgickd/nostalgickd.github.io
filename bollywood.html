@@ -17,12 +17,12 @@
 
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Kawiesh.tk holds a collection of Surinamese radio stations and Bollywood radio stations from across the world."/>
-<meta name="keywords" content="Radio, Suriname, Hindi, Dutch, Javanese, Sranang, Bollywood, kawiesh.tk"/>
+<meta name="description" content="Collection of radio stations from all across the world, airing mostly late 90s and early 2000s Bollywood songs!"/>
+<meta name="keywords" content="Online Radio, Hindi, Bollywood, Late 90s Bollywood songs, Early 2000s Bollywood songs, Nostalgia, Kawiesh"/>
 <meta name="author" content="Kawiesh"/>
-<meta property="og:title" content="Kawiesh.tk - Online Radio - Suriname - Bollywood"/>
-<meta property="og:type" content="Suriname & Bollywood Radio"/>
-<meta property="og:url" content="http://kawiesh.tk"/>
+<meta property="og:title" content="Kawiesh.tk - Bollywood Radio Stations"/>
+<meta property="og:type" content="Early 2000s Bollywood Radio Stations"/>
+<meta property="og:url" content="https://kawiesh.tk/bollywood"/>
 <meta property="og:image" content="resources/kawiesh.jpg"/>  
 
 <title>KD Radio - Bollywood</title>
@@ -37,53 +37,40 @@ display:flex; justify-content:center; align-items:center;
 .loader>img{
 min-width: 10vw; min-height: 10vw;
 }
-
-#skip{
-display: flex;
-width: 50%;
-justify-content: space-between;
-}
-
-button{
-padding: 5px;
-}
-
 </style>
 <link rel="stylesheet" href= "style.css">
 </head>
-
-<body data-nosnippet>
-<div class="loader">
+<body>
+<div class="loader" data-nosnippet>
   <img src="resources/loading.svg"/>
 </div>
-<div id= "topbar">
-  <div class="fixed" id="hide">All</div>
-  <div id="genre">
-    <span class="left">Prev.</span>&nbsp;
-    <span class="genre">Radio</span>&nbsp;
-    <span class="right">Next</span>  
+<div id= "topbar" data-nosnippet>
+  <div class="fixed" id="hide" data-nosnippet>All</div>
+  <div id="genre" data-nosnippet>
+    <span class="left" data-nosnippet>Prev.</span>&nbsp;
+    <span class="genre" data-nosnippet>Radio</span>&nbsp;
+    <span class="right" data-nosnippet>Next</span>  
   </div>
   <img class="fixed" alt="Suriname" id="sr" src="resources/sr.svg"/>
 </div>
-<div id="container"></div>
+<div id="container" data-nosnippet></div>
 
-<div id="bottombar">
-<div id="controls">
+<div id="bottombar" data-nosnippet>
+<div id="controls" data-nosnippet>
 	<button class="prev btn">Prev</button>
 	<p id="pause">&bull; &bull; &bull;</p>
 	<button class="next btn">Next</button>
 </div>
-<div id="timer">NO RADIO PLAYING</div>
+<div id="timer" data-nosnippet>NO RADIO PLAYING</div>
 </div>
 
-<div id="footer">
-<span class="settings">Settings</span>
+<div id="footer" data-nosnippet>
+<span class="settings" data-nosnippet>Settings</span>
 &nbsp;|&nbsp;
-<span class="logo">www.kawiesh.tk</span>
+<span class="logo" data-nosnippet>www.kawiesh.tk</span>
 &nbsp;|&nbsp;
-<span class="about">About</span>
+<span class="about" data-nosnippet>About</span>
 </div>
-
 
 <audio id="audio"></audio>
 <script>
