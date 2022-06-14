@@ -1,27 +1,28 @@
 
 let overlay= create("div");
+overlay.dataset.nosnippet= true;
 overlay.id= "overlay"; overlay.className= "hidden";
 document.body.append(overlay);
 overlay.innerHTML=`
 <div class="normalflex modal">
 	
-	<div class="centerflex"><b>select stations to hide</b></div>
-	<div class="normalflex">
+	<div class="centerflex" data-nosnippet><b>select stations to hide</b></div>
+	<div class="normalflex" data-nosnippet>
 		<select class="select" multiple></select>
 		<button class="save">SAVE</button>
 	</div>
 	
-	<div class="centerflex msg">
-		<i><span class="nr">0</span>&nbsp; stations hidden!</i>
+	<div class="centerflex msg" data-nosnippet>
+		<i><span class="nr" data-nosnippet>0</span>&nbsp; stations hidden!</i>
 	</div>
 	
-	<div class="centerflex"><b>Close tab after ?? minutes<b></div>
-	<div class="normalflex">
+	<div class="centerflex" data-nosnippet><b>Close tab after ?? minutes<b></div>
+	<div class="normalflex" data-nosnippet>
 		<input class="input" type="number">
 		<button class="sleep">SLEEP</button>
 	</div>
 	
-	<div class="centerflex close">×</div>
+	<div class="centerflex close" data-nosnippet>&times;</div>
 </div>`;
 
 
@@ -37,7 +38,7 @@ let selectedStations=()=> [...stationList.selectedOptions].map(i=> i.index);
 function manageHidden(){
 stationList.value= stationList.innerHTML= "";
 let optgroup= create("optgroup");
-optgroup.label= "--- Select which stations to hide ---";
+optgroup.label= "Select stations to hide:";
 stationList.append(optgroup);
 spans.forEach(i=>{
 let option= create("option");
