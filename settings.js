@@ -13,7 +13,7 @@ overlay.innerHTML=`
 	</div>
 	
 	<div class="centerflex msg" data-nosnippet>
-		<i><span class="nr" data-nosnippet>0</span>&nbsp; stations hidden!</i>
+		<span class="nr" data-nosnippet>0</span>&nbsp; stations hidden!
 	</div>
 	
 	<div class="centerflex" data-nosnippet><b>Close tab after ?? minutes<b></div>
@@ -81,14 +81,26 @@ selectedStations().forEach(i=> spans[i].classList.add("hidden"));
 	
 //hide.onclick=()=> manageHidden(false);
 select(".about").onclick=()=> window.open("about");
-select(".modal .close").onclick=()=> overlay.className= "hidden";
 stationList.oninput=()=> save.innerHTML= "SAVE";
 
 select(".settings").onclick=()=>{
 overlay.className= "unhidden";
 save.innerHTML= "SAVE";
 msg.innerHTML= selectedStations().length;
+setTimeout(()=>{
+select(".modal").classList.remove("popout");
+select(".modal").classList.add("popin");
+},500);
 };
+
+select(".modal .close").onclick=()=>{
+select(".modal").classList.remove("popin");
+select(".modal").classList.add("popout");
+setTimeout(()=>{
+overlay.className= "hidden";
+},500);
+};
+
 
 save.onclick=()=>{
 save.innerHTML= "SAVED";
