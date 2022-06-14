@@ -228,6 +228,7 @@ background: rgba(0,0,50,.5);
 border-top: 1px solid darkgray;
 position: absolute;
 bottom: 5px;
+overflow: hidden;
 }
 
 .settings,.about{
