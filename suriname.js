@@ -26,37 +26,9 @@ let sarnamie= {
 "https://my.ssl-stream.com/Suvidha_Radio" : "Suvidha",
 "https://rs.suricloud.com/radio/8050/radio.mp3" : "Trishul",
 "https://server4.ujala.nl/stream/2/listen.mp3" : "Ujala",
-"https://onlineradio.websoftitnepal.com/8030/stream/1/.mp4a.40.5" : "Vahon"
+"https://onlineradio.websoftitnepal.com/8030/stream/1/.mp4a.40.5" : "Vahon",
+//"/resources/placeholder.mp3" : "Placeholder"
 };
-
-
-let general= {
- "https://stream.zeno.fm/7qt8yd08qchvv": "ABC",
- "https://stream.zeno.fm/zh2rs490x68uv": "Apintie",
- "https://168.195.218.193:8000/radio2-2": "Beat FM",
- "http://cc3b.beheerstream.com:8192/;stream.mp3": "Cariba FM",
- "https://canopus.dribbcast.com/stream/8052/stream/1/": "Color Radio",
- "https://radiostream.limfmsu.com/radio": "LIM FM",
- "https://stream.zeno.fm/5tv3n9cw008uv": "Lime",
- "https://canopus.dribbcast.com/stream/8010": "NIO FM",
- "https://larry.torontocast.com:1795/stream": "Neutral",
- "https://168.195.218.193:8000/radio1-3": "RP Hot One",
- "https://streams.radio.co/s28bc986cd/listen": "Radio 10",
- "https://stream.zeno.fm/xsdmzxyhc18uv": "Radio 804",
- "https://rs.suricloud.com/radio/8060/radio.mp3": "Radio 9",
- "https://icecast.omroep.nl/3fm-bb-mp3": "Radio FM 103",
- "http://sccn104.serverroom.us:5600/;stream.mp3": "SCCN Smooth",
- "https://surilive.com:8060/;": "SRS",
- "https://rs.suricloud.com/radio/8010/radio.mp3": "Sky - Pipel",
- "http://stanvasteradio.gkstreamen.nl:8120/;": "Stanvaste",
- "https://stream.rcast.net/67505": "Suri Lite",
- "https://caster05.streampakket.com/proxy/9338/stream/1/": "Tamara"
-};
-
-
-
-
-
 
 let javanese= {
  "https://betelgeuse.dribbcast.com/proxy/abhost?mp=/stream": "Bangsa Jawa",
@@ -67,31 +39,53 @@ let javanese= {
  "https://stream.zeno.fm/u3abxhenhf9uv": "Tamanredjo Talents"
 };
 
-
-
-let sranang= {
- "https://canopus.dribbcast.com/stream/8052": "Anjisa",
- "https://stream.zeno.fm/q4wkxqmdqchvv": "Asosye",
- "https://stream.zeno.fm/rnf3xu9tgs8uv": "Boeskondee Media",
- "https://stream.zeno.fm/abb1cne92hhvv": "DC SuriRadio",
- "https://stream.zeno.fm/db9pak567ehvv": "DJBadJho",
- "https://stream.zeno.fm/p0d98x5phs8uv": "DoubleB 2",
- "https://stream.zeno.fm/zduxspz4kv8uv": "Fan Da Libi",
- "https://stream.zeno.fm/1sqwfhqwra0uv": "Fandaaki Paanzu",
- "https://patmos.cdnstream.com/proxy/rifawaka/?mp=/stream": "Fawaka",
- "https://stream.zeno.fm/ysd1dvrtcv8uv": "Ketebuna",
- "https://mediaserv30.live-streams.nl:18020/stream": "Konmakandra",
- "https://worldstreaminglive.com/proxy/koyeba/stream": "Koyeba FM",
- "https://clare.shoutca.st/radio/8070/radio.mp3": "MS Radio",
- "https://stream.zeno.fm/unz726g6kfhvv": "Maipa",
- "https://stream.zeno.fm/gg7afgcuhkhvv": "Makandi",
- "https://stream.zeno.fm/y3k2cb2mpchvv": "Ollies Radio",
- "https://sonic.magicdragon.nl:7011/stream": "Pokoe FM",
- "https://stream.zenolive.com/6te6g6ubed0uv.aac": "Radio Anda",
- "https://stream.zeno.fm/kyve9mgds18uv": "Radio Totness",
- "https://stream.zeno.fm/ym53qqc53hhvv": "Sam Taki"
+let general= {
+ "https://surilive.com:8020/;" : "ABC",
+ "https://stream.zeno.fm/zh2rs490x68uv" : "Apintie",
+ "http://cc3b.beheerstream.com:8192/;stream.mp3" : "Cariba FM",
+ "https://surilive.com:8070/;" : "Color Radio",
+ "https://stream.zeno.fm/u32bq5sfunhvv" : "DTV Radio",
+ "https://stream.zeno.fm/084958y3ynhvv" : "GOV Radio",
+ "https://radiostream.limfmsu.com/radio" : "LIM FM",
+ "https://stream.zeno.fm/5tv3n9cw008uv" : "Lime",
+ "https://surilive.com:8010/;" : "NIO FM",
+ "https://larry.torontocast.com:1795/stream" : "Neutral",
+ "https://rs.suricloud.com/radio/8060/radio.mp3" : "Radio 9",
+ "https://s5.radio.co/s85a633f73/listen" : "Radio 10",
+ "https://icecast.omroep.nl/3fm-bb-mp3" : "Radio FM 103",
+ "https://stream.zeno.fm/xsdmzxyhc18uv" : "Radio 804",
+ "https://video1.getstreamhosting.com:8340/stream" : "SCCN Smooth",
+ "https://surilive.com:8060/;" : "SRS",
+ "https://rs.suricloud.com/radio/8010/radio.mp3" : "Sky - Pipel",
+ "http://stanvasteradio.gkstreamen.nl:8120/;" : "Stanvaste",
+ "https://stream.rcast.net/67505" : "Suri-Lite",
+ "https://caster05.streampakket.com/proxy/9338/stream/1/" : "Tamara",
+ //"/resources/placeholder.mp3" : "Placeholder"
 };
 
+let sranang= {
+ "https://stream.zeno.fm/q4wkxqmdqchvv" : "Asosye",
+ "https://stream.zeno.fm/rnf3xu9tgs8uv" : "Boeskondee Media",
+ "https://stream.zeno.fm/q6cwr2fb1rhvv" : "Boss Media",
+ "https://stream.zeno.fm/abb1cne92hhvv" : "DC SuriRadio",
+ "https://stream.zeno.fm/db9pak567ehvv" : "DJBadJho",
+ "https://stream.zeno.fm/p0d98x5phs8uv" : "DoubleB 2",
+ "https://stream.zeno.fm/zduxspz4kv8uv" : "Fan Da Libi",
+ "https://stream.zeno.fm/1sqwfhqwra0uv" : "Fandaaki Paanzu",
+ "https://patmos.cdnstream.com/proxy/rifawaka/?mp=/stream" : "Fawaka",
+ "https://stream.zeno.fm/ysd1dvrtcv8uv" : "Ketebuna",
+ "https://mediaserv30.live-streams.nl:18020/stream" : "Konmakandra",
+ "https://worldstreaminglive.com/proxy/koyeba/stream" : "Koyeba FM",
+ "https://clare.shoutca.st/radio/8070/radio.mp3" : "MS Radio",
+ "https://stream.zeno.fm/unz726g6kfhvv" : "Maipa",
+ "https://stream.zeno.fm/gg7afgcuhkhvv" : "Makandi",
+ "https://stream.zeno.fm/y3k2cb2mpchvv" : "Ollies Radio",
+ "https://sonic.magicdragon.nl:7011/stream" : "Pokoe FM",
+ "https://kathy.torontocast.com:2945/stream" : "Radio Anda",
+ "https://stream.zeno.fm/kyve9mgds18uv" : "Radio Totness",
+ "https://stream.zeno.fm/ym53qqc53hhvv" : "Sam Taki",
+//"/resources/placeholder.mp3" : "Placeholder"
+};
 
 
 let christian= {
@@ -101,17 +95,15 @@ let christian= {
 "https://stream.radiomaria.nl/mp3" : "Radio Maria",
 "https://cc5.beheerstream.com/proxy/exoticaradio?mp=/stream" : "Radio mArt",
 "https://worldstreaminglive.com/proxy/radioshalom/stream" : "Shalom",
-//https://198.7.59.204/stream.mp3?ipport=198.7.59.204_31366" : "Radio 7 Gospel",
+//"/resources/placeholder.mp3" : "Placeholder"
 };
-
-
 
 let other= {
 "https://d1x0scdnoh33b7.cloudfront.net/olonradio/7fb21f1b/master.m3u8" : "Caribbean FM",
 "https://surilive.com:8050/stream/1/" : "LPM Portugese",
 "https://stream.zeno.fm/w0hf496vvhhvv" : "Paw Matu Radio",
 "https://d1x0scdnoh33b7.cloudfront.net/olonradio/537b9f27/master.m3u8" : "Razo",
-//"/resources/placeholder.aac" : "Placeholder"
+//"/resources/placeholder.mp3" : "Placeholder"
 };
 
 
