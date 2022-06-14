@@ -242,7 +242,7 @@ animation: changeColors 2s linear infinite alternate;
 }
 
 @keyframes changeColors{
-0%{opacity: 1}
+0%{opacity: 0.9}
 100%{opacity: 0}
 }
 
@@ -286,11 +286,11 @@ border: 5px outset blue;
 }
 
 .popin{
-animation: popin .5s ease-in;
+animation: popin .5s ease-in 0s 1 normal forwards;
 }
 
 .popout{
-animation: popout .5s ease-in;
+animation: popout .5s ease-in 0s 1 normal forwards;
 }
 
 
