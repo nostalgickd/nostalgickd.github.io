@@ -47,7 +47,7 @@ stationList.append(option);
 });
 
 let blocklist= localStorage[lsblock()];
-blocklist= blocklist ? JSON.parse(blocklist) : ibl[genre.innerHTML];
+blocklist= blocklist ? JSON.parse(blocklist) : ibl[liststring[lang]];
 
 let options= selectAll(".modal option");
 blocklist.forEach(i=>{
