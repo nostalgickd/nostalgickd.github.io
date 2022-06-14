@@ -102,6 +102,7 @@ names= Object.values(list);
 
 names.forEach(i=>{
 let a= create("span");
+a.dataset.nosnippet= true;
 addThisClass(a,"span");
 addThisClass(a,"idle");
 a.innerHTML= i;
@@ -296,13 +297,13 @@ if(!source) return;
 for(let i=0; i<urls.length; i++){
 if(source.src==urls[i]){
 
-		if(audio.currentSrc==isoffline){
-		addThisClass(spans[i],"offline");
-		return;
-		}
+	if(audio.currentSrc==isoffline){
+	addThisClass(spans[i],"offline");
+	return;
+	}
 		
-		if(audio.paused) addThisClass(spans[i],"paused");
-		else addThisClass(spans[i],"playing");
+	if(audio.paused) addThisClass(spans[i],"paused");
+	else addThisClass(spans[i],"playing");
 
 return;
 }
