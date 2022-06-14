@@ -273,16 +273,37 @@ font-variant: all-small-caps;
 }
 
 .modal{
+transform: scale(0,0);
+z-index: 2;
 width: 80%; height: 200px;
 padding: 10px;
 position: fixed;
 top: calc(50vh - 200px);
 left: 10%;
 flex-direction: column;
-background: white;
-border: 2px solid fuchsia;
-z-index: 2;
+background: linear-gradient(to bottom, white, darkgray);
+border: 5px outset blue;
 }
+
+.popin{
+animation: popin .5s ease-in;
+}
+
+.popout{
+animation: popout .5s ease-in;
+}
+
+
+@keyframes popin{
+from{transform: scale(0,0)}
+to{transform: scale(1,1)}
+}
+
+@keyframes popout{
+from{transform: scale(1,1)}
+to{transform: scale(0,0)}
+}
+
 
 .modal .select, .modal .input,
 .modal .save, .modal .sleep{
@@ -318,11 +339,15 @@ overflow: hidden;
 position: absolute;
 top:0; right: 0;
 color: white;
-background: red;
-font: bold 30px Arial;
+background: linear-gradient(to bottom right, red, pink);
 border: 2px solid black;
+font: bold 30px Arial;
 cursor: pointer;
 }
+
+
+
+
 
 /*-------------GENERAL--------------*/
 
