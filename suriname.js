@@ -1,9 +1,11 @@
 let sarnamie= {
-"https://stream.zeno.fm/bu26ykfcxnhvv" : "AVS Classic",
-"https://stream.zeno.fm/p218h6ccxnhvv" : "AVS Radio",
 "http://stream.akaashfm.com:8000/live" : "Akaash FM",
 "https://amorfm_192.streampartner.nl/stream" : "Amor",
 "https://stream.zeno.fm/xssh6qrf1wzuv" : "Assalaam",
+"https://stream.zeno.fm/bu26ykfcxnhvv" : "AVS Classic",
+"https://stream.zeno.fm/drf1tvx5xnhvv" : "AVS Dance",
+"https://stream.zeno.fm/p218h6ccxnhvv" : "AVS Radio",
+"https://mediaserv38.live-streams.nl:18039/stream" : "Awaaz",
 "https://stream.zeno.fm/putkar0p9k0uv" : "Bollywood Sur.",
 "http://www.dhantalradio.ca:8000/stream1" : "Dhantal",
 "https://rs.suricloud.com/radio/8120/radio.mp3" : "Ek Sitara",
@@ -112,7 +114,7 @@ let list= [sarnamie,general,sranang,christian,javanese,other];
 
 //BlockList
 let ibl= {
-"sarnamie" : [0,1,4,5,9,11,12,13],
+"sarnamie" : [2,3,4,5,7,11,13,14,15,23],
 "general" : [],
 "sranang" : [],
 "christian" : [],
