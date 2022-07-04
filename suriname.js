@@ -114,7 +114,7 @@ let list= [sarnamie,general,sranang,christian,javanese,other];
 
 //BlockList
 let ibl= {
-"sarnamie" : [2,3,4,5,7,11,13,14,15,23],
+"sarnamie" : [2,3,4,5,7,11,13,14,15,22],
 "general" : [],
 "sranang" : [],
 "christian" : [],
