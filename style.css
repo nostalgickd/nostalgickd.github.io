@@ -40,7 +40,6 @@ font-size: 14px;
 
 #topbar{
 height: 30px;
-width: 100vw;
 margin: 5px 0 30px 0;
 display: flex;
 justify-content: space-between;
@@ -166,7 +165,6 @@ display: none;
 /*-------------BOTTOM--------------*/
 
 #bottombar{
-width: 100%;
 margin: 30px 0;
 display: flex;
 flex-direction: column;
@@ -368,9 +366,9 @@ border-radius: 50px;
 
 
 @media(orientation:portrait){
-#container{width: 90%;}
+#container,#topbar,#bottombar{width: 90%;}
 }	
 
 @media(orientation:landscape){
-#container{width: 50%;}
+#container,#topbar,#bottombar{width: 50%;}
 }
