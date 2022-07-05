@@ -272,11 +272,10 @@ font-variant: all-small-caps;
 
 .modal{
 z-index: 2;
-width: 80%; height: 200px;
+height: 200px;
 padding: 10px;
 position: fixed;
 bottom: calc(50vh - 100px);
-left: 10%;
 flex-direction: column;
 background: linear-gradient(to bottom, white, darkgray);
 border: 5px outset blue;
@@ -366,9 +365,25 @@ border-radius: 50px;
 
 
 @media(orientation:portrait){
-#container,#topbar,#bottombar{width: 90%;}
+#container,#topbar,#bottombar{
+width: 90%;
+}
+
+.modal{
+width: 90%;
+left: 5%;
+}
+
 }	
 
 @media(orientation:landscape){
-#container,#topbar,#bottombar{width: 50%;}
+#container,#topbar,#bottombar{
+width: 50%;
+}
+
+.modal{
+width: 50%;
+left: 25%;
+}
+
 }
