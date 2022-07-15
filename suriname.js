@@ -96,7 +96,7 @@ let sranang= {
 let christian= {
 "https://stream.zeno.fm/kadt188ugy8uv" : "Afonsoewa",
 "https://stream.zeno.fm/6nt6k3e2x68uv" : "Immanu&euml;l",
-"http://server.jvhost.net:8010/live" : "Kabar Katresnan",
+"http://server.jvhost.net:8010/stream" : "Kabar Katresnan",
 "https://stream.radiomaria.nl/mp3" : "Radio Maria",
 "https://cc5.beheerstream.com/proxy/exoticaradio?mp=/stream" : "Radio mArt",
 "https://worldstreaminglive.com/proxy/radioshalom/stream" : "Shalom"
