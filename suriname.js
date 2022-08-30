@@ -101,6 +101,7 @@ let javanese= {
 let christian= {
 "https://stream.zeno.fm/kadt188ugy8uv" : "Afonsoewa",
 "https://stream.zeno.fm/6nt6k3e2x68uv" : "Immanu&euml;l",
+"http://audiostreamen.nl:8168/stream":"Kerst Radio",
 "https://stream.radiomaria.nl/mp3" : "Radio Maria",
 "https://cc5.beheerstream.com/proxy/exoticaradio?mp=/stream" : "Radio mArt",
 "https://worldstreaminglive.com/proxy/radioshalom/stream" : "Shalom"
