@@ -109,10 +109,10 @@ let christian= {
 
 
 let other= {
-//"https://stream.zeno.fm/93mh70awpuhvv" : "Golden Oldies",
 "https://d1x0scdnoh33b7.cloudfront.net/olonradio/7fb21f1b/master.m3u8" : "Caribbean FM",
 "https://stream.zeno.fm/uxv2t75ub0hvv" : "Chuckie 597",
-"https://stream.zeno.fm/ydpvx8wnsuhvv" : "Fosten Radio",
+//"https://stream.zeno.fm/ydpvx8wnsuhvv" : "Fosten Radio",
+"https://stream.zeno.fm/93mh70awpuhvv" : "Golden Oldies",
 "https://2000er.stream.laut.fm/2000er" : "Laut FM 2000s",
 "https://surilive.com:8050/stream/1/" : "LPM Portugese",
 "https://d1x0scdnoh33b7.cloudfront.net/olonradio/537b9f27/master.m3u8" : "Razo"
