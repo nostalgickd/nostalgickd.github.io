@@ -31,14 +31,6 @@ let sarnamie= {
 "https://onlineradio.websoftitnepal.com/8030/stream/1/.mp4a.40.5" : "Vahon"
 };
 
-let javanese= {
-"https://betelgeuse.dribbcast.com/proxy/abhost?mp=/stream": "Bangsa Jawa",
-"https://stream.zeno.fm/w6hh0rqqwy8uv": "DjRegi",
-"https://worldstreaminglive.com/proxy/apzrueeh/stream": "Garuda",
-"http://94.23.148.11:8214/stream/1/": "Siaran Jawa",
-"https://s5.radio.co/s1735f3c1d/listen": "Surja Vibes",
-"https://stream.zeno.fm/u3abxhenhf9uv": "Tamanredjo Talents"
-};
 
 let general= {
 "https://surilive.com:8020/;" : "ABC",
@@ -65,6 +57,7 @@ let general= {
 "https://surilive.com:8210/;" : "Top 40 Suriname"
 };
 
+
 let sranang= {
 "https://kathy.torontocast.com:2945/stream" : "Anda",
 "https://stream.zeno.fm/q4wkxqmdqchvv" : "Asosye",
@@ -77,7 +70,7 @@ let sranang= {
 "https://stream.zeno.fm/zduxspz4kv8uv" : "Fan Da Libi",
 "https://stream.zeno.fm/1sqwfhqwra0uv" : "Fandaaki Paanzu",
 "https://patmos.cdnstream.com/proxy/rifawaka/?mp=/stream" : "Fawaka",
-"https://stream.zeno.fm/gd0ghfsmsuhvv" : "Fosten Poku",
+//"https://stream.zeno.fm/gd0ghfsmsuhvv" : "Fosten Poku",
 "https://stream.zeno.fm/ysd1dvrtcv8uv" : "Ketebuna",
 "https://mediaserv30.live-streams.nl:18020/stream" : "Konmakandra",
 "https://worldstreaminglive.com/proxy/koyeba/stream" : "Koyeba FM",
@@ -87,24 +80,37 @@ let sranang= {
 "https://stream.zeno.fm/y3k2cb2mpchvv" : "Ollies Radio",
 "https://stream.zeno.fm/w0hf496vvhhvv" : "Paw Matu Radio",
 "https://sonic.magicdragon.nl:7011/stream" : "Pokoe FM",
-"https://stream.zeno.fm/6te6g6ubed0uv" : "Poku Suriname",
+//"https://stream.zeno.fm/6te6g6ubed0uv" : "Poku Suriname",
 "https://stream.zeno.fm/kyve9mgds18uv" : "Radio Totness",
 "https://stream.zeno.fm/ym53qqc53hhvv" : "Sam Taki"
+};
+
+
+let javanese= {
+"https://betelgeuse.dribbcast.com/proxy/abhost?mp=/stream": "Bangsa Jawa",
+"https://stream.zeno.fm/w6hh0rqqwy8uv": "DjRegi",
+"https://worldstreaminglive.com/proxy/apzrueeh/stream": "Garuda",
+"http://server.jvhost.net:8010/stream" : "Kabar Katresnan",
+"http://176.9.86.211:8153/stream": " Pertjajah",
+"http://94.23.148.11:8214/stream/1/": "Siaran Jawa",
+"https://s5.radio.co/s1735f3c1d/listen": "Surja Vibes",
+"https://stream.zeno.fm/u3abxhenhf9uv": "Tamanredjo Talents"
 };
 
 
 let christian= {
 "https://stream.zeno.fm/kadt188ugy8uv" : "Afonsoewa",
 "https://stream.zeno.fm/6nt6k3e2x68uv" : "Immanu&euml;l",
-"http://server.jvhost.net:8010/stream" : "Kabar Katresnan",
 "https://stream.radiomaria.nl/mp3" : "Radio Maria",
 "https://cc5.beheerstream.com/proxy/exoticaradio?mp=/stream" : "Radio mArt",
 "https://worldstreaminglive.com/proxy/radioshalom/stream" : "Shalom"
 };
 
+
 let other= {
-"https://stream.zeno.fm/93mh70awpuhvv" : "Golden Oldies",
+//"https://stream.zeno.fm/93mh70awpuhvv" : "Golden Oldies",
 "https://d1x0scdnoh33b7.cloudfront.net/olonradio/7fb21f1b/master.m3u8" : "Caribbean FM",
+"https://stream.zeno.fm/uxv2t75ub0hvv" : "Chuckie 597",
 "https://stream.zeno.fm/ydpvx8wnsuhvv" : "Fosten Radio",
 "https://2000er.stream.laut.fm/2000er" : "Laut FM 2000s",
 "https://surilive.com:8050/stream/1/" : "LPM Portugese",
@@ -113,15 +119,15 @@ let other= {
 
 
 //Main list
-let list= [sarnamie,general,sranang,christian,javanese,other];
+let list= [sarnamie,general,sranang,javanese,christian,other];
 
 //BlockList
 let ibl= {
 "sarnamie" : [2,3,4,5,7,11,13,14,15,22],
 "general" : [],
 "sranang" : [],
-"christian" : [],
 "javanese" : [],
+"christian" : [],
 "other" : []
 };
 
