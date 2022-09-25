@@ -1,14 +1,17 @@
 let one= {
 "https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio" : "Alka Yagnik",
 "https://funasia.streamguys1.com/live4" : "Big FM 106.2",
-"https://funasia.streamguys1.com/live9" : "Big Melodies",
+//"https://funasia.streamguys1.com/live9" : "Big Melodies",
 "https://stream.zeno.fm/6rth3ywheg8uv" : "BollyHits",
 "https://strm112.1.fm/bombaybeats_mobile_mp3" : "Bombay Beats",
-"https://stream.zeno.fm/vmp0tkewzv8uv" : "Caprice",
-"https://stream.zeno.fm/4gfevnscvp8uv" : "DesiZone 90s",
-"https://stream.zeno.fm/uspcm0rcvp8uv" : "DesiZone 2000s",
+//"https://stream.zeno.fm/vmp0tkewzv8uv" : "Caprice",
+"http://79.120.39.202:8002/indiancinema" : "Caprice",
+//"https://stream.zeno.fm/4gfevnscvp8uv" : "DesiZone 90s",
+"https://www.desizoneradio.com/relay3" : "DesiZone 90s",
+//"https://stream.zeno.fm/uspcm0rcvp8uv" : "DesiZone 2000s",
+"https://www.desizoneradio.com/relay2" : "DesiZone 2000s",
 "https://a11.streamgb.com/proxy/radioxl?mp=/stream" : "Diverse FM",
-"http://ca2.radioboss.fm/proxy/guyanac1?mp=/stream" : "Guyana Chunes",
+//"http://ca2.radioboss.fm/proxy/guyanac1?mp=/stream" : "Guyana Chunes",
 "https://streaming.webhostnepal.com/8020/stream" : "Himal Filmy",
 "https://stream.zeno.fm/8e9q38tg7zquv" : "Hindi Music",
 "https://tunein-icecast.mediaworks.nz/humm_128kbps" : "Humm FM",
@@ -73,6 +76,6 @@ let list= [one];
 
 //BlockList
 let ibl= {
-"one" : [9,12,16,18,20,24,26,27],
+"one" : [9,10,14,16,18,22,24,25],
 //"two" : [18,19]
 };
