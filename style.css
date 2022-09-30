@@ -346,7 +346,7 @@ cursor: pointer;
 
 .lastmod{
 position: absolute;
-right: 4px; bottom: 2px;
+right: 5px; bottom: 2px;
 color: purple;
 font: bold 10px "Courier New";
 letter-spacing: -0.5px;
