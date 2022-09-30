@@ -344,7 +344,13 @@ font: bold 30px Arial;
 cursor: pointer;
 }
 
-
+.lastmod{
+position: absolute;
+right: 2px; bottom: 2px;
+color: purple;
+font: bold 10px "Courier New";
+letter-spacing: -1px;
+}
 
 
 
