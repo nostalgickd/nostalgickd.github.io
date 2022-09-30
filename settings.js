@@ -160,14 +160,14 @@ fetch(_api + _file)
 .then(d=> {
 let lastmod= new Date(d[0].commit.author.date);
 
-let _date= new Date(lastmod).toLocaleDateString("en-US",{
+let _date= lastmod.toLocaleDateString("en-US",{
 //weekday: 'long',
 year: 'numeric',
 month: 'short',
 day: 'numeric'
 });
 
-let _time= new Date(lastmod).toLocaleTimeString("en-US",{
+let _time= lastmod.toLocaleTimeString("en-US",{
 hour: '2-digit',
 minute: '2-digit'
 });
