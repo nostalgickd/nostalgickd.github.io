@@ -21,7 +21,7 @@ overlay.innerHTML=`
 		<input class="input" type="number">
 		<button class="sleep">SLEEP</button>
 	</div>
-	
+	<div class="lastmod"></div>
 	<div class="centerflex close" data-nosnippet>&times;</div>
 </div>`;
 
@@ -148,3 +148,32 @@ y.innerHTML= `>>Tab opened in a new tab!<br>
 document.title= "Sleep Timer - KD Radio";
 }
 }
+
+
+//Last updated-----------------------
+async function ajax(url){
+let r= await fetch(url);
+if(!r.ok) throw new Error(r.status);
+return Object.fromEntries(r.headers.entries());
+}
+
+let url= location.href.includes("bollywood") ? "bollywood.js" : "suriname.js";
+ajax(url).then(headers=>{
+let lastmod= headers["last-modified"];
+
+let _date= new Date(lastmod).toLocaleDateString("en-US",{
+//weekday: 'long',
+year: 'numeric',
+month: 'short',
+day: 'numeric'
+});
+
+
+let _time= new Date(lastmod).toLocaleTimeString("en-US",{
+hour: '2-digit',
+minute: '2-digit'
+});
+
+select(".lastmod").innerHTML= `Stations updated on ${_date} @ ${_time}`;
+
+});
