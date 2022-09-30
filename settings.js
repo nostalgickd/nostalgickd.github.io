@@ -151,15 +151,14 @@ document.title= "Sleep Timer - KD Radio";
 
 
 //Last updated-----------------------
-async function ajax(url){
-let r= await fetch(url);
-if(!r.ok) throw new Error(r.status);
-return Object.fromEntries(r.headers.entries());
-}
 
-let url= location.href.includes("bollywood") ? "bollywood.js" : "suriname.js";
-ajax(url).then(headers=>{
-let lastmod= headers["last-modified"];
+let _file= location.href.includes("bollywood") ? "bollywood.js" : "suriname.js";
+let _api= "https://api.github.com/repos/nostalgickd/nostalgickd.github.io/commits?path=";
+
+fetch(_api + _file) 
+.then(r=> r.json())
+.then(d=> {
+let lastmod= new Date(d[0].commit.author.date);
 
 let _date= new Date(lastmod).toLocaleDateString("en-US",{
 //weekday: 'long',
@@ -168,12 +167,10 @@ month: 'short',
 day: 'numeric'
 });
 
-
 let _time= new Date(lastmod).toLocaleTimeString("en-US",{
 hour: '2-digit',
 minute: '2-digit'
 });
 
 select(".lastmod").innerHTML= `Stations updated on ${_date} @ ${_time}`;
-
 });
