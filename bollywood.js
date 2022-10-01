@@ -19,6 +19,7 @@ let one= {
 "https://astro4.rastream.com/india?type=mp3" : "India Beat",
 "https://stream.zeno.fm/y0ce4dbtfa0uv" : "Indias Movies",
 "http://www.indifun.net:7000/;" : "Indifun",
+"https://drive.uber.radio/uber/lrbollywood/icecast.audio" : "Love Radio",
 "https://c5.radioboss.fm:18125/stream" : "Manpasand",
 "https://stream.zeno.fm/eyxg23ky4x8uv" : "Marudhara",
 "https://stream.zeno.fm/8wk1s0pt008uv" : "NP 24",
@@ -76,6 +77,6 @@ let list= [one];
 
 //BlockList
 let ibl= {
-"one" : [10,11,15,17,19,23,25,26],
+"one" : [10,11,16,18,20,24,26,27],
 //"two" : [18,19]
 };
