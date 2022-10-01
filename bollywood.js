@@ -6,6 +6,7 @@ let one= {
 "https://strm112.1.fm/bombaybeats_mobile_mp3" : "Bombay Beats",
 //"https://stream.zeno.fm/vmp0tkewzv8uv" : "Caprice",
 "http://79.120.39.202:8002/indiancinema" : "Caprice",
+"http://qurum.ddns.net:8000/radio.mp3" : "Chaska Oman",
 //"https://stream.zeno.fm/4gfevnscvp8uv" : "DesiZone 90s",
 "https://www.desizoneradio.com/relay3" : "DesiZone 90s",
 //"https://stream.zeno.fm/uspcm0rcvp8uv" : "DesiZone 2000s",
@@ -47,7 +48,6 @@ let one= {
 let two= {
 "https://securestreams8.autopo.st:3003/1" : "90s Once Again",
 "https://drive.uber.radio/uber/bollywoodmix/icecast.audio" : "Bollywood Mix",
-"http://qurum.ddns.net:8000/radio.mp3" : "Chaska Oman",
 "https://dhoom2.radioca.st/;stream.nsv" : "Dhoom",
 "http://94.23.23.97:29270/;" : "iWiFM",
 "https://stream.zeno.fm/ehq95zyz808uv" : "JJN Radio",
