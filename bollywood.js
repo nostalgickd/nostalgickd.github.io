@@ -1,7 +1,7 @@
 let one= {
 "https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio" : "Alka Yagnik",
 "https://funasia.streamguys1.com/live4" : "Big FM 106.2",
-//"https://funasia.streamguys1.com/live9" : "Big Melodies",
+"https://funasia.streamguys1.com/live9" : "Big Melodies",
 "https://stream.zeno.fm/6rth3ywheg8uv" : "BollyHits",
 "https://strm112.1.fm/bombaybeats_mobile_mp3" : "Bombay Beats",
 //"https://stream.zeno.fm/vmp0tkewzv8uv" : "Caprice",
@@ -17,7 +17,7 @@ let one= {
 "https://stream.zeno.fm/8e9q38tg7zquv" : "Hindi Music",
 "https://tunein-icecast.mediaworks.nz/humm_128kbps" : "Humm FM",
 "https://astro4.rastream.com/india?type=mp3" : "India Beat",
-"https://stream.zeno.fm/y0ce4dbtfa0uv" : "Indias Movies",
+//"https://stream.zeno.fm/y0ce4dbtfa0uv" : "Indias Movies",
 "http://www.indifun.net:7000/;" : "Indifun",
 "https://drive.uber.radio/uber/lrbollywood/icecast.audio" : "Love Radio",
 "https://c5.radioboss.fm:18125/stream" : "Manpasand",
@@ -77,6 +77,6 @@ let list= [one];
 
 //BlockList
 let ibl= {
-"one" : [10,11,16,18,20,24,26,27],
+"one" : [16,20,23,24,26,27],
 //"two" : [18,19]
 };
