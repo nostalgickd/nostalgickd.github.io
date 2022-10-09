@@ -5,24 +5,33 @@ overlay.id= "overlay"; overlay.className= "hidden";
 document.body.append(overlay);
 overlay.innerHTML=`
 <div class="normalflex modal">
+
 	
-	<div class="centerflex" data-nosnippet><b>select stations to hide</b></div>
-	<div class="normalflex" data-nosnippet>
-		<select class="select" multiple></select>
-		<button class="save">SAVE</button>
-	</div>
+<div class="centerflex" data-nosnippet>
+  <b>select stations to hide</b>
+</div>
+<div class="normalflex" data-nosnippet>
+  <select class="select" multiple></select>
+  <button class="save">SAVE</button>
+</div>
+<div class="centerflex msg" data-nosnippet>
+  <span class="nr" data-nosnippet>0</span>&nbsp; stations hidden!
+</div>
 	
-	<div class="centerflex msg" data-nosnippet>
-		<span class="nr" data-nosnippet>0</span>&nbsp; stations hidden!
-	</div>
+
+<div class="centerflex" data-nosnippet>
+  <b>Close tab after ?? minutes</b>
+</div>
+<div class="normalflex" data-nosnippet>
+  <input class="input" type="number">
+  <button class="sleep">SLEEP</button>
+</div>
+
+
+
+<div class="lastmod" data-nosnippet></div>
+<div class="centerflex close" data-nosnippet>&times;</div>
 	
-	<div class="centerflex" data-nosnippet><b>Close tab after ?? minutes<b></div>
-	<div class="normalflex" data-nosnippet>
-		<input class="input" type="number">
-		<button class="sleep">SLEEP</button>
-	</div>
-	<div class="lastmod"></div>
-	<div class="centerflex close" data-nosnippet>&times;</div>
 </div>`;
 
 
