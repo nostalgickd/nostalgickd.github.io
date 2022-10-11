@@ -116,8 +116,7 @@ i.onclick= function(){
 showControls(i.innerText,x);
 if(/idle|paused/.test(this.className)){
 spans.forEach(i=> addThisClass(i,"idle"));							
-audio.innerHTML=`<source src="${urls[x]}">
-<source src="${urls[x]}?v=1">
+audio.innerHTML=`<source src="${urls[x]}?v=1">
 <source src="${offline}">`;
 audio.load(); audio.play();
 stationInfo(i);
