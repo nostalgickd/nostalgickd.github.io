@@ -354,11 +354,12 @@ letter-spacing: -0.5px;
 
 
 
-/*-------------GENERAL- (3px-3px)-------------*/
+/*-------------GENERAL--------------*/
 
+/*
 body::-webkit-scrollbar{
-width: 10px;
-height: 5px;
+width: 3px;
+height: 3px;
 }
 
 body::-webkit-scrollbar-track{
@@ -369,6 +370,7 @@ body::-webkit-scrollbar-thumb{
 background: yellow;
 border-radius: 50px;
 }
+*/
 
 
 @media(orientation:portrait){
