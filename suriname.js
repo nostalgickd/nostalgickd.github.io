@@ -108,7 +108,7 @@ let religious= {
 "https://securestreams8.autopo.st:3006/1" : "Bhakti Sagar ॐ",
 "https://ibadat.out.airtime.pro/ibadat_a" : "Devi Maa Radio ॐ",
 "https://stream.zeno.fm/6nt6k3e2x68uv" : "Immanu&euml;l ✝",
-""https://stream-52.zeno.fm/f9h69cgbu68uv" : "Love Islam Radio ☪",
+"https://stream-52.zeno.fm/f9h69cgbu68uv" : "Love Islam Radio ☪",
 "https://radio.radioizlam.com/9998/stream" : "Radio Izlam ☪",
 //"http://audiostreamen.nl:8168/stream":"Kerst Radio ✝",
 "https://25233.live.streamtheworld.com/SRGSTR08.mp3":"Kerst Radio ✝",
