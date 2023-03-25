@@ -325,7 +325,7 @@ let proxy2= "https://api.codetabs.com/v1/proxy?quest=";
 
 for(let key in oldobj){
 if(!key.startsWith("https")){
-newobj[`${proxy0}${key}`]= `${oldobj[key]} !`;
+newobj[`${proxy1}${key}`]= `${oldobj[key]} !`;
 }
 else newobj[key]= oldobj[key];
 }
