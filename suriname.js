@@ -130,7 +130,7 @@ let other= {
 
 
 //Main list
-let list= [sarnamie,general,sranang,javanese,christian,other];
+let list= [sarnamie,general,sranang,javanese,religious,other];
 
 //BlockList
 let ibl= {
