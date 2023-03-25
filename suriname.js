@@ -102,13 +102,19 @@ let javanese= {
 };
 
 
-let christian= {
-"https://stream.zeno.fm/kadt188ugy8uv" : "Afonsoewa",
-"https://stream.zeno.fm/6nt6k3e2x68uv" : "Immanu&euml;l",
-"http://audiostreamen.nl:8168/stream":"Kerst Radio",
-"https://stream.radiomaria.nl/mp3" : "Radio Maria",
-"https://cc5.beheerstream.com/proxy/exoticaradio?mp=/stream" : "Radio mArt",
-"https://worldstreaminglive.com/proxy/radioshalom/stream" : "Shalom"
+let religious= {
+"https://stream.zeno.fm/kadt188ugy8uv" : "Afonsoewa ✝",
+"http://s5.citrus3.com:8148/stream" : "Bhajan Radio ॐ",
+"http://103.16.47.70:7777/;stream.mp3" : "Bhakti Sagar ॐ",
+"https://ibadat.out.airtime.pro/ibadat_a" : "Devi Maa Radio ॐ",
+"https://stream.zeno.fm/6nt6k3e2x68uv" : "Immanu&euml;l ✝",
+"http://66.45.232.133:9998/;stream.nsv" : "Izlam Radio ☪",
+"http://audiostreamen.nl:8168/stream":"Kerst Radio ✝",
+"https://millenniumhits.out.airtime.pro/millenniumhits_a" : "Krishna Radio ॐ",
+"https://stream.radiomaria.nl/mp3" : "Radio Maria ✝",
+"https://cc5.beheerstream.com/proxy/exoticaradio?mp=/stream" : "Radio mArt ✝",
+"https://worldstreaminglive.com/proxy/radioshalom/stream" : "Shalom ✝",
+"https://hot.out.airtime.pro/hot_a" : "Shiva Radio ॐ"
 };
 
 
@@ -132,7 +138,7 @@ let ibl= {
 "general" : [],
 "sranang" : [],
 "javanese" : [],
-"christian" : [],
+"religious" : [],
 "other" : []
 };
 
