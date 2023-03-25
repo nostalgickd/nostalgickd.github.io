@@ -105,7 +105,7 @@ let javanese= {
 let religious= {
 "https://stream.zeno.fm/kadt188ugy8uv" : "Afonsoewa ✝",
 "http://s5.citrus3.com:8148/stream" : "Bhajan Radio ॐ",
-"http://103.16.47.70:7777/;stream.mp3" : "Bhakti Sagar ॐ",
+"https://103.16.47.70:7777/listen.pls" : "Bhakti Sagar ॐ",
 "https://ibadat.out.airtime.pro/ibadat_a" : "Devi Maa Radio ॐ",
 "https://stream.zeno.fm/6nt6k3e2x68uv" : "Immanu&euml;l ✝",
 "http://66.45.232.133:9998/;stream.nsv" : "Izlam Radio ☪",
