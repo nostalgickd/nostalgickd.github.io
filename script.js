@@ -116,7 +116,7 @@ i.onclick= function(){
 showControls(i.innerText,x);
 if(/idle|paused/.test(this.className)){
 spans.forEach(i=> addThisClass(i,"idle"));							
-audio.innerHTML=`<source src="${urls[x]}?v=1">
+audio.innerHTML=`<source src="${urls[x]}">
 <source src="${offline}">`;
 audio.load(); audio.play();
 stationInfo(i);
@@ -126,11 +126,14 @@ stationInfo(i);
 
 /*&& audio.currentTime>0
 for(let i=0; i<url.length; i++){
-if(audio.currentSrc==url[i]+"?v=1"){
+if(audio.currentSrc==url[i]){
 span[i].className=(audio.paused) ? "span paused" : "span playing";
 break;
 }
-}*/
+}
+
+//adding ?v=1 to url clashes with saveState
+*/
 
 saveState();
 }
