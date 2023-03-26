@@ -126,7 +126,7 @@ stationInfo(i);
 
 /*&& audio.currentTime>0
 for(let i=0; i<url.length; i++){
-if(audio.currentSrc==url[i]){
+if(audio.currentSrc==url[i]+"?v=1"){
 span[i].className=(audio.paused) ? "span paused" : "span playing";
 break;
 }
