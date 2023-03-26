@@ -288,6 +288,7 @@ else lang= 0;
 
 
 
+
 //save audio state when switching genres
 function saveState(){
 let source= select("source",audio);
@@ -296,13 +297,24 @@ if(!source) return;
 for(let i=0; i<urls.length; i++){
 if(source.src==urls[i]){
 
-	if(audio.currentSrc==isoffline){
-	addThisClass(spans[i],"offline");
-	return;
-	}
+    if(audio.currentSrc==isoffline){
+    addThisClass(spans[i],"offline");
+    return;
+    }
 		
-	if(audio.paused) addThisClass(spans[i],"paused");
-	else addThisClass(spans[i],"playing");
+    if(audio.paused){
+    addThisClass(spans[i],"paused");
+    return;
+    }
+    
+    if(audio.currentTime>1){
+    addThisClass(spans[i],"playing");
+    return;
+    }
+    else{
+    addThisClass(spans[i],"clicked");
+    return;
+    }
 
 return;
 }
