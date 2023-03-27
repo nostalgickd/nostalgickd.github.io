@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="theme-color" content="black"/>
+<meta name="msapplication-navbutton-color" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>KD Radio - Bollywood</title>
+
+<style>
+.loader{
+position:fixed; z-index:9999;
+top:0; bottom:0; left:0; right:0;
+background: black; min-width: 100%; min-height:100%;
+display:flex; justify-content:center; align-items:center;
+}
+
+.loader>img{
+min-width: 10vw; min-height: 10vw;
+}
+</style>
+
+<link rel="preload" href="style.css"/>
+<link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+<div id= "topbar">
+<img class="fixed" id="sr" src="../resources/sr.png"/>
+<div class="fixed" id="hide">All</div>
+</div>
+
+<div class="loader">
+<img src="../resources/loading.svg"/>
+</div>
+
+<script>
+let loader= document.querySelector(".loader");
+window.onload= function(){loader.parentNode.removeChild(loader);};
+</script>
+
+<script type="text/javascript" src="bollywood.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
