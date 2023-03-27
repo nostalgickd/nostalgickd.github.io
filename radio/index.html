@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="author" content="Kawiesh"/>
+<meta name="keywords" content="Kawiesh, Debisarun, Kawiesh Debisarun"/>
+<meta name="description" content="Kawiesh Debisarun"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<meta name="theme-color" content="black"/>
+<meta name="msapplication-TileColor" content="#da532c"/>
+<meta name="msapplication-navbutton-color" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<title>KD Radio - Older Versions</title>
+
+<style>				
+*{
+margin:0;
+padding:0; 
+outline: none;
+border: none;
+box-sizing: border-box;
+}
+
+html,.body{
+width: 100vw;
+min-height: 95vh;
+overflow-x: hidden;
+}
+
+.flexcenter{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.flexcolumn{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+
+.body{
+justify-content: flex-start;
+background: rgb(0,0,0);
+color: rgb(255,255,255);
+}
+
+.container{
+height: 100%;
+justify-content: flex-start;
+border: 0px solid darkgray;
+}
+/******************************************************/
+p{
+display: block;
+text-align: center;
+font: 20px Arial;
+margin: 50px 0;
+}
+
+
+a{
+padding: 10px;
+text-decoration: none;
+color: yellow!important;
+border: 1px solid white;
+border-radius: 4px;
+margin: 0 0 20px 0;
+}
+
+
+/******************************************************/
+
+[title]{
+position: relative;
+}
+
+[title]::before{
+content: attr(title);
+text-transform: capitalize;
+display: inline-block;
+width: 100%;
+height: 1.1em;
+font-weight: bold;
+border-bottom: 1px solid;
+}
+/******************************************************/
+
+body{
+-webkit-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+body::-webkit-scrollbar{
+width: 3px;
+height: 3px;
+}
+
+body::-webkit-scrollbar-track{
+background: white;
+}
+
+body::-webkit-scrollbar-thumb{
+background: yellow;
+border-radius: 50px;
+}
+
+@media (orientation:portrait){
+.container{width: 95%;}
+}
+
+@media (orientation:landscape){
+.container{width: 50%;}
+}
+</style>
+</head>
+<body class="body flexcolumn">
+<div class="container flexcolumn" data-nosnippet>
+
+<p>Here are some older versions of the current site.<br>
+The higher the number, the more recent the code!</p>
+
+<a href="v1/">VERSION 1.0</a>
+<a href="v2/">VERSION 2.0</a>
+<a href="v3/">VERSION 3.0</a>
+<a href="v4/">VERSION 4.0</a>
+
+</div>
+<script>				
+let create= (x)=> document.createElement(x),
+select= (x,y=document)=> y.querySelector(x),
+selectAll= (x,y=document)=> y.querySelectorAll(x);
+
+
+</script>
+</body>
+</html>
