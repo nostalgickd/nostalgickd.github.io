@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="black"/>
+<meta name="msapplication-TileColor" content="#da532c"/>
+<meta name="msapplication-navbutton-color" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>About</title>
+
+<style>				
+*{
+box-sizing: border-box;
+margin:0; padding:0; 
+outline: none;
+}	
+
+body{
+background: rgb(251,244,234) url("");
+min-width: 100vw; min-height: 100vh;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+}
+
+#container{
+border: 0px solid red;
+margin-top: 20px;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+}
+
+
+div.grid{
+display: grid;
+margin-bottom: 50px;
+height: 60px;
+grid-gap: 2px;
+grid-auto-columns: auto;
+grid-auto-rows: 30px;
+grid-template-areas:
+"picture emailicon email"
+"picture twittericon twitter";
+}
+
+.grid>div{
+border: 1px solid;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+height: 1fr;
+}
+
+.grid a{
+text-decoration: none;
+}
+
+.grid img,.grid svg{
+width: 100%;
+height: 100%;
+}
+
+.picture{
+grid-area: picture;
+width: 62px; height:62px;
+border: none;
+}
+
+
+[class$="icon"]{
+width: 30px;
+}
+
+
+.emailicon{
+padding: 1px;
+grid-area: emailicon;
+}
+
+.email{
+grid-area: email;
+padding: 5px;
+width: 19ch;
+}
+
+.twittericon{
+grid-area: twittericon;
+}
+
+.twitter{
+grid-area: twitter;
+padding: 5px;
+width: 19ch;
+}
+
+
+.info{
+width: 100%;
+text-align: left;
+}
+
+
+/*---------*/
+details{
+display: inline-block;
+}
+
+
+details>div{
+font-family: Arial;
+}
+
+
+details[open]>summary{
+border-bottom: 1px dashed;
+background: pink;
+margin-bottom: 0.5em;
+}
+
+.graph{
+width: 250px;
+height: 20px;
+border: 1px solid black;
+border-radius: 20px;
+display: flex;
+z-index: 2;
+overflow: hidden;
+}
+
+
+.graph>*{
+height: 100%;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+z-index: 1;
+font: bold 10px "Courier New";
+}
+
+.html{
+background: skyblue;
+width: 15%;
+}
+
+.css{
+background: pink;
+width: 25%;
+}
+
+.js{
+background: yellow;
+width: 60%;
+}
+
+
+span[class^='http']{
+height: 1em;
+display: inline-flex;
+place-content: center;
+}
+
+.https>svg{
+height: 100%;
+fill: green;
+}
+
+.http>svg{
+height: 100%;
+fill: red;
+}
+
+span img{
+height:1.5em;
+position: relative;
+top: 0.3em;
+}
+
+ul{
+width: 90%;
+}
+
+@media (orientation:portrait){
+#container{
+width: 95%; height: auto;
+}
+body{background-size: 35%}		
+}	
+
+@media (orientation:landscape){
+#container{
+width: 75%; height: auto;
+}
+body{background-size: 50%}			
+}	
+
+</style>
+</head>
+<body>
+<div id="container">
+
+<div class="grid">
+<div class="picture"><img src="../resources/kawiesh.jpg"/></div>
+<div class="emailicon">Email</div>
+<div class="email">email@domain.com</div>
+<div class="twittericon">Twitter</div>
+<div class="twitter">@Kawiesh</div>
+</div>
+
+<div class="info">
+<details open>
+<summary>About</summary>
+<div>
+This site contains a collection of Surinamese radio stations and radio stations airing mostly early 2000s Bollywood songs.
+</div>
+</details>
+
+<br><br>
+
+<details>
+<summary>Legality</summary>
+<div>
+The streams are not hosted or modified by me in any way.<br>
+The stream URLs are gathered from various (publicly accessable) sources across the web.<br>
+If you want your station removed or have any other comment, send an email to<span><img src="../resources/contact.png"/></span>or DM me on Twitter.
+</div>
+</details>
+
+<br><br>
+
+<details>
+<summary><span class="https">https </span> vs. <span class="http">http </span></summary>
+<div>
+A lot of the radio stations still stream their audio over <span class="purple">http</span>. 
+And it's not possible to serve http resources over <span class="green">https</span> pages. 
+Https is more secure, but because this is a static website (no server-side coding involved) http won't cause any risk.
+<br><br>
+
+TL;DR<br>
+Valid SSL certificate is present, but not used by default<br>
+Use http to be able to listen to all stations<br>
+Use https if you want more security, but access to fewer stations
+</div>
+</details>
+
+<br><br>
+
+<details>
+<summary>Code</summary>
+<div>
+The site relies heavily on JavaScript (>ES 6)
+<div class="graph">
+<span class="html">HTML</span>
+<span class="css">CSS</span>
+<span class="js">JS</span>
+</div>
+<div class="ul">
+The stream URLs are gathered from the web
+The URLs are stored in a JSON object
+A function is written to loop through the object and create station blocks
+Other functions are written to add functionalities such as play, pause, time update, skip etc
+</div>
+</div>
+</details>
+
+</div>
+</div>
+<script>				
+let create= (x)=> document.createElement(x),
+select= (x,y=document)=> y.querySelector(x),
+selectAll= (x,y=document)=> y.querySelectorAll(x);
+
+selectAll(".ul").forEach(i=>{
+let a= i.innerHTML.split("\n");
+a.shift(); a.pop();
+let b= create("ul");
+a.forEach(j=>{
+let c= create("li");
+c.innerHTML= j;
+b.append(c);
+});
+i.outerHTML= b.outerHTML;
+});
+
+
+
+let https= select(".https");
+https.innerHTML+= `<svg viewBox="0 0 24 24">
+<path d="M20 12c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5S7 
+4.243 7 7v3H6c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 
+2h12c1.103 0 2-.897 2-2v-8zM9 7c0-1.654 1.346-3 3-3s3 
+1.346 3 3v3H9V7z"/></svg>`;
+
+
+let http= select(".http");
+http.innerHTML+= `<svg viewBox="0 0 24 24">
+<path d="M17 8V7c0-2.757-2.243-5-5-5S7 4.243 7 
+7v3H6c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 
+2h12c1.103 0 2-.897 2-2v-8c0-1.103-.897-2-2-2H9V7c0-1.654 
+1.346-3 3-3s3 1.346 3 3v1h2z"/></svg>`;
+
+
+
+let email= select(".email");
+email.innerHTML= `<img src="../resources/contact.png"/>`;
+
+
+let twitter= select(".twitter");
+twitter.innerHTML= `<a href="https://twitter.com/Kawiesh">@Kawiesh</a>`;
+
+let emailicon= select(".emailicon");
+emailicon.innerHTML= `<svg viewBox="0 0 36 36">
+<path d="M32 6H4a2 2 0 0 0-2 2v20a2 2 0 0 0 2 
+2h28a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-1.54 
+22H5.66l7-7.24l-1.44-1.39L4 26.84V9.52l12.43 
+12.37a2 2 0 0 0 2.82 0L32 9.21v17.5l-7.36-7.36l-1.41 
+1.41zM5.31 8h25.07L17.84 20.47z"/></svg>`;
+
+let twittericon= select(".twittericon");
+twittericon.innerHTML= `<svg viewBox="0 0 72 72">
+<path fill="#61b2e4" d="M58.042 16.667s-2.584 
+2.083-6.209 2.458c0 0-5.708-6.375-13.875-.833c-3.666 
+2.583-4 8.041-3.375 10c0 0-11.083.875-20.75-10.459c0 
+0-4.333 7.5 2.834 13.5c0 0-2.119.334-4.132-1.333c0 
+0-.952 7.75 7.715 9.917c0 0-.583 1-4.083 0c0 0 .583 
+6.333 8.833 7.25c0 0-4.457 4.583-14.478 4c0 0 16.561 
+12.416 34.478-2.584c10-8.5 9.667-20.75 9.5-22.583c0 
+0 3.95-3 4.975-4.917c0 0-3.058 1-5.558 1c0 0 3.333-1.75 
+4.125-5.416z"/>
+<path fill="none" stroke="#000" stroke-linecap="round" 
+stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" 
+d="M58.042 16.667s-2.584 2.083-6.209 2.458c0 
+0-5.708-6.375-13.875-.833c-3.666 2.583-4 
+8.041-3.375 10c0 0-11.083.875-20.75-10.459c0 
+0-4.333 7.5 2.834 13.5c0 0-2.119.334-4.132-1.333c0 
+0-.952 7.75 7.715 9.917c0 0-.583 1-4.083 0c0 
+0 .583 6.333 8.833 7.25c0 0-4.457 4.583-14.478 
+4c0 0 16.561 12.416 34.478-2.584c10-8.5 9.667-20.75 
+9.5-22.583c0 0 3.95-3 4.975-4.917c0 0-3.058 1-5.558 
+1c0 0 3.333-1.75 4.125-5.416z"/></svg>`;
+
+select("img",email).oncontextmenu=()=>{
+alert(`The email address is not typed, but has been added as a photo instead. This is done to prevent crawling by bots`);
+return false;
+};
+</script>	
+</body>
+</html>

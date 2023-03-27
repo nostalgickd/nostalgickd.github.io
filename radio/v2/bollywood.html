@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="theme-color" content="black"/>
+<meta name="msapplication-navbutton-color" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>KD Radio - Bollywood</title>
+<style>
+.loader{
+position:fixed; z-index:9999;
+top:0; bottom:0; left:0; right:0;
+background: black; min-width: 100%; min-height:100%;
+display:flex; justify-content:center; align-items:center;
+}
+
+.loader>img{
+min-width: 10vw; min-height: 10vw;
+}
+</style>
+<link rel="stylesheet" href= "style.css">
+</head>
+<body>
+<div class="loader">
+  <img src="../resources/loading.svg"/>
+</div>
+<div id= "topbar">
+  <div class="fixed" id="hide">All</div>
+  <div id="genre">
+    <span class="left">Prev.</span>&nbsp;
+    <span class="genre">Bollywood</span>&nbsp;
+    <span class="right">Next</span>  
+  </div>
+  <img class="fixed" alt="Suriname" id="sr" src="../resources/sr.svg"/>
+</div>
+<div id="container"></div>
+<p id="stop">STOP</p>
+<div id="timer">NO RADIO PLAYING</div>
+
+<script>
+function removeLoader(){
+var loader= document.querySelector(".loader");
+loader.parentNode.removeChild(loader);
+}
+</script>
+<script src="bollywood.js"></script>
+<script src="script.js" onload="removeLoader()"></script>
+</body>
+</html>
