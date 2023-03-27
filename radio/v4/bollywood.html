@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="../resources/favicon/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="../resources/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="../resources/favicon/favicon-16x16.png"/>
+<link rel="manifest" href="../resources/favicon/site.webmanifest"/>
+<link rel="mask-icon" href="../resources/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
+<link rel="shortcut icon" href="../resources/favicon/favicon.ico"/>
+<meta name="msapplication-TileColor" content="#da532c"/>
+<meta name="msapplication-config" content="../resources/favicon/browserconfig.xml"/>
+<meta name="theme-color" content="#000000"/>
+
+<meta name="msapplication-navbutton-color" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Collection of radio stations from all across the world, airing mostly late 90s and early 2000s Bollywood songs!"/>
+<meta name="keywords" content="Online Radio, Hindi, Bollywood, Late 90s Bollywood songs, Early 2000s Bollywood songs, Nostalgia, Kawiesh"/>
+<meta name="author" content="Kawiesh"/>
+<meta property="og:title" content="Kawiesh.tk - Bollywood Radio Stations"/>
+<meta property="og:type" content="Early 2000s Bollywood Radio Stations"/>
+<meta property="og:url" content="https://kawiesh.tk/bollywood"/>
+<meta property="og:image" content="../resources/kawiesh.jpg"/>  
+
+<title>KD Radio - Bollywood</title>
+<style>
+.loader{
+position:fixed; z-index:9999;
+top:0; bottom:0; left:0; right:0;
+background: black; min-width: 100%; min-height:100%;
+display:flex; justify-content:center; align-items:center;
+}
+
+.loader>img{
+min-width: 10vw; min-height: 10vw;
+}
+</style>
+<link rel="stylesheet" href= "style.css">
+</head>
+<body>
+<div class="loader" data-nosnippet>
+  <img src="../resources/loading.svg"/>
+</div>
+<div id= "topbar" data-nosnippet>
+  <div class="fixed" id="hide" data-nosnippet>All</div>
+  <div id="genre" data-nosnippet>
+    <span class="left" data-nosnippet>Prev.</span>&nbsp;
+    <span class="genre" data-nosnippet>Radio</span>&nbsp;
+    <span class="right" data-nosnippet>Next</span>  
+  </div>
+  <img class="fixed" id="sr" src="../resources/sr.svg"/>
+</div>
+<div id="container" data-nosnippet></div>
+
+<div id="bottombar" data-nosnippet>
+<div id="controls" data-nosnippet>
+	<button class="prev btn">Prev</button>
+	<p id="pause">&bull; &bull; &bull;</p>
+	<button class="next btn">Next</button>
+</div>
+<div id="timer" data-nosnippet>NO RADIO PLAYING</div>
+</div>
+
+<div id="footer" data-nosnippet>
+<span class="settings" data-nosnippet>Settings</span>
+&nbsp;|&nbsp;
+<span class="logo" data-nosnippet>kawiesh.helioho.st</span>
+&nbsp;|&nbsp;
+<span class="about" data-nosnippet>About</span>
+</div>
+
+<audio id="audio"></audio>
+<script>
+function removeLoader(){
+var loader= document.querySelector(".loader");
+loader.parentNode.removeChild(loader);
+}
+</script>
+<script src="bollywood.js"></script>
+<script src="script.js" onload="removeLoader()"></script>
+<script src="settings.js"></script>
+</body>
+</html>

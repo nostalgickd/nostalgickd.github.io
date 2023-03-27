@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="black"/>
+<meta name="msapplication-TileColor" content="#da532c"/>
+<meta name="msapplication-navbutton-color" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>About - www.kawiesh.tk</title>
+
+<style>				
+*{
+box-sizing: border-box;
+margin:0; padding:0; 
+outline: none;
+}	
+
+:root{
+--height: 75px;
+--half: calc(var(--height) - 2px);
+}
+
+
+body{
+background: white url(/resources/pattern1.png);
+background-size: 90%;
+min-width: 100vw; 
+max-width: 100vw; 
+min-height: 100vh;
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+border: 2px double black;
+}
+
+#container{
+height: auto;
+margin-top: 20px;
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+font: 13px Arial;
+border: 1px dotted;
+padding: 5px;
+background: rgb(255,255,255,.7);
+}
+
+#block1{
+align-self: center;
+margin-bottom: 10px;
+}
+
+#block2{
+border: 15px solid transparent;
+border-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWWmZREd4VeZ9ezjZ_keRpv1xnb7McQ5X7wA&usqp=CAU) 21 / 20px / 0px round;
+border: none;
+}
+
+
+.img{
+width: var(--height);
+height: var(--height);
+border: 1px solid black;
+float: left;
+}
+
+svg{
+width: 100%;
+}
+
+#info{
+display: flex;
+flex-direction: column;
+height: var(--height);
+justify-content: space-between;
+}
+
+
+.row{
+width: max-content;
+height: calc(var(--half) / 2);
+margin-left: 2px;
+display: flex;
+}
+
+
+.icon,.info{
+height: 100%;
+display: flex;
+align-items: center;
+padding: 2px;
+border: 1px solid black;
+}
+
+.icon{
+width: calc(var(--half) / 2);
+justify-content: center;
+margin-right: 2px;
+}
+
+.info{
+cursor: pointer;
+width: 200px;
+justify-content: flex-start;
+font: bold 13px "Courier New";
+}
+
+
+a{
+text-decoration: none;
+}
+
+a:visited{
+color: blue;
+}
+
+h3{
+margin-top: 15px;
+border-bottom: 1px dotted;
+}
+
+ul{
+list-style: none;
+}
+
+li::before {
+content: "\2605";
+}
+
+
+.ss{
+width: 100%;
+height: auto;
+}
+
+@media (orientation:portrait){
+#container{width: 95%;}		
+}	
+
+@media (orientation:landscape){
+#container{width: 50%;}			
+}	
+
+</style>
+</head>
+<body data-nosnippet>
+<div id="container">
+
+<div id="block1">
+<img class="img" src="/resources/kawiesh.jpg"/>
+<div id="info">
+<div class="row one">
+   <div class="icon email">E</div>
+   <div class="info email">click to reveal</div>
+</div>
+<div class="row two">
+   <div class="icon twitter">T</div>
+   <div class="info twitter"></div>
+</div>
+</div>
+</div>
+
+
+<div id="block2">
+<h3>About</h3>
+This site holds a collection of Surinamese radio stations 
+and some radio stations airing mostly late 90s & early 2000s Bollywood songs.
+It's intended for private/non-commercial use.
+
+
+<h3>Legality</h3>
+The streams are not hosted and or modified by me. <br>
+The stream URLs are gathered from the web and are publicly accessible.
+The stations on www.kawiesh.tk merely act like shortcuts to the original streams.
+If you have any comment or want to remove/add your station, 
+use the contact information on the <a href="#info">top</a> of this page.
+
+
+<h3>Http vs. Https</h3>
+A valid SSL certificate is present on the site (see padlock icon 
+in the address bar), but is not used by default. That's because some of the radio stations 
+stream their content over http. And it's not possible to 
+access http resources over https.<br><br>
+
+Https is more secure, but because this is a static website 
+(no server-side coding involved) http (probably) won't cause any risk.
+
+<i>
+TL;DR: 
+If you want to be able to listen to all stations, use http. 
+If you want to be on the safer side, use https (not all stations will be available) !
+</i>
+
+<br><br>
+<b><u>Update:</u></b> All stations can now be played over https. Those 
+that are served over http will be accessed using a public proxy over https 
+(denoted by <b>!</b> after the station name). This is not a guaranteed/durable 
+solution though; if the proxies stop working, 
+the stations won't play over https. 
+However, they'll all still be accessible over http.
+
+
+<h3>Code</h3>
+The main code can be found <a href="/script.js">here</a>.<br>
+<ul>
+<li>URLs are gathered from the web</li>
+<li>These are stored in a JavaScript object literal</li>
+<li>This object is looped through to create station blocks</li>
+<li>Functionalities (such as play, pause, time update) are added</li>
+</ul>
+<br>
+
+The site relies heavily on JavaScript (>ES 6).<br>
+The <a href="http://bb.kawiesh.tk/radio">streamlined version</a> 
+of the site (optimized for BlackBerry phones) can be used 
+on older devices that don't support ES6.
+
+<h3>Media Controls</h3>
+The following media controls are added:
+<ul>
+<li>Previoustrack: Jump to previous station</li>
+<li>Nexttrack: Jump to next station</li>
+</ul>
+<br>
+<i>
+These controls will appear in the notification panel if 
+the browser supports <code>Media Session API</code> (e.g: Chromium 
+based browsers). The controls can be used to switch between 
+stations in the background, without opening the browser/page.</i>
+<br>
+
+<h3>Screenshots</h3>
+<br>
+<div>Android</div>
+<img class="ss" src="/resources/androidscreenshot-1.jpg"/>
+<br>
+<br>
+<div>BlackBerry</div>
+<img class="ss" src="/resources/bbscreenshot.jpg"/>
+<br>
+<br>
+<div>Desktop (old screenshot)</div>
+<img class="ss" src="/resources/desktopscreenshot.png"/>
+<br>
+</div>
+
+
+
+</div>
+<script>				
+let create= (x)=> document.createElement(x),
+select= (x,y=document)=> y.querySelector(x),
+selectAll= (x,y=document)=> y.querySelectorAll(x);
+
+let twt= `<svg viewBox="0 0 24 24"><g fill="none"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.229 13.229 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.647 4.647 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.692 4.692 0 0 1-2.104.08a4.661 4.661 0 0 0 4.352 3.234a9.348 9.348 0 0 1-5.786 1.995a9.5 9.5 0 0 1-1.112-.065a13.175 13.175 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254c0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003z" fill="currentColor"/></g></svg>`;
+let eml= `<svg viewBox="0 0 32 32"><path d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-2.2 2L16 14.78L6.2 8zM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24z" fill="currentColor"/></svg>`;
+let _twt= `<a href="https://twitter.com/Kawiesh">@Kawiesh</a>`;
+
+let name= "kawiesh";
+let mail= "contact";
+let tld= ".tk";
+let _eml= `<a href="mailto:${mail}@${name}${tld}">${mail}@${name}${tld}</a>`;
+
+
+
+let twitter= select(".icon.twitter");
+let _twitter= select(".info.twitter");
+let email= select(".icon.email");
+let _email= select(".info.email");
+
+
+twitter.innerHTML= twt;
+email.innerHTML= eml;
+_twitter.innerHTML= _twt;
+
+_email.onclick= function(){
+this.innerHTML= _eml;
+};
+
+
+
+</script>	
+</body>
+</html>
