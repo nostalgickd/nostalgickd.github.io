@@ -1,0 +1,211 @@
+@font-face {
+font-family: 'chakrapetch';
+src: url('../resources/chakrapetch.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+
+
+*{
+box-sizing: border-box;
+margin:0; padding:0; 
+outline: none;
+font-family: Arial;
+overflow: auto;
+}
+
+html,body{
+overflow: hidden auto;
+}
+
+body{
+background: rgb(0,0,0) url("../resources/background.jpg");
+background-size: cover;
+min-width: 100vw; min-height: 100vh;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+}
+
+#topbar{
+height: 30px;
+width: 100vw;
+margin: 5px 0 30px 0;
+display: flex;
+justify-content: space-between;
+}
+
+
+.fixed{
+cursor: pointer;
+height: 100%;
+min-width: 30px;
+}
+
+
+#hide{
+border:1px solid pink;
+width: 5ch;
+padding:2px;
+color: pink;
+text-align: center;
+display:inline-flex;
+align-items: center;
+justify-content: center;
+}
+
+#genre{
+height: 100%;
+display: flex;
+background-color: transparent;
+}
+
+
+.genre,.left,.right{
+height: 100%;
+padding: 2px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: yellow;
+text-transform: lowercase;
+font-variant: small-caps;
+-webkit-tap-highlight-color: transparent;
+}
+
+.genre{
+border-bottom: 1px solid yellow;
+}
+
+.left,.right{
+width: 30px;
+cursor: pointer;
+}
+
+.dir{
+width: 100%;
+height: 100%;
+}
+
+.dir *{
+fill: rgba(0,0,0,.5);
+stroke: yellow;
+stroke-width: 1;
+}
+
+a.info{
+z-index: 1;
+display: block;
+background: pink;
+padding: 1px; border-radius: 2px;
+width: 30px; height: 30px;
+position: absolute;
+right: 5px; bottom: 20px;
+overflow: hidden;
+}
+
+svg.info{
+width: 99%; height: 100%;
+fill: darkblue;
+}
+
+
+#container{
+position: relative;
+height: auto;
+margin-bottom: 10px;
+display: grid;
+grid-gap: 20px;
+grid-template-columns: 1fr 1fr;
+grid-auto-rows: 40px;
+}
+
+.span{
+width: 100%; height: 100%; 
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+background: rgb(0,0,0,0.4);
+border-radius: 3px;
+font: 15px chakrapetch;
+position: relative;
+}
+
+/*
+.span:last-child:nth-child(2n-1){
+left:50%;
+}*/
+
+#pause{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+height: 2em; width: 15ch;
+margin: 30px 0 20px 0;
+cursor: pointer;
+color:black;
+background:darkgray;
+border:1px solid black;
+border-radius: 3px;
+font: bold 15px chakrapetch;
+} 
+
+#timer{
+padding:5px;
+background:#7ba79b;
+max-width: 80%;
+border:1px solid yellow;
+font: 12px Arial;
+margin-bottom: 20px;
+}
+
+.idle{
+color:white;
+border:1px solid darkgray;
+}
+
+.clicked,.playing{
+color:#39ff14;
+border:1px solid #39ff14;
+}
+
+.offline,.paused{
+color: red;
+border:1px solid red;
+}
+
+.playing::after{
+content:"";
+background: url("../resources/playing.svg") no-repeat;
+height:1em; width:1em;
+background-size:80%;
+position: absolute; right: 0;
+}
+
+
+@media(orientation:portrait){
+#container{width: 90%;}
+}	
+
+@media(orientation:landscape){
+#container{width: 50%;}
+}
+
+
+body::-webkit-scrollbar{
+width: 3px;
+height: 3px;
+}
+
+body::-webkit-scrollbar-track{
+background: white;
+}
+
+body::-webkit-scrollbar-thumb{
+background: yellow;
+border-radius: 50px;
+}

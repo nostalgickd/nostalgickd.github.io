@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="../resources/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../resources/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../resources/favicon/favicon-16x16.png">
+<link rel="manifest" href="../resources/favicon/site.webmanifest">
+<link rel="mask-icon" href="../resources/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="../resources/favicon/favicon.ico">
+
+<meta name="theme-color" content="black"/>
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-config" content="../resources/favicon/browserconfig.xml">
+<meta name="msapplication-navbutton-color" content="black"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Kawiesh.tk holds a collection of Surinamese radio stations and Bollywood radio stations from across the world."/>
+<meta name="keywords" content="Radio, Suriname, Hindi, Dutch, Javanese, Sranang, Bollywood, kawiesh.tk"/>
+<meta name="author" content="Kawiesh"/>
+<meta property="og:title" content="Kawiesh.tk - Online Radio - Suriname - Bollywood"/>
+<meta property="og:type" content="Suriname & Bollywood Radio"/>
+<meta property="og:url" content="http://kawiesh.tk"/>
+<meta property="og:image" content="../resources/kawiesh.jpg"/>  
+
+<title>KD Radio - Bollywood</title>
+<style>
+.loader{
+position:fixed; z-index:9999;
+top:0; bottom:0; left:0; right:0;
+background: black; min-width: 100%; min-height:100%;
+display:flex; justify-content:center; align-items:center;
+}
+
+.loader>img{
+min-width: 10vw; min-height: 10vw;
+}
+</style>
+<link rel="stylesheet" href= "style.css">
+</head>
+
+<body data-nosnippet>
+<div class="loader">
+  <img src="../resources/loading.svg"/>
+</div>
+<div id= "topbar">
+  <div class="fixed" id="hide">All</div>
+  <div id="genre">
+    <span class="left">Prev.</span>&nbsp;
+    <span class="genre">Radio</span>&nbsp;
+    <span class="right">Next</span>  
+  </div>
+  <img class="fixed" alt="Suriname" id="sr" src="../resources/sr.svg"/>
+</div>
+<div id="container"></div>
+<p id="pause">&bull; &bull; &bull;</p>
+<div id="timer">NO RADIO PLAYING</div>
+<audio id="audio"></audio>
+
+<script>
+function removeLoader(){
+var loader= document.querySelector(".loader");
+loader.parentNode.removeChild(loader);
+}
+</script>
+<script src="bollywood.js"></script>
+<script src="script.js"></script>
+<script src="settings.js" onload="removeLoader()"></script>
+</body>
+</html>
