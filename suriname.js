@@ -12,7 +12,8 @@ let sarnamie= {
 "https://eksitara-radiohosting2.radioca.st/stream" : "Ek Sitara",
 //"https://hidradio.live-streams.nl/live?type=.mp3/;stream.mp3" : "HiD Radio",
 "https://stream.hostinggold.eu:1185/stream" : "Hulchul",
-"https://stream.zeno.fm/nqm3a44vzv8uv" : "Ishara",
+//"https://stream.zeno.fm/nqm3a44vzv8uv" : "Ishara",
+"http://nickerie.webhop.net:8000/stream" : "Ishara",
 "https://stream.zeno.fm/ctmsytc6em0uv" : "Joyce The Voice",
 "https://stream-10.pmteurope.com:8048/stream" : "MusicPro4U",
 "http://mscp3.live-streams.nl:8050/stream" : "Pehchaan",
@@ -137,7 +138,7 @@ let list= [sarnamie,general,sranang,javanese,religious,other];
 
 //BlockList
 let ibl= {
-"sarnamie" : [2,3,4,5,7,11,12,14,15,22],
+"sarnamie" : [2,3,4,5,7,10,12,14,15,22],
 "general" : [],
 "sranang" : [],
 "javanese" : [],
