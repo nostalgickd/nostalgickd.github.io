@@ -43,7 +43,7 @@ let general= {
 "https://stream.zeno.fm/cnkyb0ksduhvv" : "AVS SuMix",
 "http://cc3b.beheerstream.com:8192/;stream.mp3" : "Cariba FM",
 "https://surilive.com:8070/;" : "Color Radio",
-"https://stream.zeno.fm/u32bq5sfunhvv" : "DTV Radio",
+"https://stream.zeno.fm/u32bq5sfunhvv" : "DTV Radio ⚠️",
 "https://stream.zeno.fm/084958y3ynhvv" : "GOV Radio",
 "https://radiostream.limfmsu.com/radio" : "LIM FM",
 "https://stream.zeno.fm/5tv3n9cw008uv" : "Lime",
@@ -57,7 +57,7 @@ let general= {
 "https://surilive.com:8060/;" : "SRS",
 "https://rs.suricloud.com/radio/8010/radio.mp3" : "Sky - Pipel",
 "http://stanvasteradio.gkstreamen.nl:8120/;" : "Stanvaste",
-"https://stream.rcast.net/67505" : "Suri-Lite",
+"https://stream.rcast.net/67505" : "Suri-Lite ⚠️",
 "https://caster05.streampakket.com/proxy/9338/stream/1/" : "Tamara",
 "https://surilive.com:8210/;" : "Top 40 Suriname"
 };
@@ -92,11 +92,11 @@ let sranang= {
 
 
 let javanese= {
-"https://betelgeuse.dribbcast.com/proxy/abhost?mp=/stream": "Bangsa Jawa",
+"https://caster05.streampakket.com/proxy/8189/stream": "Bangsa Jawa",
 "https://stream.zeno.fm/w6hh0rqqwy8uv": "DjRegi",
 "https://worldstreaminglive.com/proxy/apzrueeh/stream": "Garuda",
 "http://server.jvhost.net:8010/stream" : "Kabar Katresnan",
-"http://176.9.86.211:8153/stream": " Pertjajah",
+"http://176.9.86.211:8153/stream": " Pertjajah ⚠️",
 "http://94.23.148.11:8214/stream/1/": "Siaran Jawa",
 "https://s5.radio.co/s1735f3c1d/listen": "Surja Vibes",
 "https://stream.zeno.fm/u3abxhenhf9uv": "Tamanredjo Talents"
