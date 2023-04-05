@@ -43,7 +43,7 @@ let general= {
 "https://stream.zeno.fm/cnkyb0ksduhvv" : "AVS SuMix",
 "http://cc3b.beheerstream.com:8192/;stream.mp3" : "Cariba FM",
 "https://surilive.com:8070/;" : "Color Radio",
-"https://stream.zeno.fm/u32bq5sfunhvv" : "DTV Radio ⚠️",
+"https://stream.zeno.fm/u32bq5sfunhvv" : "DTV Radio",
 "https://stream.zeno.fm/084958y3ynhvv" : "GOV Radio",
 "https://radiostream.limfmsu.com/radio" : "LIM FM",
 "https://stream.zeno.fm/5tv3n9cw008uv" : "Lime",
@@ -57,7 +57,7 @@ let general= {
 "https://surilive.com:8060/;" : "SRS",
 "https://rs.suricloud.com/radio/8010/radio.mp3" : "Sky - Pipel",
 "http://stanvasteradio.gkstreamen.nl:8120/;" : "Stanvaste",
-"https://stream.rcast.net/67505" : "Suri-Lite ⚠️",
+"https://stream.rcast.net/67505" : "Suri-Lite",
 "https://caster05.streampakket.com/proxy/9338/stream/1/" : "Tamara",
 "https://surilive.com:8210/;" : "Top 40 Suriname"
 };
@@ -131,6 +131,10 @@ let other= {
 "https://surilive.com:8050/stream/1/" : "LPM Portugese",
 "https://d1x0scdnoh33b7.cloudfront.net/olonradio/537b9f27/master.m3u8" : "Razo"
 };
+
+if(location.protocol=="https:"){
+general["http://stanvasteradio.gkstreamen.nl:8120/;"]= "Stanvaste ⚠️";
+}
 
 
 //Main list
