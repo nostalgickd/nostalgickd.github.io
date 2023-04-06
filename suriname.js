@@ -134,7 +134,8 @@ let other= {
 };
 
 if(location.protocol=="https:"){
-general["http://stanvasteradio.gkstreamen.nl:8120/;"]= "Stanvaste ⚠️";
+delete general["http://stanvasteradio.gkstreamen.nl:8120/;"];
+general["https://securestreams7.autopo.st/?uri=http://stanvasteradio.gkstreamen.nl:8120/;"]= "Stanvaste !";
 }
 
 
