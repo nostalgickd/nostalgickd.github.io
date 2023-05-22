@@ -97,7 +97,8 @@ let javanese= {
 "https://stream.zeno.fm/w6hh0rqqwy8uv": "DjRegi",
 "https://worldstreaminglive.com/proxy/apzrueeh/stream": "Garuda",
 "http://server.jvhost.net:8010/stream" : "Kabar Katresnan",
-"http://176.9.86.211:8153/stream": " Pertjajah ⚠️",
+"http://procyon.shoutca.st:8302/listen.pls" : "Pertjajah",
+//"http://176.9.86.211:8153/stream": " Pertjajah",
 "http://94.23.148.11:8214/stream/1/": "Siaran Jawa",
 "https://s5.radio.co/s1735f3c1d/listen": "Surja Vibes",
 "https://stream.zeno.fm/u3abxhenhf9uv": "Tamanredjo Talents"
