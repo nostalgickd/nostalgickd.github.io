@@ -1,6 +1,6 @@
 let one= {
 "https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio" : "Alka Yagnik",
-"https://funasia.streamguys1.com/live4" : "Big FM 106.2",
+"https://funasia.streamguys1.com/live4" : "Big FM 106.2 &#9888;",
 "https://funasia.streamguys1.com/live9" : "Big Melodies",
 "https://stream.zeno.fm/6rth3ywheg8uv" : "BollyHits",
 "https://strm112.1.fm/bombaybeats_mobile_mp3" : "Bombay Beats",
